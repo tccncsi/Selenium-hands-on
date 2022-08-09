@@ -5,29 +5,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Modify_Search_Page {
+import com.base.BasePage;
 
-	WebDriver ldriver;
+public class Modify_Search_Page extends BasePage {
+
 	
-public Modify_Search_Page (WebDriver rdriver) {
 	
-	ldriver = rdriver;
-	PageFactory.initElements(rdriver, this);
+public Modify_Search_Page (WebDriver driver) {
+	
+	super(driver);
+	PageFactory.initElements(driver, this);
 }
 
-	@FindBy (xpath= "(//div[@class='p-relative'])[3]")
+//	@FindBy (xpath= "(//div[@class='p-relative'])[3]") 
+	@FindBy (xpath="  //input[@name ='search']")
 	WebElement Search_txtbox;                                             
 	
-	@FindBy (xpath="//button[@name='from']")
+	@FindBy (xpath="//button[@name='from']//div")
 	WebElement Checkin;
 	
 	@FindBy (id="prefix__up-chevron")
 	WebElement Checkout;
 	
-	@FindBy (xpath = "//div[contains(text(),\"Thu, Sep 15\")]")
+	@FindBy (xpath = "//button[@name='to']//div")
 	WebElement Checkoutdate;
 	
-	@FindBy (xpath="//div[contains(text(),\"1 Room, 3 Adults, 1 Child\")]")
+	@FindBy (xpath="//button[@name=\"travellers\"]//div")
 	WebElement traveller_box;
 	
 	@FindBy (id="prefix__hotels")
@@ -43,6 +46,7 @@ public Modify_Search_Page (WebDriver rdriver) {
 	}
 	
 	public String getcheckin_date() {
+		waitForFindElementPresent(Checkin);
 		return Checkin.getText();
 	}
 	

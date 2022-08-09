@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.base.BasePage;
 
 public class LandingClearTripPage extends BasePage {
-	WebDriver ldriver;
+	
 
 	public LandingClearTripPage(WebDriver driver) {
 

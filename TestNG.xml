@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="iExam">
 
 	<listeners>
 		<listener class-name="com.utilities.Reporting" />
-		
+
 	</listeners>
 
 
 	<test name="Demo Test">
 		<parameter name="browser" value="chrome" />
- <!--   	<parameter name="url"  value="www.google.com"/>  -->
+		<!--   	<parameter name="url"  value="www.google.com"/>  -->
 		<classes>
-		
-<!--		 <class name="com.testCases.Enter_dest_intxt"/>   -->
-<!--       <class name="com.testCases.Search_hotel_basictest"/>  -->
-<!--		    <class name="com.testCases.date_picker"/>   -->
-<!--		  <class name="com.testCases.travellers"/>    -->
-<!--			 <class name="com.testCases.traveller_fromlist"/>  -->
- 		 <class name="com.testCases.addroom"/> 
 
-		      
-		    
+			<!--		 <class name="com.testCases.Enter_dest_intxt"/>   -->
+			<!--       <class name="com.testCases.Search_hotel_basictest"/>  -->
+			<!--		    <class name="com.testCases.date_picker"/>   -->
+			<!--		  <class name="com.testCases.travellers"/>    -->
+			<!--			 <class name="com.testCases.traveller_fromlist"/>  -->
+			<class name="com.testCases.addroom" />
+
+
 		</classes>
 
 	</test>
