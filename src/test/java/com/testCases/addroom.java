@@ -26,7 +26,7 @@ public class addroom extends BaseClass {
 		LandingClearTripPage room = new LandingClearTripPage(driver);
 		Modify_Search_Page room1 = new Modify_Search_Page(driver);
 		
-//		room.closePopup();
+		room.closePopup();
 		room.clickontextbox();
 	    Assert.assertEquals(room.whereto_label(), label);	
 		room.clickonlist();
@@ -52,10 +52,10 @@ public class addroom extends BaseClass {
 //		room.add_room_incradult();
 		Assert.assertEquals(room.traveller_box(), traveller_data);
 		room.Search_btn();
-		Assert.assertEquals(room1.search_txtbox(), Search_textbox);
-		Assert.assertEquals(room1.getcheckin_date(), in_date);
+//		Assert.assertEquals(room1.search_txtbox(), Search_textbox);
+//		Assert.assertEquals(room1.getcheckin_date(), in_date);
 //		Assert.assertEquals(room1.getCheckout_date(), out_date);
-//		Assert.assertEquals(room1.adult_child_data(), travellers_modifypage);
+		Assert.assertEquals(room1.adult_child_data(), travellers_modifypage);
 		}
 
 }

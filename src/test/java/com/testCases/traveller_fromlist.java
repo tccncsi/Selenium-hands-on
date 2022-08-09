@@ -11,6 +11,7 @@ public class traveller_fromlist extends BaseClass {
 	@Test
 	public void searchpage() {
 		LandingClearTripPage list = new LandingClearTripPage(driver);
+		
 		list.closePopup();
 		list.clickontextbox();
 		list.clickonlist();
@@ -23,9 +24,9 @@ public class traveller_fromlist extends BaseClass {
 		list.travellerarrow();
 		list.travellerarrow();
 //		list.travellerlist();
-		list. link_travelleR_box();
+//		list. link_travelleR_box();
 		
-//		list.Search_btn();
+		list.Search_btn();
 		
 	}
 	

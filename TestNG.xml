@@ -18,8 +18,8 @@
 <!--       <class name="com.testCases.Search_hotel_basictest"/>  -->
 <!--		    <class name="com.testCases.date_picker"/>   -->
 <!--		  <class name="com.testCases.travellers"/>    -->
-			 <class name="com.testCases.traveller_fromlist"/>  
-<!-- 		 <class name="com.testCases.addroom"/> -->	
+<!--			 <class name="com.testCases.traveller_fromlist"/>  -->
+ 		 <class name="com.testCases.addroom"/> 
 
 		      
 		    
