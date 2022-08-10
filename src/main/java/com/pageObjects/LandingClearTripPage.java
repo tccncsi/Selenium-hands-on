@@ -169,7 +169,7 @@ public class LandingClearTripPage extends BasePage {
 		Enter_Locality.sendKeys(place);
 	}
 
-	public void checkin_arrow() {
+	public void checkin_arrow() { 
 		Checkin_Arrow.click();
 	}
 
