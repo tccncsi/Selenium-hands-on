@@ -98,6 +98,9 @@ public class LandingClearTripPage extends BasePage {
 	@FindBy(xpath = "(//div[@class=\"Day-grid flex flex-middle flex-column flex-center\"])[9]") // checkin date picker
 	WebElement Checkin_Date;
 	
+	@FindBy (xpath="(//div[@class=\"p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip\"])[16]")
+	WebElement Checkin_for_invalid_scenario;
+	
 	@FindBy(xpath="//button[@name=\"from\"]") //checkin date box
 	WebElement Checkin_box;
 	
