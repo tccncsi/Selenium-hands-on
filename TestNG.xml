@@ -19,7 +19,10 @@
 			<!--		    <class name="com.testCases.date_picker"/>   -->
 			<!--		  <class name="com.testCases.travellers"/>    -->
 			<!--			 <class name="com.testCases.traveller_fromlist"/>  -->
-			<class name="com.testCases.addroom" />
+			<!--  <class name="com.testCases.addroom" />  -->
+			   <!--   	<class name="com.testCases.invalid_no_location" />  -->
+			 <!--  <class name= "com.testCases.dynamic_calender_handler" /> -->
+			 <class name = "com.testCases.enter_email_in_popup" />
 
 
 		</classes>
