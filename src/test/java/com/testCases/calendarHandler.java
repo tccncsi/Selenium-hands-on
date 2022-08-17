@@ -7,7 +7,7 @@ import com.utilities.ReadConfig;
 
 import bsh.Console;
 
-public class calendar_handler {
+public class calendarHandler {
 
 	public static void main(String[] args) throws Exception {
 
@@ -19,8 +19,6 @@ public class calendar_handler {
 		System.setProperty("webdriver.chrome.driver", "./Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.cleartrip.com/hotels");
-
-//		driver.findElement(By.xpath("(//*[name()='svg'][@class=' c-pointer c-neutral-900'])[1]")).click();
 		driver.findElement(By.xpath("//button[@name=\"from\"]")).click();
 		Thread.sleep(2000);
 
@@ -37,7 +35,7 @@ public class calendar_handler {
 		}
 
 		driver.findElement(By.xpath("//div[@aria-label='"+date+"']")).click();
-//		driver.findElement(By)
+
 	}
 
 }

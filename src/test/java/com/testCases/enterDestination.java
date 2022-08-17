@@ -3,15 +3,15 @@ package com.testCases;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
+import com.pageObjects.landingClearTripPage;
 
 
-public class Enter_dest_intxt extends BaseClass {
-	LandingClearTripPage second;
+public class enterDestination extends BaseClass {
+	landingClearTripPage second;
 	
 	@Test
 	public void searchpage() {
-		LandingClearTripPage second = new LandingClearTripPage(driver);
+		landingClearTripPage second = new landingClearTripPage(driver);
 		
 		
 		second.closePopup();
@@ -21,8 +21,6 @@ public class Enter_dest_intxt extends BaseClass {
 		second.checkin_arrow();
 		second.checkinarrow();
 		second.checkindate();
-//		second.checkout_arrow();
-//		second.checkinarrow();
 		second.checkoutdate();
 		second.Search_btn();
 		

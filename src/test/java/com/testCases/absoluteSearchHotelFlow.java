@@ -4,13 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
-import com.pageObjects.Modify_Search_Page;
+import com.pageObjects.landingClearTripPage;
+import com.pageObjects.modifySearchPage;
 
-public class flow2 extends BaseClass {
+public class absoluteSearchHotelFlow extends BaseClass {
 	
-	LandingClearTripPage obj4;
-	Modify_Search_Page room2;
+	landingClearTripPage obj4;
+	modifySearchPage room2;
 	
 	String date1 = "Tue, Nov 8";
 	String date2=  "Sun, Jul 9";
@@ -19,8 +19,8 @@ public class flow2 extends BaseClass {
 	@Test
 	public void searchpage() {
 
-		LandingClearTripPage obj4 = new LandingClearTripPage(driver);
-		Modify_Search_Page room2 = new Modify_Search_Page(driver);
+		landingClearTripPage obj4 = new landingClearTripPage(driver);
+		modifySearchPage room2 = new modifySearchPage(driver);
 		
 		if(obj4.popup()) {
 			obj4.closepopup();

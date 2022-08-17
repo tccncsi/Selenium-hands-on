@@ -17,9 +17,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.base.BasePage;
 import com.utilities.XLUtils;
 
-public class LandingClearTripPage extends BasePage {
+public class landingClearTripPage extends BasePage {
 
-	public LandingClearTripPage(WebDriver driver) {
+	public landingClearTripPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 
@@ -28,11 +28,6 @@ public class LandingClearTripPage extends BasePage {
 	@FindBy(xpath = "(//*[name()='svg'][@class=' c-pointer c-neutral-900'])[1]") // popup close
 	WebElement Popup;
 
-	/*
-	 * public void dynamic_popup() { try { Alert alert = driver.switchTo().alert();
-	 * alert.dismiss(); } catch (NoAlertPresentException ne) {
-	 * System.out.println("Alert not displayed"); // ne.printStackTrace(); } }
-	 */
 
 	@FindBy(xpath = "//h1") // heading "search hotel"
 	WebElement Heading;
@@ -453,7 +448,7 @@ public class LandingClearTripPage extends BasePage {
 	
 	// enter password and mail
 	
-	public void enter_login_password(LandingClearTripPage obj3) {
+	public void enter_login_password(landingClearTripPage obj3) {
 		try {
 			obj3.enter_email(XLUtils.fetchExcelData("email"));
 		} catch (IOException e) {
@@ -486,7 +481,7 @@ public class LandingClearTripPage extends BasePage {
 	}
 	
 	
-	public void enter_checkin_checkout_date(LandingClearTripPage obj2) {
+	public void enter_checkin_checkout_date(landingClearTripPage obj2) {
 		try {
 			obj2.enterLocality(XLUtils.fetchExcelData("place"));
 		} catch (IOException e) {

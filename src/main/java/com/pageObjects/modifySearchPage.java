@@ -7,17 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.base.BasePage;
 
-public class Modify_Search_Page extends BasePage {
+public class modifySearchPage extends BasePage {
 
 	
 	
-public Modify_Search_Page (WebDriver driver) {
+public modifySearchPage (WebDriver driver) {
 	
 	super(driver);
 	PageFactory.initElements(driver, this);
 }
 
-//	@FindBy (xpath= "(//div[@class='p-relative'])[3]") 
 	@FindBy (xpath="  //input[@name ='search']")
 	WebElement Search_txtbox;                                             
 	

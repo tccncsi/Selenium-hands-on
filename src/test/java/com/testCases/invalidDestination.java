@@ -3,19 +3,18 @@ package com.testCases;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
+import com.pageObjects.landingClearTripPage;
 
-public class invalid_no_location extends BaseClass {
+public class invalidDestination extends BaseClass {
 	 
-	LandingClearTripPage location;
+	landingClearTripPage location;
 	
 	@Test
 	public void searchpage() {
 		
-		LandingClearTripPage location = new LandingClearTripPage(driver);
+		landingClearTripPage location = new landingClearTripPage(driver);
 		
 		location.closePopup();
-		
 		location.checkin_arrow();
 		location.setdate();
 		location.Search_btn();

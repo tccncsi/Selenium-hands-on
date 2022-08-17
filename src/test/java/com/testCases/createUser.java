@@ -5,17 +5,17 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
+import com.pageObjects.landingClearTripPage;
 import com.utilities.XLUtils;
 
-public class create_user extends BaseClass {
+public class createUser extends BaseClass {
 
-	LandingClearTripPage obj3;
+	landingClearTripPage obj3;
 
 	@Test
 	public void searchpage() {
 
-		LandingClearTripPage obj3 = new LandingClearTripPage(driver);
+		landingClearTripPage obj3 = new landingClearTripPage(driver);
 
 		if (obj3.see_popup()) {
 			obj3.click_on_email();

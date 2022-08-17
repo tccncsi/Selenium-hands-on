@@ -3,14 +3,14 @@ package com.testCases;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
+import com.pageObjects.landingClearTripPage;
 
 public class traveller_fromlist extends BaseClass {
 	
-	LandingClearTripPage list;
+	landingClearTripPage list;
 	@Test
 	public void searchpage() {
-		LandingClearTripPage list = new LandingClearTripPage(driver);
+		landingClearTripPage list = new landingClearTripPage(driver);
 		
 		list.closePopup();
 		list.clickontextbox();
@@ -22,10 +22,7 @@ public class traveller_fromlist extends BaseClass {
 		list.checkindate();
 		list.checkoutdate();
 		list.travellerarrow();
-		list.travellerarrow();
-//		list.travellerlist();
-//		list. link_travelleR_box();
-		
+		list.travellerarrow();		
 		list.Search_btn();
 		
 	}

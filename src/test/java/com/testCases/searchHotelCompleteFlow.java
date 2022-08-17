@@ -5,18 +5,17 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
+import com.pageObjects.landingClearTripPage;
 import	com.utilities.XLUtils;
-public class all_dynamic_flow1  extends BaseClass{
+public class searchHotelCompleteFlow  extends BaseClass{
 	
-//	String place = "Chennai" ;
 	
-	LandingClearTripPage obj2;
+	landingClearTripPage obj2;
 	
 	@Test
 	public void searchpage() {
 		
-		LandingClearTripPage obj2 = new LandingClearTripPage (driver);
+		landingClearTripPage obj2 = new landingClearTripPage (driver);
 		
 		obj2.closePopup();
 		obj2.clickontextbox();
@@ -30,7 +29,6 @@ public class all_dynamic_flow1  extends BaseClass{
 		obj2.incrementchild();
 		obj2.incrementchild();
 		obj2.add_room();
-//		obj2.add_room_incradult();
 		obj2.Search_btn();
 	}
 }

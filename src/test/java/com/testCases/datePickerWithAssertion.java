@@ -9,20 +9,19 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.pageObjects.LandingClearTripPage;
+import com.pageObjects.landingClearTripPage;
 
-public class date_picker extends BaseClass {
+public class datePickerWithAssertion extends BaseClass {
 	
-LandingClearTripPage third ;
+landingClearTripPage third ;
 	String date_checkin = "Fri, Sep 9";
 	String date_checkout = "Thu, Sep 15";
 	@Test
 	public void searchpage() {
 
 	
-		LandingClearTripPage third = new LandingClearTripPage(driver);
+		landingClearTripPage third = new landingClearTripPage(driver);
 		
-//		third.closePopup();
 		third.clickontextbox();
 		third.clickonlist();
 
@@ -31,14 +30,8 @@ LandingClearTripPage third ;
 		third.checkinarrow();
 		third.checkindate();
 		Assert.assertEquals(third.checkinbox(),date_checkin);
-		
-//		third.checkout_arrow();
-//		third.checkinarrow();
 		third.checkoutdate();
 		Assert.assertEquals(third.Checkoutbox(), date_checkout);
-		
-		
-		
 		third.Search_btn();
 		
 	}
