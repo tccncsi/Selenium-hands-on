@@ -22,8 +22,10 @@
 			<!--  <class name="com.testCases.addroom" />  -->
 			   <!--   	<class name="com.testCases.invalid_no_location" />  -->
 			 <!--  <class name= "com.testCases.dynamic_calender_handler" /> -->
-			 <class name = "com.testCases.enter_email_in_popup" />
-
+	<!--		 <class name = "com.testCases.user_not_registered_popup" />   -->
+<!--		<class name = "com.testCases.all_dynamic_flow1" />   -->
+		<!--	<class name = "com.testCases.create_user" />  -->
+		<class name = "com.testCases.flow2" />
 
 		</classes>
 

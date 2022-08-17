@@ -27,7 +27,7 @@ public class Search_hotel_basictest extends BaseClass {
 		Assert.assertEquals(first.GetSupport(), supportlabel);
 		
 		first.clickontextbox();
-		first.setLocality(location);
+		first.enterLocality(location);
 		first.clickonlist();
 	    first.Search_btn();
 		

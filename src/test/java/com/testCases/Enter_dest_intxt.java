@@ -16,7 +16,7 @@ public class Enter_dest_intxt extends BaseClass {
 		
 		second.closePopup();
 		second.clickontextbox();
-		second.setLocality("Chennai");
+		second.enterLocality("Chennai");
 		second.clickonlist();
 		second.checkin_arrow();
 		second.checkinarrow();

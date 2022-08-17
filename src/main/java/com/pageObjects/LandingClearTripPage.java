@@ -1,5 +1,7 @@
 package com.pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -13,6 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.BasePage;
+import com.utilities.XLUtils;
 
 public class LandingClearTripPage extends BasePage {
 
@@ -55,8 +58,8 @@ public class LandingClearTripPage extends BasePage {
 	@FindBy(name = "search") // click on where to text box
 	WebElement Click_on_textbox;
 
-	@FindBy(xpath = "(//*[@class=\"to-ellipsis o-hidden ws-nowrap c-inherit fs-3\"])[5]") // Click on suggestion list
-																							// having Chennai
+	// Click on suggestion list having chennai
+	@FindBy(xpath = "(//*[@class=\"to-ellipsis o-hidden ws-nowrap c-inherit fs-3\"])[5]")
 	WebElement click_on_list;
 
 	@FindBy(name = "search") // enter data in where to? textbox
@@ -188,8 +191,8 @@ public class LandingClearTripPage extends BasePage {
 	@FindBy(xpath = "//button[@name='travellers']") // travellers text box
 	WebElement travellerbox;
 
-	//click on 2 room 4 adult from dropdownlist
-	@FindBy(xpath = "(//*[@class=\"ls-reset br-4 w-100p fs-inherit px-2 dropdown__item  hover:bg-secondary-500 hover:c-white c-pointer c-neutral-900\"])[3]") 
+	// click on 2 room 4 adult from dropdownlist
+	@FindBy(xpath = "(//*[@class=\"ls-reset br-4 w-100p fs-inherit px-2 dropdown__item  hover:bg-secondary-500 hover:c-white c-pointer c-neutral-900\"])[3]")
 	WebElement travellerlist;
 
 	@FindBy(xpath = "//*[contains ( text() , 'Add more rooms and travellers')]") // link in traveller dropdown
@@ -212,24 +215,60 @@ public class LandingClearTripPage extends BasePage {
 
 	@FindBy(xpath = "(//*[@class=\"current-stroke c-blue c-pointer\"])[3]") // child decrement
 	WebElement decrement_child;
-	
-	//less than arrow for child
-	@FindBy(xpath = "//select[@class=\"select focus:bc-secondary-500 bw-1 bs-solid w-100p br-4 fs-2 c-pointer c-neutral-900 h-9 fs-3 bc-neutral-100 c-neutral-400\"]") 
+
+	// less than arrow for child
+	@FindBy(xpath = "//select[@class=\"select focus:bc-secondary-500 bw-1 bs-solid w-100p br-4 fs-2 c-pointer c-neutral-900 h-9 fs-3 bc-neutral-100 c-neutral-400\"]")
 	WebElement lessthanarrow;
 
-	@FindBy(xpath = "//*[@class=\"pt-2\"]") // add room
+	@FindBy(xpath = "//span[contains(text(),\"Add room\")]") // add room
 	WebElement addroom;
 
-	@FindBy(xpath = "(//*[@class=\"current-stroke c-blue c-pointer\"])[5]") // add room adult increment
+	@FindBy(xpath = "(//*[@class=\"current-stroke c-blue c-pointer\"])[4]") // add room adult increment
 	WebElement addroom_incr;
 
 	@FindBy(xpath = "//span[@class=\"fs-2 c-secondary-500 hover:td-underline c-pointer\"]")
 	WebElement delete_btn;
-	 
-	//click on "Continue with Email"
-	@FindBy(xpath="//span[contains(text(),\"Continue with Email\")]")
+
+	// click on "Continue with Email"
+	@FindBy(xpath = "//span[contains(text(),\"Continue with Email\")]")
 	WebElement click_on_email;
+
+	// click on enter registered email address textbox
+	@FindBy(xpath = "//input[@data-testid=\"email\"]")
+	WebElement click_on_email_txtbx;
+
+	// click on forget password
+	@FindBy(xpath = "//span[contains(text(),\"Forgot password?\")]")
+	WebElement forget_pass;
+
+	// click on forget password email address textbox
+	@FindBy(xpath = "//div[@class=\"p-relative\"]//input[@type=\"email\"]")
+	WebElement forget_pass_email_txtbox;
+
+	// click on reset password link
+	@FindBy(xpath = "//span[contains(text(),\"Get password reset link\")]")
+	WebElement click_on_reset_link;
+
+	// click on login on search page
+	@FindBy(xpath = "//p[contains(text(),'Log in')]")
+	WebElement click_on_search_page;
+
+	// click on password textbox
+	@FindBy(xpath = "//input[@type='password']")
+	WebElement password;
+
+	// pop is visible
+	@FindBy(xpath = "//div[@style=\"width: 400px; height: 437px;\"]")
+	WebElement popup_visible;
 	
+	//click on login
+	@FindBy (xpath="//span[contains(text(),\"Log in\")]")
+	WebElement click_login;
+	
+	//click on signup
+	@FindBy (xpath="//button[text()='Log in / Sign up']")
+	WebElement click_signup;
+
 	public void clickontextbox() {
 		waitForFindElementPresent(Click_on_textbox);
 		Click_on_textbox.click();
@@ -240,7 +279,7 @@ public class LandingClearTripPage extends BasePage {
 		click_on_list.click();
 	}
 
-	public void setLocality(String place) {
+	public void enterLocality(String place) {
 
 		Enter_Locality.sendKeys(place);
 	}
@@ -320,7 +359,9 @@ public class LandingClearTripPage extends BasePage {
 	}
 
 	public void add_room() {
+		waitForFindElementPresent(addroom);
 		addroom.click();
+		System.out.println("All ok till now");
 	}
 
 	public void less_than_arr() {
@@ -328,15 +369,81 @@ public class LandingClearTripPage extends BasePage {
 	}
 
 	public void add_room_incradult() {
+		waitForFindElementPresent(addroom_incr);
 		addroom_incr.click();
+		System.out.println("good");
 	}
 
 	public void delete_btn() {
 		delete_btn.click();
 	}
-	
+
 	public void click_on_email() {
 		click_on_email.click();
+	}
+
+	public void click_on_emailtext_box() {
+		click_on_email_txtbx.click();
+	}
+
+	public void enter_email(String email) {
+		click_on_email_txtbx.sendKeys(email);
+	}
+
+	public void forget_pass_link() {
+		forget_pass.click();
+	}
+
+	public void forget_pass_email() {
+		forget_pass_email_txtbox.click();
+	}
+
+	public void forget_pass_enter_email(String email) {
+		forget_pass_email_txtbox.sendKeys(email);
+	}
+
+	public void click_reset_passlink() {
+		click_on_reset_link.click();
+	}
+
+	public void click_on_searchpage() {
+		click_on_search_page.click();
+	}
+
+	// click on passwordtext box
+	public void click_on_password() {
+		waitForFindElementPresent(password);
+		password.click();
+	}
+
+	// enter data in passsowrd textbox
+
+	public void enter_pass(String password1) {
+		waitForFindElementPresent(password);
+		password.sendKeys(password1);
+	}
+
+	// popvisible
+	public Boolean see_popup() {
+		try {
+			waitForFindElementPresent(popup_visible);
+			return popup_visible.isDisplayed();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+
+	}
+	//pop handle 
+	public Boolean popup() {
+		try {
+			waitForFindElementPresent(Popup);
+			return Popup.isDisplayed();
+			
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
 	public void Search_btn() {
@@ -344,6 +451,65 @@ public class LandingClearTripPage extends BasePage {
 
 	}
 	
+	// enter password and mail
 	
+	public void enter_login_password(LandingClearTripPage obj3) {
+		try {
+			obj3.enter_email(XLUtils.fetchExcelData("email"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+		obj3.click_on_password();
+		try {
+			obj3.enter_pass(XLUtils.fetchExcelData("password1"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	//click on cross sign on popup
+	public void closepopup() {
+		Popup.click();
+	}
+	
+	public void click_login() {
+		click_login.click();
+	}
+	
+	public void click_on_signup() {
+		click_signup.click();
+	}
+	
+	
+	public void enter_checkin_checkout_date(LandingClearTripPage obj2) {
+		try {
+			obj2.enterLocality(XLUtils.fetchExcelData("place"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		obj2.clickonlist();
+		obj2.checkin_arrow();
+		try {
+			obj2.calender(XLUtils.fetchExcelData("month"), XLUtils.fetchExcelData("date"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		obj2.getcheckout_month();
+		try {
+			obj2.checkout_calender(XLUtils.fetchExcelData("checkout_month") ,XLUtils.fetchExcelData("dates"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
+
+
