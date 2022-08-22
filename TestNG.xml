@@ -14,20 +14,20 @@
 		<!--   	<parameter name="url"  value="www.google.com"/>  -->
 		<classes>
 
-					   <class name="com.testCases.absoluteSearchHotelFlow"/>   
-			           <class name="com.testCases.addRoomFunctionality"/>  
-					   <class name="com.testCases.calendarHandler"/>  
-					   <class name="com.testCases.calenderHandlerDataDriven"/>    
-				    	 <class name="com.testCases.createUser"/>  
-			  		  <class name="com.testCases.datePickerWithAssertion" />  
-			      	  <class name="com.testCases.enterDestination" />  
-			          <class name= "com.testCases.invalidDestination" /> 
-	                	 <class name = "com.testCases.restPassword" />  
-	               	<class name = "com.testCases.searchHotelCompleteFlow" />  
+<!--				    <class name="com.testCases.absoluteSearchHotelFlow"/>   
+			            <class name="com.testCases.addRoomFunctionality"/>  
+					    <class name="com.testCases.calendarHandler"/>  
+					    <class name="com.testCases.calenderHandlerDataDriven"/>    
+				        <class name="com.testCases.createUser"/>  
+			  		    <class name="com.testCases.datePickerWithAssertion" />  
+			      	    <class name="com.testCases.enterDestination" />  
+			            <class name= "com.testCases.invalidDestination" /> 
+	                    <class name = "com.testCases.restPassword" />  
+	                	<class name = "com.testCases.searchHotelCompleteFlow" />  
 						<class name = "com.testCases.traveller_fromlist" />  
 						<class name = "com.testCases.travellers" />
-						<class name= "com.testCases.uiAssertionHotelSearchPage" />
-		
+						<class name= "com.testCases.uiAssertionHotelSearchPage" />    -->
+						<class name = "com.testCases.hotelClassFilter" />
 
 		</classes>
 

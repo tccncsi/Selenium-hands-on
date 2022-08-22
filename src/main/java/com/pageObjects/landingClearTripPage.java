@@ -66,24 +66,28 @@ public class landingClearTripPage extends BasePage {
 	@FindBy(xpath = "//div[@class='DayPicker-Caption']//div") // gettext august 2022
 	WebElement currentmonth;
 
-	@FindBy(xpath = "//div[@class='DayPicker-wrapper']//div[2]//*[local-name()='svg']") // rightside forward arrow for
-																						// checkin
+	//rightside forward arrow for checkin
+	@FindBy(xpath = "//div[@class='DayPicker-wrapper']//div[2]//*[local-name()='svg']")
 	WebElement arrow;
 
-	public String getmonth() {
+	public String getmonth() 
+	{
 		waitForFindElementPresent(currentmonth);
 		System.out.println(currentmonth.getText());
 		return currentmonth.getText();
 	}
 
-	public void calender(String month, String date) {
+	public void calender(String month, String date)
+	{
 		System.out.println(month);
 		System.out.println(date);
 		while (true) {
-			if (getmonth().equals(month)) {
+			if (getmonth().equals(month))
+			{
 				break;
 
-			} else {
+			} else
+			{
 				waitForFindElementPresent(arrow);
 				arrow.click();
 			}
@@ -102,10 +106,13 @@ public class landingClearTripPage extends BasePage {
 	}
 
 	public void checkout_calender(String checkout_month, String dates) {
-		while (true) {
-			if (getcheckout_month().equals(checkout_month)) {
+		while (true)
+		{
+			if (getcheckout_month().equals(checkout_month)) 
+			{
 				break;
-			} else {
+			} else 
+			{
 				arrow.click();
 			}
 		}
@@ -114,10 +121,12 @@ public class landingClearTripPage extends BasePage {
 	}
 
 	public void closePopup() {
-		try {
+		try
+		{
 			waitForFindElementPresent(Popup); // popup close method
 			Popup.click();
-		} catch (NoSuchElementException e) {
+		} catch (NoSuchElementException e)
+		{
 			System.out.println("No Popup");
 		}
 	}
@@ -152,11 +161,9 @@ public class landingClearTripPage extends BasePage {
 
 	@FindBy(xpath = "(//div[@class=\"Day-grid flex flex-middle flex-column flex-center\"])[9]") // checkin date picker
 	WebElement Checkin_Date;
-
-	@FindBy(xpath = "(//div[@class=\"p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip\"])[16]") // date
-																														// for
-																														// invalid
-																														// location
+	
+	//date for invalid location
+	@FindBy(xpath = "(//div[@class=\"p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip\"])[16]")
 	WebElement Checkin_for_invalid_scenario;
 
 	public void setdate() {
@@ -169,15 +176,14 @@ public class landingClearTripPage extends BasePage {
 	@FindBy(xpath = "//button[@name='to']")
 	WebElement Checkout_box;
 
-	@FindBy(xpath = "//*[@class=\"c-pointer c-secondary-500\"]") //
+	@FindBy(xpath = "//*[@class=\"c-pointer c-secondary-500\"]") 
 	WebElement Checkout_nxt_arrow;
 
 	@FindBy(id = "prefix__down-chevron") // arrow for checkout date
 	WebElement Checkout_Arrow;
-
-	@FindBy(xpath = "(//div[@class=\"p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip\"])[14]") // date
-																														// for
-																														// checkout
+	
+	//date for checkout
+	@FindBy(xpath = "(//div[@class=\"p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip\"])[14]") 
 	WebElement Checkout_Date;
 
 	@FindBy(name = "travellers") // click on the travellers box
@@ -412,7 +418,6 @@ public class landingClearTripPage extends BasePage {
 	}
 
 	// enter data in passsowrd textbox
-
 	public void enter_pass(String password1) {
 		waitForFindElementPresent(password);
 		password.sendKeys(password1);
@@ -447,7 +452,6 @@ public class landingClearTripPage extends BasePage {
 	}
 	
 	// enter password and mail
-	
 	public void enter_login_password(landingClearTripPage obj3) {
 		try {
 			obj3.enter_email(XLUtils.fetchExcelData("email"));
