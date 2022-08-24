@@ -8,7 +8,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.pageObjects.modifySearchPage;
 
-public class hotelClassFilter extends BaseClass {
+public class guestHouseFilter extends BaseClass {
 	
 	
 	landingClearTripPage obj5;
@@ -24,16 +24,21 @@ public class hotelClassFilter extends BaseClass {
 		obj5.clickontextbox();
 		obj5.enter_checkin_checkout_date(obj5);
 		obj5.Search_btn();
-		hotel.giftcards();
+		hotel.clear_all();
+		hotel.scrollupto_bottom();
 		hotel.guesthouse();
-		//hotel.fivestar_hotelcount();
-//		hotel.hoteldeals();
 		hotel.waitForResult();
 		
 		
 		
 		Assert.assertEquals(hotel.guesthouse_getdata(), hotel.hotelDetailsCount());
 		
+	
+		
 		}
 
 }
+
+
+
+

@@ -48,7 +48,7 @@ public class modifySearchPage extends BasePage {
 	@FindBy(xpath = "(//div[@class=\"flex flex-start p-relative flex-middle\"])[26]")
 	WebElement guestHouse;
 
-	@FindBy(xpath = "(//div[@class=\"flex flex-start p-relative flex-middle\"])[27]")
+	@FindBy(xpath = "(//div[@class=\"flex flex-start p-relative flex-middle\"])[29]")
 	WebElement Apartment;
 
 	//  property - appartment get data
@@ -66,6 +66,20 @@ public class modifySearchPage extends BasePage {
 	// element on footerpage
 	@FindBy(xpath = "//a[contains(text(),\"Gift Cards\")]")
 	WebElement giftcard;
+	
+	
+	// see more link for property type filter
+	@FindBy(xpath="(//div[contains(text(),'See more')])[2]")
+	WebElement seemore_property;
+	
+	
+	//get text for guest house
+	@FindBy(xpath="(//div[@class=\"flex flex-middle flex-between flex-1\"])[26]//span")
+	WebElement gettext;
+	
+	//clear all link 
+	@FindBy(xpath="//div[contains(text(),'Clear all')]")
+	WebElement clearall;
 
 	@FindAll({ @FindBy(xpath = "//button[contains(text(),'View details')]") })
 	List<WebElement> viewDetails;
@@ -111,10 +125,10 @@ public class modifySearchPage extends BasePage {
 		return appartment_data.getText();
 	}
 	
-	public String guesthouse_getdata() {
-		waitForFindElementPresent(guestHouse);
-		System.out.println(guestHouse.getText());
-		return guestHouse.getText();
+	public int guesthouse_getdata() {
+		waitForFindElementPresent(gettext);
+		System.out.println(gettext.getText());
+		return Integer.parseInt(gettext.getText());
 		
 	}
 
@@ -133,10 +147,26 @@ public class modifySearchPage extends BasePage {
 		hoteldeal.click();
 	}
 
-	public void giftcards() {
-		waitForFindElementPresent(Apartment);
+	//scrolluntil guest house is visible
+	public void guesthouse_visible() {
+		waitForFindElementPresent( guestHouse);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", Apartment);
+		js.executeScript("arguments[0].scrollIntoView();", guestHouse);
 	}
 
+	public void seemoreproperty_visible() {
+		waitForFindElementPresent( seemore_property);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", seemore_property);
+		
+	}
+	
+	public void scrollupto_bottom() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		   js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+	}
+	
+	public void clear_all() {
+		waitForFindElementPresent(clearall);
+	}
 }
