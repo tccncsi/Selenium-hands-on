@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.xml.xpath.XPath;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -80,7 +81,39 @@ public class modifySearchPage extends BasePage {
 	//clear all link 
 	@FindBy(xpath="//div[contains(text(),'Clear all')]")
 	WebElement clearall;
+	
+	// see more link for Amenities
+	@FindBy(xpath="//div[contains(text(),\"See more\")]")
+	WebElement seemoreamenities;
+	
+	//bar filter in amenities
+	@FindBy(xpath="(//div[@class=\"flex flex-start p-relative flex-middle\"])[23]")
+	WebElement bar;
+	
+	
+	//bar get data
+	@FindBy(xpath="(//span[contains(text(),32)])[2]")
+	WebElement getdatabar;
 
+	
+	//get text Turyaa chennai
+	@FindBy (xpath="//div[@style='width: 382px;']//h2")
+	WebElement turyachennai;
+	
+	
+	//get loaction of turya hotel
+	@FindBy(xpath="(//p[contains(text(),'Omr Road')])[1]")
+	WebElement turya_location;
+	
+	//click on view details
+	@FindBy(xpath="(//button[contains(text(),\"View details\")])[1]")
+	WebElement view_details_turyaa;
+	
+	
+	//next page (after view details) turya get text
+	@FindBy(xpath="//div[@class=\"flex flex-middle flex-between\"]//h2")
+	WebElement nexttruya;
+	
 	@FindAll({ @FindBy(xpath = "//button[contains(text(),'View details')]") })
 	List<WebElement> viewDetails;
 
@@ -168,5 +201,79 @@ public class modifySearchPage extends BasePage {
 	
 	public void clear_all() {
 		waitForFindElementPresent(clearall);
+				
+		}
+	
+	public void seemore_amenities() {
+		waitForFindElementPresent(seemoreamenities);
+		seemoreamenities.click();
 	}
+	
+	public void baar() {
+		waitForFindElementPresent(bar);
+		bar.click();
+	}
+	
+	public int getdata_bar() {
+		waitForFindElementPresent(getdatabar);
+		System.out.println(getdatabar.getText());
+		return Integer.parseInt(getdatabar.getText());
+	}
+	
+	
+	//gettext for Turya chennai
+	public String get_turyaachennai() {
+		waitForFindElementPresent(turyachennai);
+		System.out.println(turyachennai.getText());
+		return turyachennai.getText();
+	}
+	
+	
+	//get turya location
+	public String get_turyaloc() {
+		waitForFindElementPresent(turya_location);
+		System.out.println(turya_location.getText());
+		return turya_location.getText();
+	}
+	
+
+	//price for turya hotel
+
+
+ 
+   public void RemoveCharString(){
+ 
+	String str = driver.findElement(By.xpath("//div[@class=\"mt-2 mb-1\"]//span")).getText();
+ 
+//String result = str.substring(0, index) + str.substring(index+1);
+ 
+  String result = str.substring(0, 0) + str.substring(0+1);
+   System.out.println(result);
+   
+   result = result.replaceAll(",","");
+		   System.out.println(result);
+		   
+ 
+}
+   public void viewdetailsturyaa() {
+	   waitForFindElementPresent(view_details_turyaa);
+	   view_details_turyaa.click();
+   }
+   
+   public String get_turya_nextpage() {
+	   waitForFindElementPresent(nexttruya);
+	  System.out.println(nexttruya.getText());
+	  return nexttruya.getText();
+	  }
+   
+   public void remove_chennai() {
+	   String str1 = driver.findElement(By.xpath("//span[contains(text(),\"Omr Road, Chennai\")]")).getText();
+	   String[] str2 = str1.split(",");
+	   System.out.println(str2[0]);
+   }
+   
+   //wait for text to be visible
+   public void waitfortext() {
+	   waitForFindElementPresent(nexttruya);
+   }
 }

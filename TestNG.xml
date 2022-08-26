@@ -27,7 +27,9 @@
 						<class name = "com.testCases.traveller_fromlist" />  
 						<class name = "com.testCases.travellers" />
 						<class name= "com.testCases.uiAssertionHotelSearchPage" />    -->
-						<class name = "com.testCases.hotelClassFilter" />
+	<!--					<class name = "com.testCases.hotelClassFilter" />  
+						<class name = "com.testCases.barFilter" />  -->
+						<class name = "com.testCases.turyaChennaiHotel" />
 
 		</classes>
 
