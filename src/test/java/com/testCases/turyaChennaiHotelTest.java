@@ -7,16 +7,16 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.pageObjects.modifySearchPage;
 
-public class turyaChennaiHotel extends BaseClass {
+public class turyaChennaiHotelTest extends BaseClass {
 	
 	landingClearTripPage hotel;
 	modifySearchPage first;
 	
-	String H = "Turyaa Chennai";
-	String loc = "Omr Road";
+//	String H = "Turyaa Chennai";
+//	String loc = "Omr Road";
 	
 	
-	@Test
+	@Test (enabled = true)
 	public void firsthotel() {
 		
 		landingClearTripPage hotel = new landingClearTripPage (driver);

@@ -7,7 +7,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.pageObjects.modifySearchPage;
 
-public class absoluteSearchHotelFlow extends BaseClass {
+public class absoluteSearchHotelFlowTest extends BaseClass {
 	
 	landingClearTripPage obj4;
 	modifySearchPage room2;

@@ -8,7 +8,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.utilities.XLUtils;
 
-public class createUser extends BaseClass {
+public class createUserTest extends BaseClass {
 
 	landingClearTripPage obj3;
 

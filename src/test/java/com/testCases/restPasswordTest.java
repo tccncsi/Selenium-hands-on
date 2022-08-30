@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.utilities.XLUtils;
-public class restPassword   extends BaseClass {
+public class restPasswordTest   extends BaseClass {
 	landingClearTripPage obj1;
 	
 	@Test

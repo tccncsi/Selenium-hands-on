@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 
-public class invalidDestination extends BaseClass {
+public class invalidDestinationTest extends BaseClass {
 	 
 	landingClearTripPage location;
 	

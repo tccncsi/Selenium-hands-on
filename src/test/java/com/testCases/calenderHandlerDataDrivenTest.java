@@ -7,7 +7,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.utilities.*;
 
-public class calenderHandlerDataDriven extends BaseClass {
+public class calenderHandlerDataDrivenTest extends BaseClass {
 
 	landingClearTripPage calender;
 

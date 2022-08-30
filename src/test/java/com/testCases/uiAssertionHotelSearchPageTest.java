@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 
-public class uiAssertionHotelSearchPage extends BaseClass {
+public class uiAssertionHotelSearchPageTest extends BaseClass {
 	landingClearTripPage first ;
 	String location = "Chennai";
 	String heading = "Search for hotels";

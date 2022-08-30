@@ -8,7 +8,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.pageObjects.modifySearchPage;
 
-public class guestHouseFilter extends BaseClass {
+public class guestHouseFilterTest extends BaseClass {
 	
 	
 	landingClearTripPage obj5;

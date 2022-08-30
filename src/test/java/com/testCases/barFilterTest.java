@@ -7,7 +7,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.pageObjects.modifySearchPage;
 
-public class barFilter extends BaseClass {
+public class barFilterTest extends BaseClass {
 
 	
 	landingClearTripPage bar1;

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import	com.utilities.XLUtils;
-public class searchHotelCompleteFlow  extends BaseClass{
+public class searchHotelCompleteFlowTest  extends BaseClass{
 	
 	
 	landingClearTripPage obj2;

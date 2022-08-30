@@ -8,7 +8,7 @@ import com.pageObjects.modifySearchPage;
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 
-public class addRoomFunctionality extends BaseClass {
+public class addRoomFunctionalityTest extends BaseClass {
 	landingClearTripPage room;
 	modifySearchPage room1;
 	String label = "Where to?";

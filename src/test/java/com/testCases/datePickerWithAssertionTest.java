@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 
-public class datePickerWithAssertion extends BaseClass {
+public class datePickerWithAssertionTest extends BaseClass {
 	
 landingClearTripPage third ;
 	String date_checkin = "Fri, Sep 9";

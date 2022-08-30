@@ -11,7 +11,7 @@
 
 	<test name="Demo Test">
 		<parameter name="browser" value="chrome" />
-		<!--   	<parameter name="url"  value="www.google.com"/>  -->
+<!-- 		  	<parameter name="url"  value="www.google.com"/>  -->
 		<classes>
 
 <!--				    <class name="com.testCases.absoluteSearchHotelFlow"/>   
@@ -27,7 +27,7 @@
 						<class name = "com.testCases.traveller_fromlist" />  
 						<class name = "com.testCases.travellers" />
 						<class name= "com.testCases.uiAssertionHotelSearchPage" />    -->
-	<!--					<class name = "com.testCases.hotelClassFilter" />  
+	<!--				<class name = "com.testCases.hotelClassFilter" />  
 						<class name = "com.testCases.barFilter" />  -->
 						<class name = "com.testCases.turyaChennaiHotel" />
 

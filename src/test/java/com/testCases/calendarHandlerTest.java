@@ -7,7 +7,7 @@ import com.utilities.ReadConfig;
 
 import bsh.Console;
 
-public class calendarHandler {
+public class calendarHandlerTest {
 
 	public static void main(String[] args) throws Exception {
 

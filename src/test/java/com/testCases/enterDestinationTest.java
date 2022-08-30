@@ -6,7 +6,7 @@ import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 
 
-public class enterDestination extends BaseClass {
+public class enterDestinationTest extends BaseClass {
 	landingClearTripPage second;
 	
 	@Test

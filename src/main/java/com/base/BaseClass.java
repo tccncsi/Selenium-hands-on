@@ -29,9 +29,9 @@ public  class BaseClass {
 	public Logger logger;
 
 	
-	@Parameters("browser" )
+	@Parameters({"browser" , "url"})
 	@BeforeMethod
-	public void setup(String brwname)  
+	public void setup(String brwname ,String url)  
 	{
 		
 		
@@ -72,7 +72,7 @@ public  class BaseClass {
 		}
 		  
 		driver.manage().deleteAllCookies();
-		driver.get(baseURL);
+		driver.get(url);
 		logger.info("url is opened");
 		driver.manage().window().maximize();
 	}
