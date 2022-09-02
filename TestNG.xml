@@ -28,8 +28,10 @@
 						<class name = "com.testCases.travellers" />
 						<class name= "com.testCases.uiAssertionHotelSearchPage" />    -->
 	<!--				<class name = "com.testCases.hotelClassFilter" />  
-						<class name = "com.testCases.barFilter" />  -->
-						<class name = "com.testCases.turyaChennaiHotel" />
+						<class name = "com.testCases.barFilter" />  
+						<class name = "com.testCases.turyaChennaiHotelTest" />  -->
+						<class name = "com.testCases.addroomResultSearchPageTest" />
+						
 
 		</classes>
 

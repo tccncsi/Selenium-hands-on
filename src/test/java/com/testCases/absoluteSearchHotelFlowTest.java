@@ -1,11 +1,14 @@
 package com.testCases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
 import com.pageObjects.landingClearTripPage;
 import com.pageObjects.modifySearchPage;
+import com.utilities.XLUtils;
 
 public class absoluteSearchHotelFlowTest extends BaseClass {
 	
@@ -48,8 +51,15 @@ public class absoluteSearchHotelFlowTest extends BaseClass {
 			obj4.Search_btn();
 	   }
 //		Assert.assertEquals(room2.traveller_box(), traveller_data);
-		Assert.assertEquals(room2.getcheckin_date(), date1);
+		try {
+			Assert.assertEquals(room2.getcheckin_date(),XLUtils.fetchExcelData("date1"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Assert.assertEquals(room2.getCheckout_date(), date2);
 		Assert.assertEquals(room2.adult_child_data(), traveller_modifypage);
+
+		
 	}
 }

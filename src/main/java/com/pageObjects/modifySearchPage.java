@@ -41,6 +41,10 @@ public class modifySearchPage extends BasePage {
 
 	@FindBy(xpath = "//button[@name=\"travellers\"]//div")
 	WebElement traveller_box;
+	
+	//add room
+	@FindBy(xpath="//span[contains(text(),\"Add room\")]")
+	WebElement addroom;
 
 	@FindBy(id = "prefix__hotels")
 	WebElement Hotel_Logo;
@@ -97,7 +101,7 @@ public class modifySearchPage extends BasePage {
 
 	
 	//get text Turyaa chennai
-	@FindBy (xpath="//div[@style='width: 382px;']//h2")
+	@FindBy (xpath="//h2")
 	WebElement turyachennai;
 	
 	
@@ -113,6 +117,29 @@ public class modifySearchPage extends BasePage {
 	//next page (after view details) turya get text
 	@FindBy(xpath="//div[@class=\"flex flex-middle flex-between\"]//h2")
 	WebElement nexttruya;
+	
+	
+	@FindBy(xpath="//p[@class=\"p-2 fs-3 c-secondary-500 hover:td-underline c-pointer\"]")
+	WebElement addroomlink;
+	
+	//wait for Quick select in traveller box
+	@FindBy (xpath="//p[@class=\"fs-2 c-neutral-400 p-2\"]")
+	WebElement quickselect;
+	
+	//click on plus sign adults
+	@FindBy(xpath="(//li[@class=\"flex-inline\"])[6]")
+	WebElement plussign;
+	
+	//click on view details button
+	@FindBy(xpath="//button[contains(text(),\"View details\")]")
+	WebElement viewdetails;
+	
+	//modify search button
+	@FindBy(xpath="//button[contains(text(),\"Modify search\")]")
+	WebElement modifysearch;
+	
+
+	
 	
 	@FindAll({ @FindBy(xpath = "//button[contains(text(),'View details')]") })
 	List<WebElement> viewDetails;
@@ -140,6 +167,11 @@ public class modifySearchPage extends BasePage {
 		return traveller_box.getText();
 	}
 
+	public void click_ontravellerbox() {
+		waitForFindElementPresent(traveller_box);
+		traveller_box.click();
+		
+	}
 	public void guesthouse() {
 		waitForFindElementPresent(guestHouse);
 		guestHouse.click();
@@ -255,6 +287,39 @@ public class modifySearchPage extends BasePage {
 		   
  
 }
+   
+   public void get_price_turrya() {
+	 String price = driver.findElement(By.xpath("//div[@class=\"mt-2 mb-1\"]//span ")).getText();
+	 String oldprice = price.substring(0, 0)+ price.substring(0+1);
+	 System.out.println(oldprice);
+	 oldprice  = oldprice.replaceAll(",", "");
+	 System.out.println(oldprice);
+//	 Integer.parseInt(oldprice);
+	 
+
+	   String room = driver.findElement(By.xpath("//button[@name=\"travellers\"]//div")).getText();
+	   char counts = room.charAt(0);
+	   System.out.println(counts);
+	   int count =Integer.parseInt(String.valueOf(counts)); 
+	   System.out.println(count);
+	 int newprice = Integer.parseInt(oldprice) * count;
+	 System.out.println(newprice);
+			 
+   }
+   
+   
+   //separate 2 from traveler data
+   public void number_of_rooms()
+   {
+	   String room = driver.findElement(By.xpath("//button[@name=\"travellers\"]//div")).getText();
+	   char count = room.charAt(0);
+	   
+//	   String count = room.substring(0, 0)+ room.substring(0+1);
+	 
+	   System.out.println(count);
+	   
+   }
+
    public void viewdetailsturyaa() {
 	   waitForFindElementPresent(view_details_turyaa);
 	   view_details_turyaa.click();
@@ -276,4 +341,44 @@ public class modifySearchPage extends BasePage {
    public void waitfortext() {
 	   waitForFindElementPresent(nexttruya);
    }
+   
+   //add room from drop down
+   public void addroom_link() {
+	   waitForFindElementPresent(addroom);
+	  addroom.click();
+   }
+   
+   //click on add more rooms and travellers 
+   public void clickon_addroomlink() {
+	   waitForFindElementPresent(addroomlink);
+	   addroomlink.click();
+   }
+   
+   //wait for quick select to be visible (traveller box)
+   public void quick_select() {
+	   waitForFindElementPresent(quickselect);
+
+   }
+   
+   //modify search btn
+   public void modifysrach_btn() {
+	   waitForFindElementPresent(modifysearch);
+	   modifysearch.click();
+   }
+   
+   //plus sign adults
+   public void plussign_adults() {
+	   waitForFindElementPresent(plussign);
+	   plussign.click();
+   }
+   
+   //click on view details btn
+   public void viewdetails_btn() {
+	   waitForFindElementPresent(viewdetails);
+	   viewdetails.click();
+	   
+   }
+   
+  
 }
+

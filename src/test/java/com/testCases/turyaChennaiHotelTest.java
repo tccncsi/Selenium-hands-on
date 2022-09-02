@@ -12,8 +12,9 @@ public class turyaChennaiHotelTest extends BaseClass {
 	landingClearTripPage hotel;
 	modifySearchPage first;
 	
+	
 //	String H = "Turyaa Chennai";
-//	String loc = "Omr Road";
+	String loc = "Omr Road";
 	
 	
 	@Test (enabled = true)
@@ -32,9 +33,11 @@ public class turyaChennaiHotelTest extends BaseClass {
 		first.RemoveCharString();
 		first.viewdetailsturyaa();
 		first.waitfortext();
-		Assert.assertEquals(first.get_turyaachennai(), first.get_turya_nextpage());
+		String actuallocation = first.get_turyaachennai();
+		String expectedlocation  = first.get_turya_nextpage();
+		Assert.assertEquals(actuallocation, expectedlocation);
 		first.remove_chennai();
-//		Assert.assertEquals(first.get_turyaloc(), loc);
+		Assert.assertEquals(first.get_turyaloc(), loc);
 	}
 	
 
