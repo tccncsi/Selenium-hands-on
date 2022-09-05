@@ -41,9 +41,9 @@ public class modifySearchPage extends BasePage {
 
 	@FindBy(xpath = "//button[@name=\"travellers\"]//div")
 	WebElement traveller_box;
-	
-	//add room
-	@FindBy(xpath="//span[contains(text(),\"Add room\")]")
+
+	// add room
+	@FindBy(xpath = "//span[contains(text(),\"Add room\")]")
 	WebElement addroom;
 
 	@FindBy(id = "prefix__hotels")
@@ -56,7 +56,7 @@ public class modifySearchPage extends BasePage {
 	@FindBy(xpath = "(//div[@class=\"flex flex-start p-relative flex-middle\"])[29]")
 	WebElement Apartment;
 
-	//  property - appartment get data
+	// property - appartment get data
 	@FindBy(xpath = "(//span[@class='fs-2 c-neutral-400'])[29]")
 	WebElement appartment_data;
 
@@ -71,76 +71,68 @@ public class modifySearchPage extends BasePage {
 	// element on footerpage
 	@FindBy(xpath = "//a[contains(text(),\"Gift Cards\")]")
 	WebElement giftcard;
-	
-	
+
 	// see more link for property type filter
-	@FindBy(xpath="(//div[contains(text(),'See more')])[2]")
+	@FindBy(xpath = "(//div[contains(text(),'See more')])[2]")
 	WebElement seemore_property;
-	
-	
-	//get text for guest house
-	@FindBy(xpath="(//div[@class=\"flex flex-middle flex-between flex-1\"])[26]//span")
+
+	// get text for guest house
+	@FindBy(xpath = "(//div[@class=\"flex flex-middle flex-between flex-1\"])[26]//span")
 	WebElement gettext;
-	
-	//clear all link 
-	@FindBy(xpath="//div[contains(text(),'Clear all')]")
+
+	// clear all link
+	@FindBy(xpath = "//div[contains(text(),'Clear all')]")
 	WebElement clearall;
-	
+
 	// see more link for Amenities
-	@FindBy(xpath="//div[contains(text(),\"See more\")]")
+	@FindBy(xpath = "//div[contains(text(),\"See more\")]")
 	WebElement seemoreamenities;
-	
-	//bar filter in amenities
-	@FindBy(xpath="(//div[@class=\"flex flex-start p-relative flex-middle\"])[23]")
+
+	// bar filter in amenities
+	@FindBy(xpath = "(//div[@class=\"flex flex-start p-relative flex-middle\"])[23]")
 	WebElement bar;
-	
-	
-	//bar get data
-	@FindBy(xpath="(//span[contains(text(),32)])[2]")
+
+	// bar get data
+	@FindBy(xpath = "(//span[contains(text(),32)])[2]")
 	WebElement getdatabar;
 
-	
-	//get text Turyaa chennai
-	@FindBy (xpath="//h2")
+	// get text Turyaa chennai
+	@FindBy(xpath = "//h2")
 	WebElement turyachennai;
-	
-	
-	//get loaction of turya hotel
-	@FindBy(xpath="(//p[contains(text(),'Omr Road')])[1]")
+
+	// get loaction of turya hotel
+	@FindBy(xpath = "(//p[contains(text(),'Omr Road')])[1]")
 	WebElement turya_location;
-	
-	//click on view details
-	@FindBy(xpath="(//button[contains(text(),\"View details\")])[1]")
+
+	// click on view details
+	@FindBy(xpath = "(//button[contains(text(),\"View details\")])[1]")
 	WebElement view_details_turyaa;
-	
-	
-	//next page (after view details) turya get text
-	@FindBy(xpath="//div[@class=\"flex flex-middle flex-between\"]//h2")
+
+	// next page (after view details) turya get text
+	@FindBy(xpath = "//div[@class=\"flex flex-middle flex-between\"]//h2")
 	WebElement nexttruya;
-	
-	
-	@FindBy(xpath="//p[@class=\"p-2 fs-3 c-secondary-500 hover:td-underline c-pointer\"]")
+
+	@FindBy(xpath = "//p[@class=\"p-2 fs-3 c-secondary-500 hover:td-underline c-pointer\"]")
 	WebElement addroomlink;
-	
-	//wait for Quick select in traveller box
-	@FindBy (xpath="//p[@class=\"fs-2 c-neutral-400 p-2\"]")
+
+	// wait for Quick select in traveller box
+	@FindBy(xpath = "//p[@class=\"fs-2 c-neutral-400 p-2\"]")
 	WebElement quickselect;
-	
-	//click on plus sign adults
-	@FindBy(xpath="(//li[@class=\"flex-inline\"])[6]")
+
+	// click on plus sign adults
+	@FindBy(xpath = "(//li[@class=\"flex-inline\"])[6]")
 	WebElement plussign;
-	
-	//click on view details button
-	@FindBy(xpath="//button[contains(text(),\"View details\")]")
+
+	// click on view details button
+	@FindBy(xpath = "//button[contains(text(),\"View details\")]")
 	WebElement viewdetails;
-	
-	//modify search button
-	@FindBy(xpath="//button[contains(text(),\"Modify search\")]")
+
+	// modify search button
+	@FindBy(xpath = "//button[contains(text(),\"Modify search\")]")
 	WebElement modifysearch;
 	
+	
 
-	
-	
 	@FindAll({ @FindBy(xpath = "//button[contains(text(),'View details')]") })
 	List<WebElement> viewDetails;
 
@@ -170,8 +162,9 @@ public class modifySearchPage extends BasePage {
 	public void click_ontravellerbox() {
 		waitForFindElementPresent(traveller_box);
 		traveller_box.click();
-		
+
 	}
+
 	public void guesthouse() {
 		waitForFindElementPresent(guestHouse);
 		guestHouse.click();
@@ -189,12 +182,12 @@ public class modifySearchPage extends BasePage {
 		System.out.println(appartment_data.getText());
 		return appartment_data.getText();
 	}
-	
+
 	public int guesthouse_getdata() {
 		waitForFindElementPresent(gettext);
 		System.out.println(gettext.getText());
 		return Integer.parseInt(gettext.getText());
-		
+
 	}
 
 	public String fivestar_hotelcount() {
@@ -212,173 +205,171 @@ public class modifySearchPage extends BasePage {
 		hoteldeal.click();
 	}
 
-	//scrolluntil guest house is visible
+	// scrolluntil guest house is visible
 	public void guesthouse_visible() {
-		waitForFindElementPresent( guestHouse);
+		waitForFindElementPresent(guestHouse);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", guestHouse);
 	}
 
 	public void seemoreproperty_visible() {
-		waitForFindElementPresent( seemore_property);
+		waitForFindElementPresent(seemore_property);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", seemore_property);
-		
+
 	}
-	
+
 	public void scrollupto_bottom() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		   js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
-	
+
 	public void clear_all() {
 		waitForFindElementPresent(clearall);
-				
-		}
-	
+
+	}
+
 	public void seemore_amenities() {
 		waitForFindElementPresent(seemoreamenities);
 		seemoreamenities.click();
 	}
-	
+
 	public void baar() {
 		waitForFindElementPresent(bar);
 		bar.click();
 	}
-	
+
 	public int getdata_bar() {
 		waitForFindElementPresent(getdatabar);
 		System.out.println(getdatabar.getText());
 		return Integer.parseInt(getdatabar.getText());
 	}
-	
-	
-	//gettext for Turya chennai
+
+	// gettext for Turya chennai
 	public String get_turyaachennai() {
 		waitForFindElementPresent(turyachennai);
 		System.out.println(turyachennai.getText());
 		return turyachennai.getText();
 	}
-	
-	
-	//get turya location
+
+	// get turya location
 	public String get_turyaloc() {
 		waitForFindElementPresent(turya_location);
 		System.out.println(turya_location.getText());
 		return turya_location.getText();
 	}
-	
 
-	//price for turya hotel
+	// price for turya hotel
 
+	public void RemoveCharString() {
 
- 
-   public void RemoveCharString(){
- 
-	String str = driver.findElement(By.xpath("//div[@class=\"mt-2 mb-1\"]//span")).getText();
- 
+		String str = driver.findElement(By.xpath("//div[@class=\"mt-2 mb-1\"]//span")).getText();
+
 //String result = str.substring(0, index) + str.substring(index+1);
- 
-  String result = str.substring(0, 0) + str.substring(0+1);
-   System.out.println(result);
-   
-   result = result.replaceAll(",","");
-		   System.out.println(result);
-		   
- 
-}
-   
-   public void get_price_turrya() {
-	 String price = driver.findElement(By.xpath("//div[@class=\"mt-2 mb-1\"]//span ")).getText();
-	 String oldprice = price.substring(0, 0)+ price.substring(0+1);
-	 System.out.println(oldprice);
-	 oldprice  = oldprice.replaceAll(",", "");
-	 System.out.println(oldprice);
+
+		String result = str.substring(0, 0) + str.substring(0 + 1);
+		System.out.println(result);
+
+		result = result.replaceAll(",", "");
+		System.out.println(result);
+
+	}
+
+	public void get_price_turrya() {
+		String price = driver.findElement(By.xpath("//div[@class=\"mt-2 mb-1\"]//span ")).getText();
+		String[] price1 = price.split("\n");
+		String oldprice;
+		if (price1.length > 1) {
+			System.out.println(price1[1]);
+			oldprice = price1[1].substring(0, 0) + price1[1].substring(0 + 1);
+		} else {
+			System.out.println(price1[0]);
+			oldprice = price1[0].substring(0, 0) + price1[0].substring(0 + 1);
+		}
+		System.out.println("Oldprice" + oldprice);
+		oldprice = oldprice.replaceAll(",", "");
+		System.out.println("OldPrice without comma and rupees sign" + oldprice);
 //	 Integer.parseInt(oldprice);
-	 
 
-	   String room = driver.findElement(By.xpath("//button[@name=\"travellers\"]//div")).getText();
-	   char counts = room.charAt(0);
-	   System.out.println(counts);
-	   int count =Integer.parseInt(String.valueOf(counts)); 
-	   System.out.println(count);
-	 int newprice = Integer.parseInt(oldprice) * count;
-	 System.out.println(newprice);
-			 
-   }
-   
-   
-   //separate 2 from traveler data
-   public void number_of_rooms()
-   {
-	   String room = driver.findElement(By.xpath("//button[@name=\"travellers\"]//div")).getText();
-	   char count = room.charAt(0);
-	   
+		String room = driver.findElement(By.xpath("//button[@name=\"travellers\"]//div")).getText();
+		char counts = room.charAt(0);
+		System.out.println("Number of rooms after modification" + counts);
+		int count = Integer.parseInt(String.valueOf(counts));
+		System.out.println("Actual Room count " + count);
+		int newprice = Integer.parseInt(oldprice) * count;
+		System.out.println("Old price into number of rooms" + newprice);
+
+	}
+
+	// separate 2 from traveler data
+	public void number_of_rooms() {
+		String room = driver.findElement(By.xpath("//button[@name=\"travellers\"]//div")).getText();
+		char count = room.charAt(0);
+
 //	   String count = room.substring(0, 0)+ room.substring(0+1);
-	 
-	   System.out.println(count);
-	   
-   }
 
-   public void viewdetailsturyaa() {
-	   waitForFindElementPresent(view_details_turyaa);
-	   view_details_turyaa.click();
-   }
-   
-   public String get_turya_nextpage() {
-	   waitForFindElementPresent(nexttruya);
-	  System.out.println(nexttruya.getText());
-	  return nexttruya.getText();
-	  }
-   
-   public void remove_chennai() {
-	   String str1 = driver.findElement(By.xpath("//span[contains(text(),\"Omr Road, Chennai\")]")).getText();
-	   String[] str2 = str1.split(",");
-	   System.out.println(str2[0]);
-   }
-   
-   //wait for text to be visible
-   public void waitfortext() {
-	   waitForFindElementPresent(nexttruya);
-   }
-   
-   //add room from drop down
-   public void addroom_link() {
-	   waitForFindElementPresent(addroom);
-	  addroom.click();
-   }
-   
-   //click on add more rooms and travellers 
-   public void clickon_addroomlink() {
-	   waitForFindElementPresent(addroomlink);
-	   addroomlink.click();
-   }
-   
-   //wait for quick select to be visible (traveller box)
-   public void quick_select() {
-	   waitForFindElementPresent(quickselect);
+		System.out.println("Number of rooms after modification " + count);
 
-   }
-   
-   //modify search btn
-   public void modifysrach_btn() {
-	   waitForFindElementPresent(modifysearch);
-	   modifysearch.click();
-   }
-   
-   //plus sign adults
-   public void plussign_adults() {
-	   waitForFindElementPresent(plussign);
-	   plussign.click();
-   }
-   
-   //click on view details btn
-   public void viewdetails_btn() {
-	   waitForFindElementPresent(viewdetails);
-	   viewdetails.click();
-	   
-   }
-   
-  
+	}
+
+	public void viewdetailsturyaa() {
+		waitForFindElementPresent(view_details_turyaa);
+		view_details_turyaa.click();
+	}
+
+	public String get_turya_nextpage() {
+		waitForFindElementPresent(nexttruya);
+		System.out.println(nexttruya.getText());
+		return nexttruya.getText();
+	}
+
+	public void remove_chennai() {
+		String str1 = driver.findElement(By.xpath("//span[contains(text(),\"Omr Road, Chennai\")]")).getText();
+		String[] str2 = str1.split(",");
+		System.out.println(str2[0]);
+	}
+
+	// wait for text to be visible
+	public void waitfortext() {
+		waitForFindElementPresent(nexttruya);
+	}
+
+	// add room from drop down
+	public void addroom_link() {
+		waitForFindElementPresent(addroom);
+		addroom.click();
+	}
+
+	// click on add more rooms and travellers
+	public void clickon_addroomlink() {
+		waitForFindElementPresent(addroomlink);
+		addroomlink.click();
+	}
+
+	// wait for quick select to be visible (traveller box)
+	public void quick_select() {
+		waitForFindElementPresent(quickselect);
+
+	}
+
+	// modify search btn
+	public void modifysrach_btn() {
+		waitForFindElementPresent(modifysearch);
+		modifysearch.click();
+	}
+
+	// plus sign adults
+	public void plussign_adults() {
+		waitForFindElementPresent(plussign);
+		plussign.click();
+	}
+
+	// click on view details btn
+	public void viewdetails_btn() {
+		waitForFindElementPresent(viewdetails);
+		viewdetails.click();
+
+	}
+	
+	
 }
-

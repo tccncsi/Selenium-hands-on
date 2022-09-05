@@ -34,11 +34,23 @@ public class addroomResultSearchPageTest extends BaseClass {
 //		addroom.get_price_turrya();
 		addroom.modifysrach_btn();
 		addroom.clear_all();
-		addroom.number_of_rooms();
+//		addroom.number_of_rooms();
 		addroom.get_price_turrya();
 		addroom.viewdetails_btn();
 		tallyprice.waitforHotelName();
 		tallyprice.viewdetail_turryaprice();
+		tallyprice.scrolluntil_viewmap_visible();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		tallyprice.click_view_map();
+		driver.switchTo().frame("//iframe[@id=\"mapIframe\"]");
+		tallyprice.waituntil_maploads();
+		tallyprice.click_plussign();
+//		driver.switchTo().defaultContent();
 		
 		
 		
