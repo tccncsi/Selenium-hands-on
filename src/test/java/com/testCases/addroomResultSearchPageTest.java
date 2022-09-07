@@ -47,7 +47,7 @@ public class addroomResultSearchPageTest extends BaseClass {
 			e.printStackTrace();
 		}
 		tallyprice.click_view_map();
-		driver.switchTo().frame("//iframe[@id=\"mapIframe\"]");
+		tallyprice. switchframe_plussign();
 		tallyprice.waituntil_maploads();
 		tallyprice.click_plussign();
 //		driver.switchTo().defaultContent();

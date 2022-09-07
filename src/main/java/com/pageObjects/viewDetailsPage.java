@@ -27,7 +27,7 @@ public class viewDetailsPage extends BasePage {
 		WebElement viewmap;
 	
 		//click on zoom in (plus sign)
-		@FindBy(xpath="(//iframe[@title='Criteo DIS iframe'])[3]")
+		@FindBy(xpath="//button[@aria-label=\"Zoom in\"]")
 		WebElement plussign;
 		
 	//wait for hotel name 
@@ -79,8 +79,10 @@ public class viewDetailsPage extends BasePage {
 			plussign.click();
 		}
 
-	
-	
+	   // switch to frame in map view
+		public void switchframe_plussign() {
+			driver.switchTo().frame("mapIframe");
+		}
  
 	
 
