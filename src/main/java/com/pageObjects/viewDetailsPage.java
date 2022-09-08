@@ -62,7 +62,7 @@ public class viewDetailsPage extends BasePage {
 		js.executeScript("arguments[0].scrollIntoView();", viewmap);
 	}
 	
-	 //click on view map
+	   //click on view map
 		public void click_view_map() {
 			waitForFindElementPresent(viewmap);
 			viewmap.click();
@@ -73,11 +73,20 @@ public class viewDetailsPage extends BasePage {
 			waitForFindElementPresent(plussign);
 		}
 		
-		//click on plus sign
+		//click on plus sign until the button is disabled.
 		public void click_plussign() {
 			waitForFindElementPresent(plussign);
-			plussign.click();
+			
+		while(true) {
+			if(plussign.isEnabled()){
+				plussign.click();
+					}
+			else {
+				break;
+			}
+		}	
 		}
+		
 
 	   // switch to frame in map view
 		public void switchframe_plussign() {

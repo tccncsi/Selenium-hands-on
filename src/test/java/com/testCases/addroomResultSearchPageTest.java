@@ -50,7 +50,7 @@ public class addroomResultSearchPageTest extends BaseClass {
 		tallyprice. switchframe_plussign();
 		tallyprice.waituntil_maploads();
 		tallyprice.click_plussign();
-//		driver.switchTo().defaultContent();
+
 		
 		
 		
