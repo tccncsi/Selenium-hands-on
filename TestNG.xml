@@ -30,7 +30,8 @@
 	<!--				<class name = "com.testCases.hotelClassFilter" />  
 						<class name = "com.testCases.barFilter" />  
 						<class name = "com.testCases.turyaChennaiHotelTest" />  -->
-						<class name = "com.testCases.addroomResultSearchPageTest" />
+			<!--			<class name = "com.testCases.addroomResultSearchPageTest" />   -->
+							<class name = "com.testCases.paymentMethodUPITest" /> 
 						
 
 		</classes>

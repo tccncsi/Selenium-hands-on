@@ -1,5 +1,7 @@
 package com.pageObjects;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +31,23 @@ public class viewDetailsPage extends BasePage {
 		//click on zoom in (plus sign)
 		@FindBy(xpath="//button[@aria-label=\"Zoom in\"]")
 		WebElement plussign;
+		
+		//click on zoomout(minus sign)
+		@FindBy (xpath="//button[@aria-label=\"Zoom out\"]")
+		WebElement zoomout;
+		
+		//get hotel name from view map
+		@FindBy (xpath="/html[1]/body[1]/div[4]/div[1]/div[1]/div[1]/div[1]/h2[1]")
+		WebElement getnamefrommap;
+		
+		//click on close button for map
+		@FindBy(xpath="(//*[name()='svg'][@class='c-pointer c-neutral-700'])[1]")
+		WebElement closemap;
+		
+		//Click on first book
+		@FindBy (xpath="(//button[contains(text(),\"Book\")])[1]")
+		WebElement bookhotel;
+	
 		
 	//wait for hotel name 
 	public void waitforHotelName() {
@@ -93,6 +112,47 @@ public class viewDetailsPage extends BasePage {
 			driver.switchTo().frame("mapIframe");
 		}
  
+		//click on zoom out sign
+		public void zoomout() {
+			waitForFindElementPresent(zoomout);
+			zoomout.click();
+			
+		}
+		
+		public void getacktomainframe() {
+			driver.switchTo().defaultContent();
+		}
+		
+		public String getHotelName() {
+			waitForFindElementPresent(hotelname);
+			System.out.println(hotelname.getText());
+			return hotelname.getText();
+					
+		}
+		
+		public String hotelnameviewmap() {
+			waitForFindElementPresent(getnamefrommap);
+			System.out.println(getnamefrommap.getText());
+			return getnamefrommap.getText();
+		}
+		
+		public void closemap() {
+			waitForFindElementPresent(closemap);
+			closemap.click();
+		}
+		
+		public void bookfirsthotelRoom() {
+			waitForFindElementPresent(bookhotel);
+			bookhotel.click();
+		}
+		
+		public void switchtonewtab() {
+			 ArrayList<String> windsinfo = new ArrayList<String>(driver.getWindowHandles());
+		        driver.switchTo().window(windsinfo.get(1));
+		        
+			
+		}
 	
+
 
 }
