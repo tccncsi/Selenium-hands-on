@@ -1,6 +1,9 @@
 package com.base;
 
 
+import java.io.IOException;
+import java.util.PriorityQueue;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,10 +13,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.pageObjects.airtelHomePage;
 import com.paulhammant.ngwebdriver.NgWebDriver;
 import com.utilities.ReadConfig;
+import com.utilities.XLUtils;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -30,7 +39,7 @@ public  class BaseClass {
 
 	
 	@Parameters("browser" )
-	@BeforeMethod
+	@BeforeMethod 
 	public void setup(String brwname )  
 	{
 		
@@ -77,7 +86,7 @@ public  class BaseClass {
 		driver.manage().window().maximize();
 	}
 	
-	
+	    
 		
 	@AfterMethod
 	public void teardown()

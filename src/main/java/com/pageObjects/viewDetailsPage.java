@@ -152,6 +152,8 @@ public class viewDetailsPage extends BasePage {
 		        
 			
 		}
+		
+		
 	
 
 

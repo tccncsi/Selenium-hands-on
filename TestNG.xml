@@ -26,13 +26,19 @@
 	                	<class name = "com.testCases.searchHotelCompleteFlow" />  
 						<class name = "com.testCases.traveller_fromlist" />  
 						<class name = "com.testCases.travellers" />
-						<class name= "com.testCases.uiAssertionHotelSearchPage" />    -->
-	<!--				<class name = "com.testCases.hotelClassFilter" />  
+						<class name= "com.testCases.uiAssertionHotelSearchPage" />    
+					<class name = "com.testCases.hotelClassFilter" />  
 						<class name = "com.testCases.barFilter" />  
-						<class name = "com.testCases.turyaChennaiHotelTest" />  -->
-			<!--			<class name = "com.testCases.addroomResultSearchPageTest" />   -->
-							<class name = "com.testCases.paymentMethodUPITest" /> 
-						
+						<class name = "com.testCases.turyaChennaiHotelTest" />  
+						<class name = "com.testCases.addroomResultSearchPageTest" />   
+							<class name = "com.testCases.paymentMethodUPITest" />  
+							<class name = "com.testCases.electricityBillTest" /> 
+							<class name = "com.testCases.addMoneyTest" />
+						   <class name = "com.testCases.loginAirtelTest" />		
+						   <class name= "com.testCases.fasTagAirtelTest" />  
+						   <class name = "com.testCases.failedAirtelLoginTest" /> 
+						   <class name = "com.testCases.AddImageExample" />-->
+						   <class name = "com.testCases.failedAirtelLoginTest" />
 
 		</classes>
 

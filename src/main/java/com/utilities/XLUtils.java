@@ -117,7 +117,7 @@ public class XLUtils {
 	   {
 
 		   
-		   String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\Data.xlsx";
+		   String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\cleartrip.xlsx";
 		   String temp[][] = new String[2][2];
 		   
 		   File f = new File(path);
