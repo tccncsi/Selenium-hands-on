@@ -11,7 +11,7 @@ public class restPasswordTest   extends BaseClass {
 	landingClearTripPage obj1;
 	
 	@Test
-	public void searchpage() {
+	public void searchpageresetpasslink() {
 		landingClearTripPage obj1 = new landingClearTripPage(driver);
 		
 		obj1.click_on_email();

@@ -13,7 +13,7 @@ public class searchHotelCompleteFlowTest  extends BaseClass{
 	landingClearTripPage obj2;
 	
 	@Test
-	public void searchpage() {
+	public void searchpageentireflow() {
 		
 		landingClearTripPage obj2 = new landingClearTripPage (driver);
 		

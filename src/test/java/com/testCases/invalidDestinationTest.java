@@ -10,7 +10,7 @@ public class invalidDestinationTest extends BaseClass {
 	landingClearTripPage location;
 	
 	@Test
-	public void searchpage() {
+	public void searchpageinvalidloc() {
 		
 		landingClearTripPage location = new landingClearTripPage(driver);
 		

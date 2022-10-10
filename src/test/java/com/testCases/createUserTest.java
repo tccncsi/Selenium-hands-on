@@ -13,7 +13,7 @@ public class createUserTest extends BaseClass {
 	landingClearTripPage obj3;
 
 	@Test
-	public void searchpage() {
+	public void searchpagecreateuser() {
 
 		landingClearTripPage obj3 = new landingClearTripPage(driver);
 

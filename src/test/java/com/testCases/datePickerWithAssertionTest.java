@@ -17,7 +17,7 @@ landingClearTripPage third ;
 	String date_checkin = "Fri, Sep 9";
 	String date_checkout = "Thu, Sep 15";
 	@Test
-	public void searchpage() {
+	public void searchpagewithassertion() {
 
 	
 		landingClearTripPage third = new landingClearTripPage(driver);

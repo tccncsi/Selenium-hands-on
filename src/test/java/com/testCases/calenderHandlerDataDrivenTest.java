@@ -12,7 +12,7 @@ public class calenderHandlerDataDrivenTest extends BaseClass {
 	landingClearTripPage calender;
 
 	@Test
-	public void searchpage() {
+	public void searchpagecalender() {
 
 		landingClearTripPage calender = new landingClearTripPage(driver);
 

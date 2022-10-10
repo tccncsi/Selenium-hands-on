@@ -17,8 +17,10 @@
 <!--				    <class name="com.testCases.absoluteSearchHotelFlow"/>   
 			            <class name="com.testCases.addRoomFunctionality"/>  
 					    <class name="com.testCases.calendarHandler"/>  
-					    <class name="com.testCases.calenderHandlerDataDriven"/>    
-				        <class name="com.testCases.createUser"/>  
+					    <class name="com.testCases.calenderHandlerDataDriven"/> 
+					       
+				        <class name="com.testCases.createUser"/>  //
+				        
 			  		    <class name="com.testCases.datePickerWithAssertion" />  
 			      	    <class name="com.testCases.enterDestination" />  
 			            <class name= "com.testCases.invalidDestination" /> 
@@ -30,15 +32,17 @@
 					<class name = "com.testCases.hotelClassFilter" />  
 						<class name = "com.testCases.barFilter" />  
 						<class name = "com.testCases.turyaChennaiHotelTest" />  
-						<class name = "com.testCases.addroomResultSearchPageTest" />   
+						<class name = "com.testCases.addroomResultSearchPageTest" />
+						
+						   
 							<class name = "com.testCases.paymentMethodUPITest" />  
 							<class name = "com.testCases.electricityBillTest" /> 
 							<class name = "com.testCases.addMoneyTest" />
 						   <class name = "com.testCases.loginAirtelTest" />		
 						   <class name= "com.testCases.fasTagAirtelTest" />  
 						   <class name = "com.testCases.failedAirtelLoginTest" /> 
-						   <class name = "com.testCases.AddImageExample" />-->
-						   <class name = "com.testCases.failedAirtelLoginTest" />
+						   <class name = "com.testCases.failedAirtelLoginTest" /> -->
+						     <class name = "com.testCases.AddImageExample" />
 
 		</classes>
 

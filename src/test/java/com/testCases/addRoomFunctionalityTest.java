@@ -22,7 +22,7 @@ public class addRoomFunctionalityTest extends BaseClass {
 	String travellers_modifypage = "1 Room, 3 Adults, 1 Child";
 
 	@Test
-	public void searchpage() {
+	public void searchpageaddroom() {
 
 		landingClearTripPage room = new landingClearTripPage(driver);
 		modifySearchPage room1 = new modifySearchPage(driver);

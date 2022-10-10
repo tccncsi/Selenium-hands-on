@@ -14,7 +14,7 @@ public class uiAssertionHotelSearchPageTest extends BaseClass {
 	String heading = "Search for hotels";
 	String supportlabel = "Support";
 	@Test
-	public void searchpage() {
+	public void searchpageuiassertion() {
 
 	
 		landingClearTripPage first = new landingClearTripPage(driver);

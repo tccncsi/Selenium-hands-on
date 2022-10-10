@@ -9,7 +9,7 @@ public class traveller_fromlistTest extends BaseClass {
 	
 	landingClearTripPage list;
 	@Test
-	public void searchpage() {
+	public void searchpagetravellerbox() {
 		landingClearTripPage list = new landingClearTripPage(driver);
 		
 		list.closePopup();

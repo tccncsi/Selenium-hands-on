@@ -11,7 +11,7 @@ public class travellersTest  extends BaseClass{
 landingClearTripPage four ;
 	
 	@Test
-	public void searchpage() {
+	public void searchpageselectadultroom() {
 
 	
 		landingClearTripPage four = new landingClearTripPage(driver);

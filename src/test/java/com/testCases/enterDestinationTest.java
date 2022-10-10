@@ -10,7 +10,7 @@ public class enterDestinationTest extends BaseClass {
 	landingClearTripPage second;
 	
 	@Test
-	public void searchpage() {
+	public void searchpageenterloc() {
 		landingClearTripPage second = new landingClearTripPage(driver);
 		
 		
