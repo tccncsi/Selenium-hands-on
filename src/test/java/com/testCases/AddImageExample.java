@@ -13,7 +13,7 @@ import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
 public class AddImageExample {  
         public static void main(String[] args) throws Exception{
              
-       	FileInputStream   book1 =  new FileInputStream( );
+  //     	FileInputStream   book1 =  new FileInputStream( );
         	
         	    /* Create a Workbook and Worksheet */
                 HSSFWorkbook myworkbook = new HSSFWorkbook();
