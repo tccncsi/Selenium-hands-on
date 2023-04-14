@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TCC-TestRunner">
+	<listeners>
+		<listener class-name="com.utilities.Reporting" />
+		<!-- <listener class-name="com.utilities.TestListener" /> -->
+	</listeners>
+	<parameter name="browser" value="chrome" />
+	<parameter name="url" value="http://10.176.41.10:8080/UatAms" />
+	<test name="AMS Test">
+		<classes>
+			<class name="com.tests.AMS.EmployeeModuleTest" />
+		</classes>
+	</test>
+</suite>

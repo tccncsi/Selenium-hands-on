@@ -1,0 +1,2 @@
+@Login
+<class name="com.testCases.Login.LoginValidTest" />

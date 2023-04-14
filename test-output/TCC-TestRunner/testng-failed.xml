@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TCC-TestRunner]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="Demo Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://10.176.41.10:8080/UatAms"/>
+    <classes>
+      <class name="com.AMS.Master.SearchAssetTest">
+        <methods>
+          <include name="SerachAssets"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.AMS.Master.SearchAssetTest -->
+    </classes>
+  </test> <!-- Demo Test(failed) -->
+</suite> <!-- Failed suite [TCC-TestRunner] -->

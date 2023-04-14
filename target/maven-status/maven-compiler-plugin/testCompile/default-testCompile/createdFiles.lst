@@ -1,0 +1,5 @@
+com\tests\AMS\EmployeeModuleTest.class
+com\tests\AMS\ForgotPasswordTest.class
+com\tests\AMS\AssetModuleTest.class
+com\tests\AMS\DashboardModuleTest.class
+com\tests\AMS\LoginTest.class
