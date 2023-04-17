@@ -125,6 +125,23 @@ public class EmployeePage extends BasePage {
 	@FindBy(xpath = "//tr/td//i[@class='fa fa-trash']")
 	WebElement DeleteEmployeeBtnLoc;
 
+	// Delete Employee confirmation and warning message
+	@FindBy(xpath = "//h2[@id='swal2-title']")
+	WebElement ConfirmationmessLoc;
+	@FindBy(xpath = "// div[@id='swal2-content']")
+	WebElement WarningMessLoc;
+
+	// Delete Employee Buttons
+	// #Yes
+	@FindBy(xpath = "//button[contains(text(),'Yes, Delete It!')]")
+	WebElement YesDeleteEmplyeeLoc;
+	@FindBy(xpath = "//button[@type='button' and contains(text(),'OK')]")
+	WebElement OKLoc;
+
+	// #Cancel
+	@FindBy(xpath = "//div[@class='swal2-actions']//button[contains(text(),'Cancel')]")
+	WebElement CancelDeleteEmpLoc;
+
 	// Update Employee form locators
 
 	// Employee Id
@@ -168,12 +185,12 @@ public class EmployeePage extends BasePage {
 
 	// Search the Assets using Search Box
 	// >> Valid inputs -> Asset no, Employee-name, category etc.
-	public void SearchEmployeeByText(String EmployeeName) {
+	public void SearchEmployee(String Empemail) throws IOException {
 		System.out.println("Inside SearchEmployeeByText()");
 		waitForFindElementPresent(SearchByTextboxEmpWindowLoc);
 		SearchByTextboxEmpWindowLoc.clear();
-		SearchByTextboxEmpWindowLoc.sendKeys(EmployeeName);
-		System.out.println("Inside SearchEmployeeByText() : Serched Employee is - " + EmployeeName);
+		SearchByTextboxEmpWindowLoc.sendKeys(XLUtils.FetchExcelData(Empemail));
+		System.out.println("Inside SearchEmployeeByText() : Serched Employee is - " + Empemail);
 	}
 
 	public void VerifyRecordDisplayed() {
@@ -314,37 +331,61 @@ public class EmployeePage extends BasePage {
 	public void ClickDeleteUserToolTip() {
 		waitForFindElementPresent(DeleteEmployeeBtnLoc);
 		DeleteEmployeeBtnLoc.click();
+		System.out.println(ConfirmationmessLoc.getText());
+		System.out.println(WarningMessLoc.getText());
+	}
+
+	// Delete Employee
+	public void YesDeleteEmployee() {
+		YesDeleteEmplyeeLoc.click();
+		//OKLoc.click();
+	}
+
+	// Cancel Employee Deletion
+	public void NoCancelEmpDelete() {
+		CancelDeleteEmpLoc.click();
 	}
 
 	// Update Employee form
+	// **********************************************************
 
-	// fill the all information
-	public void FillUpdateUserForm(String EmpId, String EmpName, String SelStatus, String EdtDate, String EdtEmail)
-			throws IOException {
-		System.out.println("Inside FillUpdateUserForm()");
-
-		// Enter Employee Id
+	// Enter Employee Id
+	public void UpdateEmployeeID(String EmpId) throws IOException {
+		System.out.println("Inside UpdateEmployeeID()");
 		waitForFindElementPresent(EditEntrEmployeeIdLoc);
 		EditEntrEmployeeIdLoc.clear();
 		EditEntrEmployeeIdLoc.sendKeys(XLUtils.FetchExcelData(EmpId));
 
-		// Enter Employee Name
+	}
+
+	// Enter Employee Name
+	public void UpdateEmployeeName(String EmpName) throws IOException {
+		System.out.println("Inside UpdateEmployeeName()");
 		waitForFindElementPresent(EditEntrEmployeeNameLoc);
 		EditEntrEmployeeNameLoc.clear();
 		EditEntrEmployeeNameLoc.sendKeys(XLUtils.FetchExcelData(EmpName));
+	}
 
-		// Select Status
+	// Select Status
+	public void UpdateEmpStatus(String SelStatus) throws IOException {
+		System.out.println("Inside UpdateEmpStatus()");
 		waitForFindElementPresent(EditSelectStatusLoc);
 		Select status = new Select(EditSelectStatusLoc); // Create object of the Select class
 		status.selectByVisibleText(XLUtils.FetchExcelData(SelStatus));
 		waitForFindElementPresent(EditSelectStatusLoc);
+	}
 
-		// Date of Joining
+	// Date of Joining
+	public void UpdateEmpDateOfJoining(String EdtDate) throws IOException {
+		System.out.println("Inside UpdateDateOfJoining()");
 		waitForFindElementPresent(EntrDateLoc);
 		EntrDateLoc.clear();
 		EntrDateLoc.sendKeys(XLUtils.FetchExcelData(EdtDate));
+	}
 
-		// Enter Email
+	// Enter Email
+	public void UpdateEmpEmail(String EdtEmail) throws IOException {
+		System.out.println("Inside UpdateEmpEmail()");
 		waitForFindElementPresent(EntrEmailLoc);
 		EntrEmailLoc.clear();
 		EntrEmailLoc.sendKeys(XLUtils.FetchExcelData(EdtEmail));

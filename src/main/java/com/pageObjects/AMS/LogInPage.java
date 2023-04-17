@@ -207,10 +207,10 @@ public class LogInPage extends BasePage {
 	}
 
 	// Login Directly From Here
-	public void LoginToAMSApplication(String AMSUsername, String AMSPassword) throws InterruptedException {
+	public void LoginToAMSApplication() throws InterruptedException {
 		RefreshPage();
-		EnterUsername(AMSUsername);
-		EnterPassword(AMSPassword);
+		EnterUsername(readconfig.getAMSUsername());
+		EnterPassword(readconfig.getAMSPassword());
 		LoginBtnLoc.click();
 		HandleChangePasswordPopUp();
 		System.out.println("Sign In completed");

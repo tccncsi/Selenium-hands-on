@@ -47,7 +47,7 @@ public class AssetPage extends BasePage {
 //	---------------------------------------------
 
 	// Create Assets header message
-	@FindBy(xpath = "//div/h5[@id='exampleModalLabel']")
+	@FindBy(xpath = "//*[@id='exampleModalLongTitle']")
 	WebElement CreateAssetsHeaderMessageLoc;
 
 	// "x" button to cancel or minimize the Create Assets window
@@ -394,7 +394,7 @@ public class AssetPage extends BasePage {
 	public void VerifyCreateAssetSuccessfullMessage(String ExpectedErrorMessage) throws IOException {
 		System.out.println("Inside 'VerifyCreateAssetSuccessfullMessage()'");
 		waitForFindElementPresent(SuccessfulPopupLoc);
-		
+
 		// isDisplayed() method returns boolean value either True or False
 		if (SuccessfulPopupLoc.isDisplayed()) {
 			// To print the value

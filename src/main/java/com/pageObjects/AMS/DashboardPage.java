@@ -19,29 +19,34 @@ public class DashboardPage extends BasePage {
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>LOCATORS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
 	// UpdatePasswordPopUp Close button Loc
-	@FindBy(xpath = "//button[1]")
-	WebElement UpdatePasswordPopUp;
+//	@FindBy(xpath = "//button[1]")
+	//WebElement UpdatePasswordPopUp;
 
-	// DashboardMainTest home button Loc
+	// Cancel button update password pop up window
+	@FindBy(xpath = "//button[starts-with(text(),'Cancel')]")
+	WebElement CancelBtnUpdatePasswordPopUpLoc;
+
+	// Dashboard home button Loc
 	@FindBy(xpath = "//span[contains(text(),'Dashboard')]/parent::a")
 	WebElement DashboardHomeTabBtnLoc;
 
+// Master Module	
 	// Master tab button dropdown Loc
 	@FindBy(xpath = "//span[contains(text(),'Master')]/parent::a") // alternate option -> "//ul/li/a//span/i[@xpath=1]"
 	WebElement MasterTabBtnLoc;
 
 	// Assets tab Loc
-	@FindBy(xpath = "//a[@href='#/home/assets'][contains(text(),'Assets')]")
+	@FindBy(xpath = "//a[@href='#/home/assets'][contains(text(),'Assets')]")///////////////// update xpath
 	WebElement AssetsBtnLoc;
 
-	// Cancel button update password pop up window
-	@FindBy(xpath = "//button[starts-with(text(),'Cancel')]")
-	WebElement CancelBtnUpdatePasswordPopUpLoc;
-	
 	// Employee Tab Loc
 	@FindBy(xpath = "//a[@routerlink='/home/employee']")
 	WebElement EmployeeBtnLoc;
-	
+
+	// Request Tab Loc
+	@FindBy(xpath = "// a[contains(text(),'Request')][1]")
+	WebElement RequestTabBtnLoc;
+
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>METHODS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
 	// Click on Cancel Button on update password pop up window
@@ -72,13 +77,21 @@ public class DashboardPage extends BasePage {
 	public void ClickAssetsfromMaster() {
 		waitForFindElementPresent(AssetsBtnLoc);
 		AssetsBtnLoc.click();
-		System.out.println("Inside Assets Tab\n");
+		System.out.println("Inside Assets Tab");
 	}
-	
+
 	// Click/Select Assets from Master Dropdown
 	public void ClickOnEmployeeTab() {
 		waitForFindElementPresent(EmployeeBtnLoc);
 		EmployeeBtnLoc.click();
-		System.out.println("Inside Employee Tab\n");
+		System.out.println("Inside Employee Tab");
 	}
+
+	// Click/Select Request from Master Dropdown
+	public void ClickOnRequestTab() {
+		waitForFindElementPresent(RequestTabBtnLoc);
+		RequestTabBtnLoc.click();
+		System.out.println("Inside Request Tab");
+	}
+
 }

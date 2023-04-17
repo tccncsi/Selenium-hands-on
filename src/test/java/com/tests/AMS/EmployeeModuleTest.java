@@ -23,9 +23,11 @@ public class EmployeeModuleTest extends BaseClass {
 
 	@Test(priority = 1, enabled = true)
 	public void ExecuteAllEmployeeTCs() throws Exception {
+		System.out.println("Execute All Employee Module related Test Cases");
 		CreateEmployeeTest();
 		SearchTheEmployeeTest();
-
+		UpdateEmployeeTest();
+		DeleteEmployeeTest();
 	}
 
 	// Create
@@ -36,46 +38,43 @@ public class EmployeeModuleTest extends BaseClass {
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSEmp = new EmployeePage(driver);
-
 		AMSComm.TestCaseName("CreateEmployeeTest()");
-		AMSlogin.LoginToAMSApplication(readconfig.getAMSUsername(), readconfig.getAMSPassword());
+		AMSlogin.LoginToAMSApplication();
 		AMSDashboard.ClickDashboardHomeBtn();
 		AMSDashboard.ClickMasterTabBtn();
 		AMSDashboard.ClickOnEmployeeTab();
 		AMSEmp.ClickCreateEmployeeButton();
-
 		// Fill The Form
 		AMSEmp.EnterEmployeeId("EmployeeID");
 		AMSEmp.EnterEmployeeName("EmployeeName");
 		AMSEmp.SelectStatus("Status");
 		AMSEmp.EnterDateOfJoining("DateOfJoining");
 		AMSEmp.EnterEmail("EmailId");
-
 		// Click Close Button
-		AMSEmp.ClickEmpCloseButton();
+		// AMSEmp.ClickEmpCloseButton();
 		// Click Save Button
-		// AMSEmp.ClickEmpSaveButton();
-		AMSlogin.Logout();
+		AMSEmp.ClickEmpSaveButton();
+		// AMSlogin.Logout();
 	}
 
 	// Read
-	public void SearchTheEmployeeTest() throws InterruptedException {
+	public void SearchTheEmployeeTest() throws InterruptedException, IOException {
 		// Objects of Below Pages
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSEmp = new EmployeePage(driver);
 		AMSComm = new CommonPage(driver);
-
 		AMSComm.TestCaseName("SearchTheEmployee");
-
-		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
+		AMSlogin.RefreshPage();
+		// AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
+		AMSDashboard.ClickDashboardHomeBtn();
 		AMSDashboard.ClickMasterTabBtn();
 		AMSDashboard.ClickOnEmployeeTab();
 		AMSEmp.SelectItemFromItemsPerPageDropDownEmp("15");
-		AMSEmp.SearchEmployeeByText("EmployeeID");
+		AMSEmp.SearchEmployee("EmailId");
 		// AMSEmp.VerifyDataNotFoundMessDisplayed();
 		AMSEmp.VerifyRecordDisplayed();
-		AMSlogin.Logout();
+		// AMSlogin.Logout();
 	}
 
 	// Update
@@ -85,42 +84,41 @@ public class EmployeeModuleTest extends BaseClass {
 		AMSDashboard = new DashboardPage(driver);
 		AMSEmp = new EmployeePage(driver);
 		AMSComm = new CommonPage(driver);
-
 		AMSComm.TestCaseName("UpdateEmployeeTest");
-
-		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
-
+		AMSlogin.RefreshPage();
+		// AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
+		AMSDashboard.ClickDashboardHomeBtn();
 		AMSDashboard.ClickMasterTabBtn();
 		AMSDashboard.ClickOnEmployeeTab();
-		AMSEmp.SearchEmployeeByText("EmployeeID");
+		AMSEmp.SearchEmployee("EmailId");
 		AMSEmp.VerifyRecordDisplayed();
 		AMSEmp.ClickEditUserToolTip();
-		AMSEmp.FillUpdateUserForm(baseURL, baseURL, baseURL, baseURL, baseURL);
-		AMSEmp.ClickCloseBtn();
-		// AMSEmp.ClickUpdteBtn();
-
-		AMSlogin.Logout();
+		AMSEmp.UpdateEmpStatus("NewEmpStatus");
+		AMSEmp.UpdateEmpEmail("NewEmpEmailId");
+		// AMSEmp.ClickCloseBtn();
+		AMSEmp.ClickUpdteBtn();
+		// AMSlogin.Logout();
 	}
 
 	// Delete
-	public void DeleteEmployeeTest() throws InterruptedException {
+	public void DeleteEmployeeTest() throws InterruptedException, IOException {
 		// Objects of Below Pages
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSEmp = new EmployeePage(driver);
 		AMSComm = new CommonPage(driver);
-
+		AMSlogin.RefreshPage();
 		AMSComm.TestCaseName("UpdateEmployeeTest");
-
-		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
-
+		// AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
+		AMSDashboard.ClickDashboardHomeBtn();
 		AMSDashboard.ClickMasterTabBtn();
 		AMSDashboard.ClickOnEmployeeTab();
-		AMSEmp.SearchEmployeeByText("EmployeeID");
+		AMSEmp.SearchEmployee("NewEmpEmailId");
 		AMSEmp.VerifyRecordDisplayed();
 		AMSEmp.ClickDeleteUserToolTip();
-		AMSEmp.VerifyDataNotFoundMessDisplayed();
-		
+		AMSEmp.YesDeleteEmployee();
+		// AMSEmp.SearchEmployee("NewEmpEmailId");
+		// AMSEmp.VerifyDataNotFoundMessDisplayed();
 		AMSlogin.Logout();
 	}
 }

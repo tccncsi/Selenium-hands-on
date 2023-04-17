@@ -45,7 +45,7 @@ public class AssetModuleTest extends BaseClass {
 		AMSComm.TestCaseName("CreateAssetTest");
 		AMSlogin.RefreshPage();
 		// Login to AMS Application
-		AMSlogin.LoginToAMSApplication(readconfig.getAMSUsername(), readconfig.getAMSPassword());
+		AMSlogin.LoginToAMSApplication();
 		// Click on "Master" Tab
 		AMSDashboard.ClickMasterTabBtn();
 		// Click on "Assets" tab inside Master Tab
@@ -115,7 +115,7 @@ public class AssetModuleTest extends BaseClass {
 		AMSAssets.UpdateAssetType("NewAssetType");
 		AMSAssets.UpdateAssetDescription("NewAssetDescription");
 		AMSAssets.ClickUpdateBtn();
-		AMSAssets.UpdateSuccessfullyPopUpMessage("UpdateSuccessfullyPopUpMessage");
+		AMSAssets.UpdateSuccessfullyPopUpMessage("Record Updated Successfully!");
 		AMSlogin.Logout();
 	}
 
@@ -132,8 +132,8 @@ public class AssetModuleTest extends BaseClass {
 		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
 		AMSDashboard.ClickMasterTabBtn();
 		AMSDashboard.ClickAssetsfromMaster();
-		AMSAssets.DeleteTheTopMostRecordAfterSearch(XLUtils.FetchExcelData("NewAssetNumber"));
-		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("NewAssetNumber"));
+		AMSAssets.DeleteTheTopMostRecordAfterSearch(XLUtils.FetchExcelData("AssetNumber"));
+		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
 		AMSAssets.VerifyDataNotFoundMessageIsPresent();
 		AMSlogin.Logout();
 	}

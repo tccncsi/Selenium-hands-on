@@ -13,5 +13,6 @@ com\utilities\defectLogGenericUtility.class
 com\pageObjects\AMS\LogInPage.class
 com\utilities\DataGeneratorUtility.class
 com\pageObjects\AMS\EmployeePage.class
+com\pageObjects\AMS\RequestPage.class
 com\utilities\JiraServiceProvider.class
 com\pageObjects\AMS\CommonPage.class
