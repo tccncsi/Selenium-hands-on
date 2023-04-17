@@ -116,8 +116,44 @@ public class EmployeePage extends BasePage {
 	// Save Button
 	@FindBy(xpath = "//button[contains(text(),' Save ')]")
 	WebElement CreateEmpSaveBtnLoc;
-	
-	// 
+
+	// Edit Employee button
+	@FindBy(xpath = "//tr//td/i[@class='fa fa-edit']")
+	WebElement EditEmployeeBtnLoc;
+
+	// Delete Employee button
+	@FindBy(xpath = "//tr/td//i[@class='fa fa-trash']")
+	WebElement DeleteEmployeeBtnLoc;
+
+	// Update Employee form locators
+
+	// Employee Id
+	@FindBy(xpath = "//div[@id='editUser']//div[@class='modal-content']//div[1]//input[1]")
+	WebElement EditEntrEmployeeIdLoc;
+
+	// Employee Name
+	@FindBy(xpath = "//div[@id='editUser']//div[@class='modal-content']//div[1]//input[1]")
+	WebElement EditEntrEmployeeNameLoc;
+
+	// Status
+	@FindBy(xpath = "(//select[@id='status'])[2]")
+	WebElement EditSelectStatusLoc;
+
+	// Date of Joining
+	@FindBy(xpath = "(//input[@type='date'])[2]")
+	WebElement EntrDateLoc;
+
+	// Email-ID
+	@FindBy(xpath = "(//input[@type='email'])[2]")
+	WebElement EntrEmailLoc;
+
+	// Close Button
+	@FindBy(xpath = "(//button[@type='button'][contains(text(),'Close')])[2]")
+	WebElement CloseBtnLoc;
+
+	// Update Button
+	@FindBy(xpath = "//button[contains(text(),'Update')]")
+	WebElement UpdateBtnLoc;
 
 //*************************************|Methods|*************************************\\
 
@@ -139,18 +175,18 @@ public class EmployeePage extends BasePage {
 		SearchByTextboxEmpWindowLoc.sendKeys(EmployeeName);
 		System.out.println("Inside SearchEmployeeByText() : Serched Employee is - " + EmployeeName);
 	}
-	
+
 	public void VerifyRecordDisplayed() {
 		if (FirstRowAfterSearchLoc.isDisplayed() == true) {
 			System.out.println("Record Displayed!");
 		}
 	}
-	
+
 	public void VerifyDataNotFoundMessDisplayed() {
 		if (DataNotFoundMessLoc.isDisplayed() == true) {
 			String DNFMessage = DataNotFoundMessLoc.getText();
 			System.out.println("The Message Displayed!");
-			System.out.println("Message is '"+ DNFMessage +"'");
+			System.out.println("Message is '" + DNFMessage + "'");
 		}
 	}
 
@@ -245,7 +281,8 @@ public class EmployeePage extends BasePage {
 	}
 
 	// Fill the form at once
-	public void FillTheCompleteEmployeeForm(String EmployeeID, String EmployeeName, String Status, String DateOfJoining, String EmailId) throws IOException {
+	public void FillTheCompleteEmployeeForm(String EmployeeID, String EmployeeName, String Status, String DateOfJoining,
+			String EmailId) throws IOException {
 		// Insert all Information
 		EnterEmployeeId(EmployeeID);
 		EnterEmployeeName(EmployeeName);
@@ -266,4 +303,63 @@ public class EmployeePage extends BasePage {
 		waitForFindElementPresent(CreateEmpSaveBtnLoc);
 		CreateEmpSaveBtnLoc.click();
 	}
+
+	// Click on edit user button
+	public void ClickEditUserToolTip() {
+		waitForFindElementPresent(EditEmployeeBtnLoc);
+		EditEmployeeBtnLoc.click();
+	}
+
+	// Click on delete user button
+	public void ClickDeleteUserToolTip() {
+		waitForFindElementPresent(DeleteEmployeeBtnLoc);
+		DeleteEmployeeBtnLoc.click();
+	}
+
+	// Update Employee form
+
+	// fill the all information
+	public void FillUpdateUserForm(String EmpId, String EmpName, String SelStatus, String EdtDate, String EdtEmail)
+			throws IOException {
+		System.out.println("Inside FillUpdateUserForm()");
+
+		// Enter Employee Id
+		waitForFindElementPresent(EditEntrEmployeeIdLoc);
+		EditEntrEmployeeIdLoc.clear();
+		EditEntrEmployeeIdLoc.sendKeys(XLUtils.FetchExcelData(EmpId));
+
+		// Enter Employee Name
+		waitForFindElementPresent(EditEntrEmployeeNameLoc);
+		EditEntrEmployeeNameLoc.clear();
+		EditEntrEmployeeNameLoc.sendKeys(XLUtils.FetchExcelData(EmpName));
+
+		// Select Status
+		waitForFindElementPresent(EditSelectStatusLoc);
+		Select status = new Select(EditSelectStatusLoc); // Create object of the Select class
+		status.selectByVisibleText(XLUtils.FetchExcelData(SelStatus));
+		waitForFindElementPresent(EditSelectStatusLoc);
+
+		// Date of Joining
+		waitForFindElementPresent(EntrDateLoc);
+		EntrDateLoc.clear();
+		EntrDateLoc.sendKeys(XLUtils.FetchExcelData(EdtDate));
+
+		// Enter Email
+		waitForFindElementPresent(EntrEmailLoc);
+		EntrEmailLoc.clear();
+		EntrEmailLoc.sendKeys(XLUtils.FetchExcelData(EdtEmail));
+	}
+
+	// Close form - click close button
+	public void ClickCloseBtn() {
+		waitForFindElementPresent(CloseBtnLoc);
+		CloseBtnLoc.click();
+	}
+
+	// Update employee - click on Update button
+	public void ClickUpdteBtn() {
+		waitForFindElementPresent(UpdateBtnLoc);
+		UpdateBtnLoc.click();
+	}
+
 }
