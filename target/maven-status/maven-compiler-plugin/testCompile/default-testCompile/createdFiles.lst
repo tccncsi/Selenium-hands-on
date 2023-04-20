@@ -5,5 +5,6 @@ com\tests\AMS\AssetModuleTest.class
 com\tests\AMS\DashboardModuleTest.class
 com\tests\AMS\AssetsVendorModuleTest.class
 com\tests\AMS\AssetsGroupModuleTest.class
+com\tests\AMS\AssetsStatusModuleTest.class
 com\tests\AMS\LoginTest.class
 com\tests\AMS\RequestModuleTest.class

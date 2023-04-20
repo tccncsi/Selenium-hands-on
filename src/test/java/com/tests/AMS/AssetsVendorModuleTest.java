@@ -63,7 +63,7 @@ public class AssetsVendorModuleTest extends BaseClass {
 	public void SearchAssetsVendorTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsVendorTab();
 		AMSComm.TestCaseName("SearchAssetsVendorTest");
-		AMSAssetsVendor.ItemsPerPageDropDown("15");
+		//AMSAssetsVendor.ItemsPerPageDropDown("15");
 		AMSAssetsVendor.SearchAssetsVendor("AssetVendorName");
 		AMSAssetsVendor.VerifyRecordIsPresent();
 		AMSAssetsVendor.GetRowData();

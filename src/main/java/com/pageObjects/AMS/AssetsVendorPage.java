@@ -25,7 +25,7 @@ public class AssetsVendorPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	// *************************************|Locators|****************************
+// *************************************|Locators|****************************
 
 	// Items Per Page dropdown on screen
 	@FindBy(xpath = "//select[@class='sort']")

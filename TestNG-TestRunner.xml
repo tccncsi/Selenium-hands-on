@@ -9,7 +9,7 @@
 	<parameter name="url" value="http://10.176.41.10:8080/UatAms" />
 	<test name="AMS Test">
 		<classes>
-			<class name="com.tests.AMS.AssetsVendorModuleTest" />
+			<class name="com.tests.AMS.AssetsStatusModuleTest" />
 		</classes>
 	</test>
 </suite>

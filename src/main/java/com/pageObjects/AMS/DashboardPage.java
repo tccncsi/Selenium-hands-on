@@ -18,10 +18,6 @@ public class DashboardPage extends BasePage {
 
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>LOCATORS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
-	// UpdatePasswordPopUp Close button Loc
-//	@FindBy(xpath = "//button[1]")
-	// WebElement UpdatePasswordPopUp;
-
 	// Cancel button update password pop up window
 	@FindBy(xpath = "//button[starts-with(text(),'Cancel')]")
 	WebElement CancelBtnUpdatePasswordPopUpLoc;
@@ -59,6 +55,14 @@ public class DashboardPage extends BasePage {
 	@FindBy(xpath = "//*[contains(text(),'Assets Vendor')]")
 	WebElement AssetsVendorBtnLoc;
 
+	// Assets Status Tab Loc
+	@FindBy(xpath = "//*[contains(text(),'Assets Status')]")
+	WebElement AssetsStatusBtnLoc;
+
+	// User Tab Loc
+	@FindBy(xpath = "//li[.='User']/child::a")
+	WebElement UserBtnLoc;
+
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>METHODS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
 	// Click on Cancel Button on update password pop up window
@@ -73,8 +77,8 @@ public class DashboardPage extends BasePage {
 		AMSComm = new CommonPage(driver);
 		waitForFindElementPresent(DashboardHomeTabBtnLoc);
 		DashboardHomeTabBtnLoc.click();
-		System.out.println("Inside DashboardPage");
 		System.out.println("Current Page URL is : " + AMSComm.getPageURL());
+		System.out.println("Inside Dashboard Tab");
 	}
 
 	// Click on Master dropdown
@@ -124,7 +128,21 @@ public class DashboardPage extends BasePage {
 	public void ClickOnAssetsVendorTab() {
 		waitForFindElementPresent(AssetsVendorBtnLoc);
 		AssetsVendorBtnLoc.click();
-		System.out.println("\nInside ClickOnAssetsVendorTab Tab");
+		System.out.println("\nInside AssetsVendor Tab");
+	}
+
+	// Click/Select Assets Status from Master Dropdown
+	public void ClickOnAssetsStatusTab() {
+		waitForFindElementPresent(AssetsStatusBtnLoc);
+		AssetsStatusBtnLoc.click();
+		System.out.println("\nInside AssetsStatus Tab");
+	}
+
+	// Click/Select User from Master Dropdown
+	public void ClickOnUserTab() {
+		waitForFindElementPresent(UserBtnLoc);
+		UserBtnLoc.click();
+		System.out.println("\nInside User Tab");
 	}
 
 }
