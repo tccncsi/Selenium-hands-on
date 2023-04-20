@@ -2,3 +2,8 @@
 			<class name="com.tests.AMS.DashboardModuleTest" />
 			<class name="com.tests.AMS.AssetModuleTest" />
 			<class name="com.tests.AMS.EmployeeModuleTest" />
+			
+			
+			
+			//implicit wait
+      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

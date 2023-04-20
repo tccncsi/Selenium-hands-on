@@ -17,7 +17,7 @@ public class CommonPage extends BasePage {
 
 	// Print Testcase name
 	public void TestCaseName(String EnterTestCaseName) {
-		System.out.println("\nInside " + EnterTestCaseName);
+		System.out.println("\nInside " + EnterTestCaseName + "\n------------------------------------------------");
 	}
 
 	// Print the message

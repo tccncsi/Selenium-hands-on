@@ -4,6 +4,7 @@ D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\base\B
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilities\JiraServiceProvider.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilities\ReadConfig.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\base\Page.java
+D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\pageObjects\AMS\AssetsVendorPage.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilities\DataGeneratorUtility.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilities\JiraCreateIssue.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilities\Reporting.java
@@ -14,5 +15,7 @@ D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilit
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\pageObjects\AMS\CommonPage.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\pageObjects\AMS\AssetPage.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\base\BaseClass.java
+D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\pageObjects\AMS\AssetsDepartmentPage.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\utilities\TestListener.java
+D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\pageObjects\AMS\AssetsGroupPage.java
 D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\java\com\pageObjects\AMS\LogInPage.java

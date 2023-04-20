@@ -20,7 +20,7 @@ public class DashboardPage extends BasePage {
 
 	// UpdatePasswordPopUp Close button Loc
 //	@FindBy(xpath = "//button[1]")
-	//WebElement UpdatePasswordPopUp;
+	// WebElement UpdatePasswordPopUp;
 
 	// Cancel button update password pop up window
 	@FindBy(xpath = "//button[starts-with(text(),'Cancel')]")
@@ -36,7 +36,7 @@ public class DashboardPage extends BasePage {
 	WebElement MasterTabBtnLoc;
 
 	// Assets tab Loc
-	@FindBy(xpath = "//a[@href='#/home/assets'][contains(text(),'Assets')]")///////////////// update xpath
+	@FindBy(xpath = "//a[@href='#/home/assets'][contains(text(),'Assets')]") ///////////////// update xpath
 	WebElement AssetsBtnLoc;
 
 	// Employee Tab Loc
@@ -44,8 +44,20 @@ public class DashboardPage extends BasePage {
 	WebElement EmployeeBtnLoc;
 
 	// Request Tab Loc
-	@FindBy(xpath = "// a[contains(text(),'Request')][1]")
+	@FindBy(xpath = "//*[contains(text(),'Request')][1]")
 	WebElement RequestTabBtnLoc;
+
+	// Assets Group Tab Loc
+	@FindBy(xpath = "(//*[contains(text(),'Assets Group')])")
+	WebElement AssetsGroupBtnLoc;
+
+	// Assets Department Tab Loc
+	@FindBy(xpath = "//*[contains(text(),'Assets Department')]")
+	WebElement AssetsDepartmentBtnLoc;
+
+	// Assets Vendor Tab Loc
+	@FindBy(xpath = "//*[contains(text(),'Assets Vendor')]")
+	WebElement AssetsVendorBtnLoc;
 
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>METHODS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
@@ -61,7 +73,7 @@ public class DashboardPage extends BasePage {
 		AMSComm = new CommonPage(driver);
 		waitForFindElementPresent(DashboardHomeTabBtnLoc);
 		DashboardHomeTabBtnLoc.click();
-		System.out.println("On DashboardMainTest");
+		System.out.println("Inside DashboardPage");
 		System.out.println("Current Page URL is : " + AMSComm.getPageURL());
 	}
 
@@ -92,6 +104,27 @@ public class DashboardPage extends BasePage {
 		waitForFindElementPresent(RequestTabBtnLoc);
 		RequestTabBtnLoc.click();
 		System.out.println("Inside Request Tab");
+	}
+
+	// Click/Select Assets Group from Master Dropdown
+	public void ClickOnAssetsGroupTab() {
+		waitForFindElementPresent(AssetsGroupBtnLoc);
+		AssetsGroupBtnLoc.click();
+		System.out.println("\nInside AssetsGroup Tab");
+	}
+
+	// Click/Select Assets Department from Master Dropdown
+	public void ClickOnAssetsDepartmentTab() {
+		waitForFindElementPresent(AssetsDepartmentBtnLoc);
+		AssetsDepartmentBtnLoc.click();
+		System.out.println("\nInside AssetsDepartment Tab");
+	}
+
+	// Click/Select Assets Vendor from Master Dropdown
+	public void ClickOnAssetsVendorTab() {
+		waitForFindElementPresent(AssetsVendorBtnLoc);
+		AssetsVendorBtnLoc.click();
+		System.out.println("\nInside ClickOnAssetsVendorTab Tab");
 	}
 
 }

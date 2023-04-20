@@ -8,11 +8,14 @@ com\utilities\TestListener.class
 com\base\Page.class
 com\base\BaseClass.class
 com\utilities\Reporting.class
+com\pageObjects\AMS\AssetsDepartmentPage.class
 com\utilities\XLUtils.class
 com\utilities\defectLogGenericUtility.class
 com\pageObjects\AMS\LogInPage.class
+com\pageObjects\AMS\AssetsVendorPage.class
 com\utilities\DataGeneratorUtility.class
 com\pageObjects\AMS\EmployeePage.class
+com\pageObjects\AMS\AssetsGroupPage.class
 com\pageObjects\AMS\RequestPage.class
 com\utilities\JiraServiceProvider.class
 com\pageObjects\AMS\CommonPage.class

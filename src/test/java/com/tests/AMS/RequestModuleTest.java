@@ -35,10 +35,14 @@ public class RequestModuleTest extends BaseClass {
 
 		AMSlogin.LoginToAMSApplication();
 		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
 		SearchRequestTest();
-		CheckRequestByFilter();
+		CheckAllRequests();
+		CheckApprovedRequests();
+		CheckPendingRequests();
+		CheckRejectedRequests();
 
 		AMSlogin.Logout();
 	}
@@ -49,25 +53,41 @@ public class RequestModuleTest extends BaseClass {
 
 		AMSComm.TestCaseName("SearchRequestTest");
 
-		AMSDashboard.ClickMasterTabBtn();
 		AMSDashboard.ClickOnRequestTab();
 
 		AMSReq.ItemsPerPageDropDown("15");
 		AMSReq.SearchRequest("4632300004");
-		AMSReq.VerifyRecordDisplayed();
+		// AMSReq.VerifyRecordDisplayed();
+		AMSReq.VerifyRecordIsPresent();
 		AMSReq.GetReqRowData();
 	}
 
-	public void CheckRequestByFilter() throws InterruptedException {
-
-		AMSComm.TestCaseName("CheckRequestByFilter");
-
-		AMSDashboard.ClickMasterTabBtn();
+	public void CheckAllRequests() throws InterruptedException {
+		AMSComm.TestCaseName("CheckAllRequests");
 		AMSDashboard.ClickOnRequestTab();
-
 		AMSReq.ClickAllButton();
+		AMSReq.VerifyRecordIsPresent();
+		AMSComm.Print(AMSReq.getTextAllButton());
+	}
+
+	public void CheckApprovedRequests() {
+		AMSComm.TestCaseName("CheckApprovedRequests");
+		AMSDashboard.ClickOnRequestTab();
 		AMSReq.ClickApprovedButton();
+		AMSReq.ValidateStatus(AMSReq.getTextApprovedButton());
+	}
+
+	public void CheckPendingRequests() {
+		AMSComm.TestCaseName("CheckPendingRequests");
+		AMSDashboard.ClickOnRequestTab();
 		AMSReq.ClickPendingButton();
+		AMSReq.ValidateStatus(AMSReq.getTextPendingButton());
+	}
+
+	public void CheckRejectedRequests() {
+		AMSComm.TestCaseName("CheckRejectedRequests");
+		AMSDashboard.ClickOnRequestTab();
 		AMSReq.ClickRejectedButton();
+		AMSReq.ValidateStatus(AMSReq.getTextRejectedButton());
 	}
 }
