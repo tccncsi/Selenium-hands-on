@@ -122,7 +122,7 @@ public class UserPage extends BasePage {
 	WebElement RoleNameLabelLoc;
 
 	// Select Role Drop Down
-	@FindBy(xpath = "//div[@id='createUser']//select[@class='form-control ng-pristine ng-invalid is-invalid ng-touched']")
+	@FindBy(xpath = "//div[@id='createUser']//select")
 	WebElement SelectRoleLoc;
 
 	// Error Message 3
@@ -142,7 +142,7 @@ public class UserPage extends BasePage {
 	WebElement EntPasswordErrorMessageLoc;
 
 	// Create Button
-	@FindBy(xpath = "//button[@type='submit' and contains(text(),'Create')]")
+	@FindBy(xpath = "//button[@id='closeModal' and contains(text(),'Create')]")
 	WebElement CreateButtonLoc;
 
 	// Cancel Button
@@ -184,7 +184,7 @@ public class UserPage extends BasePage {
 	WebElement ErrMess3EditWindoqLoc;
 
 	// Update Role
-	@FindBy(xpath = "//div[@id='edit']//select[@class='form-control ng-dirty ng-touched is-invalid ng-invalid']")
+	@FindBy(xpath = "//div[@id='edit']//select")
 	WebElement UpdtRoleLoc;
 
 	// Error message 4 on Edit window for Email
@@ -325,14 +325,14 @@ public class UserPage extends BasePage {
 		EntrUserNameLoc.click();
 	}
 
-	public void EnterUserName(String UserName) throws IOException {
-		waitForFindElementPresent(EntrUserNameLoc);
-		EntrUserNameLoc.sendKeys(XLUtils.FetchExcelData(UserName));
+	public void EnterUserName(String Username) throws IOException {
+		ClickInsideEnterUserName();
+		EntrUserNameLoc.sendKeys(XLUtils.FetchExcelData(Username));
 	}
 
-	public void ValidateErrorMessage1(String ExErrorMess) {
+	public void ValidateErrorMessage1(String ExErrorMess) throws IOException {
 		String ErrorMess = EntUsernameErrorMessageLoc.getText();
-		Assert.assertEquals(ErrorMess, ExErrorMess);
+		Assert.assertEquals(ErrorMess, XLUtils.FetchExcelData(ExErrorMess));
 	}
 
 	public String EmployeeIDLabel() {
@@ -345,14 +345,14 @@ public class UserPage extends BasePage {
 		EntrEmpIdLoc.click();
 	}
 
-	public void EnterEmployeeID(String UserName) throws IOException {
-		waitForFindElementPresent(EntrEmpIdLoc);
-		EntrEmpIdLoc.sendKeys(XLUtils.FetchExcelData(UserName));
+	public void EnterEmployeeID(String EMPID) throws IOException {
+		ClickInsideEmpId();
+		EntrEmpIdLoc.sendKeys(XLUtils.FetchExcelData(EMPID));
 	}
 
-	public void ValidateErrorMessage2(String ExErrorMess) {
+	public void ValidateErrorMessage2(String ExErrorMess) throws IOException {
 		String ErrorMess = EntEmpIdErrorMessageLoc.getText();
-		Assert.assertEquals(ErrorMess, ExErrorMess);
+		Assert.assertEquals(ErrorMess, XLUtils.FetchExcelData(ExErrorMess));
 	}
 
 	public String EmailLabel() {
@@ -365,14 +365,14 @@ public class UserPage extends BasePage {
 		EntrUserEmailLoc.click();
 	}
 
-	public void EnterEmail(String UserName) throws IOException {
-		waitForFindElementPresent(EntrUserEmailLoc);
-		EntrUserEmailLoc.sendKeys(XLUtils.FetchExcelData(UserName));
+	public void EnterEmail(String Email) throws IOException {
+		ClickInsideEmail();
+		EntrUserEmailLoc.sendKeys(XLUtils.FetchExcelData(Email));
 	}
 
-	public void ValidateErrorMessage3(String ExErrorMess) {
+	public void ValidateErrorMessage3(String ExErrorMess) throws IOException {
 		String ErrorMess = EntUserEmailErrorMessageLoc.getText();
-		Assert.assertEquals(ErrorMess, ExErrorMess);
+		Assert.assertEquals(ErrorMess, XLUtils.FetchExcelData(ExErrorMess));
 	}
 
 	public String RoleNameLabel() {
@@ -386,16 +386,17 @@ public class UserPage extends BasePage {
 	}
 
 	public void SelectRole(String Role) throws IOException {
-		waitForFindElementPresent(EntrUserEmailLoc);
+		ClickRole();
+		SelectRoleLoc.click();
 		// Create object of the Select class
 		Select items = new Select(SelectRoleLoc);
-		items.selectByVisibleText(Role);
+		items.selectByVisibleText(XLUtils.FetchExcelData(Role));
 		System.out.println("Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - " + Role);
 	}
 
-	public void ValidateErrorMessage4(String ExErrorMess) {
+	public void ValidateErrorMessage4(String ExErrorMess) throws IOException {
 		String ErrorMess = SelectRoleErrorMessageLoc.getText();
-		Assert.assertEquals(ErrorMess, ExErrorMess);
+		Assert.assertEquals(ErrorMess, XLUtils.FetchExcelData(ExErrorMess));
 	}
 
 	public String PasswordLabel() {
@@ -409,13 +410,13 @@ public class UserPage extends BasePage {
 	}
 
 	public void EnterPassword(String Password) throws IOException {
-		waitForFindElementPresent(EntrPasswordLoc);
+		ClickInsidePassword();
 		EntrPasswordLoc.sendKeys(XLUtils.FetchExcelData(Password));
 	}
 
-	public void ValidateErrorMessage5(String ExErrorMess) {
+	public void ValidateErrorMessage5(String ExErrorMess) throws IOException {
 		String ErrorMess = EntPasswordErrorMessageLoc.getText();
-		Assert.assertEquals(ErrorMess, ExErrorMess);
+		Assert.assertEquals(ErrorMess, XLUtils.FetchExcelData(ExErrorMess));
 	}
 
 	public void ClickCreateButton() {
@@ -463,10 +464,13 @@ public class UserPage extends BasePage {
 
 	public void SelectRoleToUpdate(String Role) throws IOException {
 		waitForFindElementPresent(UpdtRoleLoc);
+		UpdtRoleLoc.click();
+		UpdtRoleLoc.click();
 		// Create object of the Select class
 		Select items = new Select(UpdtRoleLoc);
-		items.selectByVisibleText(Role);
-		System.out.println("Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - " + Role);
+		items.selectByVisibleText(XLUtils.FetchExcelData(Role));
+		System.out.println(
+				"Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - " + (XLUtils.FetchExcelData(Role)));
 	}
 
 	public void ClickCancelButtonInUpdate() {

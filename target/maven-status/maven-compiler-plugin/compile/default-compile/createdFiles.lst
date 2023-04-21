@@ -1,6 +1,7 @@
 com\base\BasePage.class
 com\pageObjects\AMS\AssetPage.class
 com\pageObjects\AMS\DashboardPage.class
+com\pageObjects\AMS\UserPage.class
 com\utilities\ReadJiraConfig.class
 com\utilities\JiraCreateIssue.class
 com\utilities\ReadConfig.class

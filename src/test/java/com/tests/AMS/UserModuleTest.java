@@ -23,7 +23,7 @@ public class UserModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void AssetsGroupModuleTestExecution() throws Exception {
+	public void UserModuleTestExecution() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
@@ -51,18 +51,22 @@ public class UserModuleTest extends BaseClass {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void GetAllRowsPresent() throws IOException {
-		AMSDashboard.ClickOnAssetsStatusTab();
+		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("GetAllRowsPresent");
 		AMSUser.ItemsPerPageDropDown("15");
 		AMSUser.VerifyRecordIsPresent();
-		AMSUser.GetRowData();
+		AMSComm.GetRowData("User");
 	}
 
 	public void CreateUserTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("CreateUserTest");
 		AMSUser.ClickCreateUserButton();
-		AMSUser.EnterUserName("UserName");
+		AMSUser.EnterUserName("UserName1");
+		AMSUser.EnterEmployeeID("EmpID1");
+		AMSUser.EnterEmail("Email1");
+		AMSUser.SelectRole("Role1");
+		AMSUser.EnterPassword("UserPassword1");
 		AMSUser.ClickCreateButton();
 		// AMSUser.ClickCancelButton();
 		AMSUser.ValidateMessAfterUser("SuccessMessAfterCreate");
@@ -72,19 +76,20 @@ public class UserModuleTest extends BaseClass {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("SearchUserTest");
 		AMSUser.ItemsPerPageDropDown("15");
-		AMSUser.SearchUser("UserName");
-		;
+		AMSUser.SearchUser("EmpID1");
 		AMSUser.VerifyRecordIsPresent();
-		AMSUser.GetRowData();
+		AMSComm.GetRowData("User");
 	}
 
 	public void UpdateUserTest() throws IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("UpdateUserTest");
-		AMSUser.SearchUser("UserName");
+		AMSUser.SearchUser("EmpID1");
 		AMSUser.VerifyRecordIsPresent();
 		AMSUser.ClickEditTooltip();
-		AMSUser.EnterUserNameToUpdate("NewUserName");
+		AMSUser.EnterUserNameToUpdate("NewUsername1");
+		AMSUser.EnterEmailToUpdate("NewEmail1");
+		AMSUser.SelectRoleToUpdate("ChangeRole1");
 		// AMSUser.ClickCancelButtonInUpdate();
 		AMSUser.ClickUpdateButtonInUpdate();
 		AMSUser.ValidateUpdatedSuccessMess("UpdateSuccesMess");
@@ -93,7 +98,7 @@ public class UserModuleTest extends BaseClass {
 	public void DeleteUserTest() throws IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("DeleteUserTest");
-		AMSUser.SearchUser("NewUserName");
+		AMSUser.SearchUser("EmpID1");
 		AMSUser.VerifyRecordIsPresent();
 		AMSUser.GetRowData();
 		AMSUser.ClickDeleteTooltip();

@@ -74,7 +74,7 @@ public class EmployeeModuleTest extends BaseClass {
 		AMSEmp.SearchEmployee("EmailId");
 		// AMSEmp.VerifyDataNotFoundMessDisplayed();
 		AMSEmp.VerifyRecordDisplayed();
-		AMSComm.GetRowData();
+		AMSComm.GetRowData("Employees");
 		// AMSlogin.Logout();
 	}
 

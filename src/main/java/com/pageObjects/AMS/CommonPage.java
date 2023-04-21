@@ -13,7 +13,7 @@ import com.utilities.XLUtils;
 
 public class CommonPage extends BasePage {
 
-	// Functoion to call the driver
+	// Function to call the driver
 	public CommonPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -56,26 +56,31 @@ public class CommonPage extends BasePage {
 	}
 
 	// Get Row data
-	public void GetRowData() throws IOException {
+	public void GetRowData(String data) throws IOException {
 
-		// To locate table.
+		// To locate the table.
 		WebElement mytable = driver.findElement(By.xpath(presenttable));
 
-		// To locate rows of table.
+		// To locate rows of the table.
 		List<WebElement> rows_table = mytable.findElements(By.tagName("tr"));
-		// To calculate no of rows In table.
+		// To calculate the rows In the table.
 		int rows_count = rows_table.size();
 
-		// Loop will execute till the last row of table.
+		System.out.println("\nTable of " + data + " : \n----------------------------------");
+
+		// Loop will execute till the last row of the table.
 		for (int row = 0; row < rows_count; row++) {
 
 			// To locate columns(cells) of that specific row.
 			List<WebElement> Columns_row = rows_table.get(row).findElements(By.tagName("td"));
 			// To calculate no of columns (cells). In that specific row.
 			int columns_count = Columns_row.size();
-			System.out.println("Number of cells In Row " + row + " are " + columns_count);
-			System.out.println("All Rows");
-			System.out.print("| ");
+
+			/*
+			 * System.out.println("Number of cells In Row " + row + " are " +
+			 * columns_count);
+			 */
+
 			// Loop will execute till the last cell of that specific row.
 			for (int column = 0; column < columns_count; column++) {
 				// To retrieve text from that specific cell.
@@ -86,9 +91,10 @@ public class CommonPage extends BasePage {
 				} else if (celtext == null) {
 					System.out.print("NullValue");
 				}
-				System.out.print(" | ");
+				System.out.print(" ");
 			}
-			System.out.println("\n-------------------------------------------------- ");
+			System.out.println(
+					"\n------------------------------------------------------------------------------------- ");
 		}
 	}
 }
