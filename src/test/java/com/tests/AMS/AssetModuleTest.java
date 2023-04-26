@@ -22,7 +22,7 @@ public class AssetModuleTest extends BaseClass {
 	public ReadConfig readconfig = new ReadConfig();
 
 	@Test(priority = 1, enabled = true)
-	public void ExecuteAllLoginTCs() throws Exception {
+	public void ExecuteAllAssetModuleTCs() throws Exception {
 		// 1. Execute CreatAssetTest
 		CreatAssetTest();
 		// 2. Execute SerachAssetsTest

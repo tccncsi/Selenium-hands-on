@@ -1,15 +1,11 @@
-<!--
-@Tests - AMSLogin
-<class name="com.tests.AMS.LoginTest" />
-<class name="com.tests.AMS.ForgotPasswordTest" />
-			
-@Tests - AMSDashboard
-<class name="com.tests.AMS.DashboardModuleTest"/>
-			
-@Tests - AMSMaster
-1. Asset
-<class name="com.tests.AMS.AssetModuleTest"/>
-			
-2. Employee
-<class name="com.AMS.Master.EmployeeModuleTest"/>
--->
+LoginTest
+ForgotPasswordTest
+DashboardModuleTest
+AssetModuleTest
+EmployeeModuleTest
+RequestModuleTest
+AssetsGroupModuleTest
+AssetsDepartmentModuleTest
+AssetsVendorModuleTest
+AssetsStatusModuleTest
+UserModuleTest

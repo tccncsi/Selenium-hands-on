@@ -12,26 +12,29 @@ public class LoginTest extends BaseClass {
 
 	LogInPage AMSlogin;
 	CommonPage AMSComm;
-	public ReadConfig readconfig = new ReadConfig();
+	public ReadConfig FromConfig = new ReadConfig();
 
 	@Test(priority = 1, enabled = true)
 	public void ExecuteAllLoginTCs() throws Exception {
-		// 1. Execute LoginPageAssertionTest
+		// Objects of required classes
+		AMSlogin = new LogInPage(driver);
+		AMSComm = new CommonPage(driver);
+		AMSComm.Print("Executing Login Testcases...");
+
+		// Execute LoginPageAssertionTest
 		LoginPageAssertionTest();
-		// 2. Execute LoginValidCredTest
+		// Execute LoginValidCredTest
 		LoginValidCredTest();
-		// 3. Execute LoginInValidCredTest
+		// Execute LoginInValidCredTest
 		LoginInValidCredTest();
-		// 4. Execute LoginBlankCredTest
+		// Execute LoginBlankCredTest
 		LoginBlankCredTest();
 	}
 
 	// Test 1 for Assertion
 	public void LoginPageAssertionTest() throws IOException {
-		AMSlogin = new LogInPage(driver);
-		AMSComm = new CommonPage(driver);
 		AMSComm.TestCaseName("LoginPageAssertionTest()");
-		AMSlogin.RefreshPage();
+		AMSComm.RefreshPage();
 		// Assert elements on screen
 		AMSlogin.AssertURL(XLUtils.FetchExcelData("LoginPageURL"));
 		AMSlogin.AssertTitle(XLUtils.FetchExcelData("LoginPageTitle"));
@@ -44,36 +47,31 @@ public class LoginTest extends BaseClass {
 
 	// Test 2 for Valid Login
 	public void LoginValidCredTest() throws NumberFormatException, IOException, InterruptedException {
-		// Object of AMSActions
-		AMSlogin = new LogInPage(driver);
 		AMSComm.TestCaseName("LoginValidCredTest()");
 		AMSlogin.RefreshPage();
 		// Enter Correct Username & Password
-		AMSlogin.EnterUsername(readconfig.getAMSUsername());
-		AMSlogin.EnterPassword(readconfig.getAMSPassword());
+		AMSlogin.EnterUsername(FromConfig.getAMSUsername());
+		AMSlogin.EnterPassword(FromConfig.getAMSPassword());
 		AMSlogin.CheckRememberMeCheckBox();
 		AMSlogin.ClickOnLoginButton();
 		AMSlogin.HandleChangePasswordPopUp();
+		AMSlogin.Logout();
 	}
 
 	// Test 3 for Invalid Credentials
-	public void LoginInValidCredTest() throws NumberFormatException, IOException {
-		AMSlogin = new LogInPage(driver);
-		AMSComm = new CommonPage(driver);
+	public void LoginInValidCredTest() throws NumberFormatException, IOException, InterruptedException {
 		AMSComm.TestCaseName("LoginInValidCredTest()");
 		AMSlogin.RefreshPage();
 		// Enter Wrong Username & Password
 		AMSlogin.EnterUsername(XLUtils.FetchExcelData("WrongUsername"));
 		AMSlogin.EnterPassword(XLUtils.FetchExcelData("WrongPassword"));
 		AMSlogin.ClickOnLoginButton();
-		// Validate Pop up apears and message displayed is correct
+		// Validate Pop up appears and message displayed is correct
 		AMSlogin.ValidateErrorMessageforWrongInput(XLUtils.FetchExcelData("ErrorMessforWrongCredeonLoginPage"));
 	}
 
 	// Test 4 for Blank Credentials fields
 	public void LoginBlankCredTest() throws NumberFormatException, IOException {
-		AMSlogin = new LogInPage(driver);
-		AMSComm = new CommonPage(driver);
 		AMSComm.TestCaseName("LoginBlankCredTest()");
 		AMSlogin.RefreshPage();
 		// Do not enter Username & Password

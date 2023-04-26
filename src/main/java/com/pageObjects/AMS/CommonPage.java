@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.base.BasePage;
+import com.utilities.ReadConfig;
 import com.utilities.XLUtils;
 
 public class CommonPage extends BasePage {
@@ -18,6 +19,8 @@ public class CommonPage extends BasePage {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
+
+	public ReadConfig readconfig = new ReadConfig();
 
 	// Visible Table
 	@FindBy(xpath = "//table//tbody")
@@ -50,9 +53,12 @@ public class CommonPage extends BasePage {
 		return driver.getPageSource();
 	}
 
-	public String FromExcel(String data) throws IOException {
-		String ExcelCellData = XLUtils.FetchExcelData(data);
-		return ExcelCellData;
+	public String ReadExcel(String data) throws IOException {
+		return XLUtils.FetchExcelData(data);
+	}
+
+	public void RefreshPage() {
+		driver.navigate().refresh();
 	}
 
 	// Get Row data
@@ -96,5 +102,9 @@ public class CommonPage extends BasePage {
 			System.out.println(
 					"\n------------------------------------------------------------------------------------- ");
 		}
+	}
+
+	public void name() {
+
 	}
 }

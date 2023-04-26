@@ -26,11 +26,9 @@ public class DashboardModuleTest extends BaseClass {
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSComm = new CommonPage(driver);
-		
+
 		AMSComm.TestCaseName("DashboardMainPageTest()");
 		AMSlogin.LoginToAMSApplication();
 		AMSDashboard.ClickDashboardHomeBtn();
-		AMSDashboard.ClickMasterTabBtn();
-		AMSDashboard.ClickAssetsfromMaster();
 	}
 }

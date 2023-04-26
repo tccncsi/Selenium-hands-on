@@ -11,7 +11,7 @@ import com.utilities.ReadConfig;
 public class LogInPage extends BasePage {
 	public ReadConfig readconfig = new ReadConfig();
 
-	// Functoion to call the driver
+	// Function to call the driver
 	public LogInPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -24,39 +24,39 @@ public class LogInPage extends BasePage {
 	WebElement NCSlogoLoc;
 
 	// Login Window Header on Landing page of AMS Application
-	@FindBy(xpath = "//h4")
+	@FindBy(xpath = "//*[contains(@class,'card-title')]")
 	WebElement LoginHeadingLoc;
 
 	// Username Textbox Label
-	@FindBy(xpath = "//label[contains(text(),'Username')]")
+	@FindBy(xpath = "//label[@for='username']")
 	WebElement UsernameLabelLoc;
 
 	// Username Textbox
-	@FindBy(xpath = "//input[@formcontrolname='username']")
+	@FindBy(xpath = "//input[contains(@placeholder,'User Name')]")
 	WebElement UsernameTextBoxLoc;
 
-	// Passsword Textbox Label
-	@FindBy(xpath = "//label[@for=\"password\"]")
+	// Password Textbox Label
+	@FindBy(xpath = "//label[@for='password']")
 	WebElement PasswordLabelLoc;
 
 	// Password Textbox
-	@FindBy(xpath = "//input[@placeholder=\"Password\"]")
+	@FindBy(xpath = "//input[@placeholder='Password']")
 	WebElement PasswordTextBoxLoc;
 
 	// Show and hide password eye icon - click element
-	@FindBy(xpath = "//form//div[2]//i[1]")
+	@FindBy(xpath = "//i[@class='fa fa-eye']")
 	WebElement ShowPasswordEyeIconLoc;
 
 	// Remember me Checkbox
-	@FindBy(xpath = "//input[@type=\"checkbox\"]")
+	@FindBy(xpath = "//input[@type='checkbox']")
 	WebElement RememberMeCheckBoxLoc;
 
 	// Remember me Label
-	@FindBy(xpath = "//p")
+	@FindBy(xpath = "//p[contains(text(),'Re')]")
 	WebElement RememberMeLabelLoc;
 
 	// Forget password link
-	@FindBy(xpath = "//a[@routerlink='/resetPassword']")
+	@FindBy(xpath = "//a[contains(text(),'Forgot Pass')]")
 	WebElement ForgetPasswordLinkLoc;
 
 	// Login Button
@@ -187,6 +187,8 @@ public class LogInPage extends BasePage {
 	// Click on Forgot Password link
 	public void ClickForgotPasswordLink() {
 		ForgetPasswordLinkLoc.click();
+		String ActualURL = driver.getCurrentUrl();
+		System.out.println("After navigation current url is " + ActualURL);
 	}
 
 	// Click on Login Button
@@ -200,6 +202,7 @@ public class LogInPage extends BasePage {
 		Thread.sleep(1000);
 		waitForFindElementPresent(CancelBtnUpdatePasswordPopUpLoc);
 		CancelBtnUpdatePasswordPopUpLoc.click();
+		System.out.println("Login Succussful!");
 	}
 
 	public void RefreshPage() {
@@ -213,7 +216,6 @@ public class LogInPage extends BasePage {
 		EnterPassword(readconfig.getAMSPassword());
 		LoginBtnLoc.click();
 		HandleChangePasswordPopUp();
-		System.out.println("Sign In completed");
 	}
 
 	public void Login(String AMSUsername, String AMSPassword) throws InterruptedException {
@@ -221,7 +223,7 @@ public class LogInPage extends BasePage {
 		EnterUsername(AMSUsername);
 		EnterPassword(AMSPassword);
 		ClickOnLoginButton();
-		System.out.println("Sign In completed");
+		System.out.println("Login Succussful!");
 	}
 
 	// Click on User Icon
@@ -308,11 +310,11 @@ public class LogInPage extends BasePage {
 		// isDisplayed() method returns boolean value either True or False
 		Boolean Display = EntrValidEmailAdrsMessageLoc.isDisplayed();
 		// To print the value
-		System.out.println("Element displayed is :" + Display);
-
+		System.out.println("Error message displayed is :" + Display);
 		String ErrMess = EntrValidEmailAdrsMessageLoc.getText();
-		// Assert to check that message is corrent
+		// Assert to check that message is correct
 		Assert.assertEquals(ErrMess, ExpectedErrorMessage);
+		System.out.println("Error Message is " + ErrMess);
 	}
 
 	// Validate Error message displayed is current on login page below username
@@ -322,11 +324,12 @@ public class LogInPage extends BasePage {
 		// isDisplayed() method returns boolean value either True or False
 		Boolean Display = LoginPageInvalidUsernameLoc.isDisplayed();
 		// To print the value
-		System.out.println("Element displayed is :" + Display);
-
+		System.out.println("Error Message below Username Textbox displayed? -> " + Display);
 		String ErrMess = LoginPageInvalidUsernameLoc.getText();
-		// Assert to check that message is corrent
+		// Assert to check that message is correct
 		Assert.assertEquals(ErrMess, ExpectedErrorMessage);
+		// Print Error Message
+		System.out.println("Actual Message : " + ErrMess);
 
 	}
 
@@ -337,11 +340,13 @@ public class LogInPage extends BasePage {
 		// isDisplayed() method returns boolean value either True or False
 		Boolean Display = LoginPageInvalidPasswordLoc.isDisplayed();
 		// To print the value
-		System.out.println("Element displayed is :" + Display);
+		System.out.println("Error Message below Password Textbox displayed? -> " + Display);
 
 		String ErrMess = LoginPageInvalidPasswordLoc.getText();
-		// Assert to check that message is corrent
+		// Assert to check that message is correct
 		Assert.assertEquals(ErrMess, ExpectedErrorMessage);
+		// Print Error Message
+		System.out.println("Actual Message : " + ErrMess);
 	}
 
 	// Validate Error message displayed on pop pup arises when wrong input provided
@@ -355,7 +360,7 @@ public class LogInPage extends BasePage {
 		System.out.println("Authentication Failed Popup displayed is :" + Display);
 
 		String ErrMess = AuthenticationFailedPopupMessageLoc.getText();
-		// Assert to check that message is corrent
+		// Assert to check that message is correct
 
 		Assert.assertEquals(ErrMess, ExpectedErrorMessage);
 
@@ -382,5 +387,13 @@ public class LogInPage extends BasePage {
 		if (verifyURL == true) {
 			System.out.println("Actual URL(" + ActualURL + ") And Expected URL(" + Expected + ") Matches");
 		}
+	}
+
+	// Validate URL after clicking Back button on forgot password page
+	public void AfterReturnToLoginPage(String Expected) {
+		System.out.println(
+				"After clicking on Back Button on Forgot Password Page user navigates to Login Page\nCheck it through url");
+		AssertURL(Expected);
+		System.out.println("User navigated to Login Page.");
 	}
 }
