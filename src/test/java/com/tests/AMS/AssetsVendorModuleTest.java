@@ -23,19 +23,16 @@ public class AssetsVendorModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void AssetsGroupModuleTestExecution() throws Exception {
+	public void ExecuteAssetsVendorModuleTests() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSAssetsVendor = new AssetsVendorPage(driver);
-
-		AMSComm.Print(
-				"\nExecute All AssetsGroup Module related Test Cases\n--------------------------------------------------");
-
+		AMSComm.Print("Executing Assets Vendor Module Testcases...");
 		AMSlogin.LoginToAMSApplication();
-		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.NavigateToDashboardPage();
 		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
@@ -45,6 +42,8 @@ public class AssetsVendorModuleTest extends BaseClass {
 		DeleteAssetsVendorTest();
 
 		AMSlogin.Logout();
+
+		AMSComm.TotalTestCount("0", "4");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,17 +62,16 @@ public class AssetsVendorModuleTest extends BaseClass {
 	public void SearchAssetsVendorTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsVendorTab();
 		AMSComm.TestCaseName("SearchAssetsVendorTest");
-		//AMSAssetsVendor.ItemsPerPageDropDown("15");
+		// AMSAssetsVendor.ItemsPerPageDropDown("15");
 		AMSAssetsVendor.SearchAssetsVendor("AssetVendorName");
-		AMSAssetsVendor.VerifyRecordIsPresent();
-		AMSAssetsVendor.GetRowData();
+		AMSComm.GetTableData("Asset Vendor");
 	}
 
 	public void UpdateAssetsVendorTest() throws IOException {
 		AMSDashboard.ClickOnAssetsVendorTab();
 		AMSComm.TestCaseName("UpdateAssetsVendorTest");
 		AMSAssetsVendor.SearchAssetsVendor("AssetVendorName");
-		AMSAssetsVendor.VerifyRecordIsPresent();
+		AMSComm.GetTableData("Asset Vendor");
 		AMSAssetsVendor.ClickEditTooltip();
 		AMSAssetsVendor.EnterAssetVendorNameToUpdate("NewAssetVendorName");
 		AMSAssetsVendor.EnterAssetVendorCodeToUpdate("NewAssetVendorCode");
@@ -82,14 +80,13 @@ public class AssetsVendorModuleTest extends BaseClass {
 		AMSAssetsVendor.ValidateUpdatedSuccessMess("UpdateSuccesMess");
 	}
 
-	public void DeleteAssetsVendorTest() throws IOException {
+	public void DeleteAssetsVendorTest() throws IOException, InterruptedException {
 		AMSDashboard.ClickOnAssetsVendorTab();
 		AMSComm.TestCaseName("DeleteAssetsVendorTest");
 		AMSAssetsVendor.SearchAssetsVendor("NewAssetVendorName");
-		AMSAssetsVendor.VerifyRecordIsPresent();
-		AMSAssetsVendor.GetRowData();
+		AMSComm.GetTableData("Asset Vendor");
 		AMSAssetsVendor.ClickDeleteTooltip();
-		AMSAssetsVendor.YesDeleteIt("DeleteMessAfterDel");
+		AMSComm.YesDeleteIt("DeleteMessAfterDel");
 	}
 
 }

@@ -9,31 +9,18 @@
 	<parameter name="url" value="http://10.176.41.10:8080/UatAms" />
 	<test name="AMS Test">
 		<classes>
-			<class name="com.tests.AMS.DashboardModuleTest" />
-
-			<!--
 			<class name="com.tests.AMS.LoginTest" />
-			<class
-			name="com.tests.AMS.ForgotPasswordTest" />
-			<class
-			name="com.tests.AMS.DashboardModuleTest" />
-			<class
-			name="com.tests.AMS.AssetModuleTest" />
-			<class
-			name="com.tests.AMS.EmployeeModuleTest" />
-			<class
-			name="com.tests.AMS.RequestModuleTest" />
-			<class
-			name="com.tests.AMS.AssetsGroupModuleTest" />
-			<class
-			name="com.tests.AMS.AssetsDepartmentModuleTest" />
-			<class
-			name="com.tests.AMS.AssetsVendorModuleTest" />
-			<class
-			name="com.tests.AMS.AssetsStatusModuleTest" />
-			<class
-			name="com.tests.AMS.UserModuleTest" />
-			-->
+			<class name="com.tests.AMS.ForgotPasswordTest" />
+			<class name="com.tests.AMS.DashboardModuleTest" />
+			<class name="com.tests.AMS.AssetModuleTest" />
+			<class name="com.tests.AMS.EmployeeModuleTest" />
+			<class name="com.tests.AMS.RequestModuleTest" />
+			<class name="com.tests.AMS.AssetsGroupModuleTest" />
+			<class name="com.tests.AMS.AssetsDepartmentModuleTest" />
+			<class name="com.tests.AMS.AssetsVendorModuleTest" />
+			<class name="com.tests.AMS.AssetsStatusModuleTest" />
+
+			<class name="com.tests.AMS.UserModuleTest" />
 		</classes>
 	</test>
 </suite>

@@ -9,10 +9,45 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">TCC-TestRunner</th></tr>
-<tr><td><a href="#t0">AMS Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">9,151</td><td></td><td></td></tr>
+<tr><td><a href="#t0">AMS Test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">1</td><td class="num">148,664</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TCC-TestRunner</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AMS Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.tests.AMS.DashboardModuleTest</td><td><a href="#m0">DashboardMainPageTest</a></td><td rowspan="1">1682338335972</td><td rowspan="1">4600</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TCC-TestRunner</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AMS Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.tests.AMS.DashboardModuleTest</td><td><a href="#m0">ExecuteDashboardTests</a></td><td rowspan="1">1683272144052</td><td rowspan="1">5142</td></tr><tr><th colspan="4">AMS Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.tests.AMS.AssetModuleTest</td><td><a href="#m1">ExecuteAssetModuleTests</a></td><td rowspan="1">1683272153260</td><td rowspan="1">20392</td></tr><tr class="passedodd"><td rowspan="1">com.tests.AMS.AssetsDepartmentModuleTest</td><td><a href="#m2">ExecuteAssetsDepartmentModuleTests</a></td><td rowspan="1">1683272217377</td><td rowspan="1">8455</td></tr><tr class="passedeven"><td rowspan="1">com.tests.AMS.AssetsGroupModuleTest</td><td><a href="#m3">ExecuteAssetsGroupModuleTests</a></td><td rowspan="1">1683272204128</td><td rowspan="1">8793</td></tr><tr class="passedodd"><td rowspan="1">com.tests.AMS.AssetsStatusModuleTest</td><td><a href="#m4">ExecuteAssetsStatusModuleTests</a></td><td rowspan="1">1683272245019</td><td rowspan="1">8237</td></tr><tr class="passedeven"><td rowspan="1">com.tests.AMS.AssetsVendorModuleTest</td><td><a href="#m5">ExecuteAssetsVendorModuleTests</a></td><td rowspan="1">1683272230431</td><td rowspan="1">8691</td></tr><tr class="passedodd"><td rowspan="1">com.tests.AMS.EmployeeModuleTest</td><td><a href="#m6">ExecuteAllEmployeeTCs</a></td><td rowspan="1">1683272178281</td><td rowspan="1">12815</td></tr><tr class="passedeven"><td rowspan="1">com.tests.AMS.ForgotPasswordTest</td><td><a href="#m7">ExecuteForgotPasswordTests</a></td><td rowspan="1">1683272137131</td><td rowspan="1">2910</td></tr><tr class="passedodd"><td rowspan="1">com.tests.AMS.LoginTest</td><td><a href="#m8">ExecuteLoginTests</a></td><td rowspan="1">1683272126733</td><td rowspan="1">6473</td></tr><tr class="passedeven"><td rowspan="1">com.tests.AMS.RequestModuleTest</td><td><a href="#m9">ExecuteRequestModuleTests</a></td><td rowspan="1">1683272195295</td><td rowspan="1">4314</td></tr><tr class="passedodd"><td rowspan="1">com.tests.AMS.UserModuleTest</td><td><a href="#m10">ExecuteUserModuleTests</a></td><td rowspan="1">1683272257983</td><td rowspan="1">10506</td></tr></tbody>
 </table>
-<h2>AMS Test</h2><h3 id="m0">com.tests.AMS.DashboardModuleTest#DashboardMainPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>AMS Test</h2><h3 id="m0">com.tests.AMS.DashboardModuleTest#ExecuteDashboardTests</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[@class=&apos;heading&apos;]&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-413IDC&apos;, ip: &apos;10.176.44.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\P1345365\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75fcb2b4340eb8a386186e9f1825a67c
+*** Element info: {Using=xpath, value=//label[@class=&apos;heading&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.getText(Unknown Source)
+	at com.pageObjects.AMS.DashboardPage.ClickOnBulkAssetImportTab(DashboardPage.java:565)
+	at com.tests.AMS.DashboardModuleTest.UtilityModuleTest(DashboardModuleTest.java:103)
+	at com.tests.AMS.DashboardModuleTest.ExecuteDashboardTests(DashboardModuleTest.java:39)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.tests.AMS.AssetModuleTest#ExecuteAssetModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.tests.AMS.AssetsDepartmentModuleTest#ExecuteAssetsDepartmentModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.tests.AMS.AssetsGroupModuleTest#ExecuteAssetsGroupModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.tests.AMS.AssetsStatusModuleTest#ExecuteAssetsStatusModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.tests.AMS.AssetsVendorModuleTest#ExecuteAssetsVendorModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.tests.AMS.EmployeeModuleTest#ExecuteAllEmployeeTCs</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.tests.AMS.ForgotPasswordTest#ExecuteForgotPasswordTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.tests.AMS.LoginTest#ExecuteLoginTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.tests.AMS.RequestModuleTest#ExecuteRequestModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.tests.AMS.UserModuleTest#ExecuteUserModuleTests</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

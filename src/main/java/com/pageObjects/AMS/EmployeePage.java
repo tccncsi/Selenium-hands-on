@@ -118,7 +118,7 @@ public class EmployeePage extends BasePage {
 	WebElement CreateEmpSaveBtnLoc;
 
 	// Edit Employee button
-	@FindBy(xpath = "//tr//td/i[@class='fa fa-edit']")
+	@FindBy(xpath = "//tr//td/*[@class='fa fa-edit']")
 	WebElement EditEmployeeBtnLoc;
 
 	// Delete Employee button
@@ -186,11 +186,11 @@ public class EmployeePage extends BasePage {
 	// Search the Assets using Search Box
 	// >> Valid inputs -> Asset no, Employee-name, category etc.
 	public void SearchEmployee(String Empemail) throws IOException {
-		System.out.println("Inside SearchEmployeeByText()");
+		System.out.println("Inside SearchEmployee()");
 		waitForFindElementPresent(SearchByTextboxEmpWindowLoc);
 		SearchByTextboxEmpWindowLoc.clear();
 		SearchByTextboxEmpWindowLoc.sendKeys(XLUtils.FetchExcelData(Empemail));
-		System.out.println("Inside SearchEmployeeByText() : Serched Employee is - " + Empemail);
+		System.out.println("Serched Employee -> " + XLUtils.FetchExcelData(Empemail));
 	}
 
 	public void VerifyRecordDisplayed() {
@@ -291,7 +291,7 @@ public class EmployeePage extends BasePage {
 	}
 
 	public void EnterEmail(String EmpEmail) throws IOException {
-		System.out.println("Inside EnterDateOfJoining()");
+		System.out.println("Inside EnterEmail()");
 		waitForFindElementPresent(EnterEmailLoc);
 		EnterEmailLoc.clear();
 		EnterEmailLoc.sendKeys(XLUtils.FetchExcelData(EmpEmail));
@@ -338,7 +338,7 @@ public class EmployeePage extends BasePage {
 	// Delete Employee
 	public void YesDeleteEmployee() {
 		YesDeleteEmplyeeLoc.click();
-		//OKLoc.click();
+		// OKLoc.click();
 	}
 
 	// Cancel Employee Deletion

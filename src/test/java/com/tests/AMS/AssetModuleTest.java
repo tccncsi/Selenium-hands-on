@@ -15,50 +15,64 @@ import com.utilities.XLUtils;
 public class AssetModuleTest extends BaseClass {
 
 	LogInPage AMSlogin;
-	DashboardPage AMSDashboard;
+	DashboardPage AMSDash;
 	AssetPage AMSAssets;
 	CommonPage AMSComm;
 
 	public ReadConfig readconfig = new ReadConfig();
 
 	@Test(priority = 1, enabled = true)
-	public void ExecuteAllAssetModuleTCs() throws Exception {
-		// 1. Execute CreatAssetTest
-		CreatAssetTest();
-		// 2. Execute SerachAssetsTest
-		SerachAssetTest();
-		// 3. Execute UpdateAssetsTest
+	public void ExecuteAssetModuleTests() throws Exception {
+
+		// Objects of Required Pages
+		AMSlogin = new LogInPage(driver);
+		AMSDash = new DashboardPage(driver);
+		AMSComm = new CommonPage(driver);
+		AMSAssets = new AssetPage(driver);
+		AMSComm.Print("Executing AssetModule Testcases...");
+		AMSlogin.LoginToAMSApplication();
+		AMSDash.NavigateToDashboardPage();
+		AMSDash.ClickMasterTabBtn();
+
+//		Execute all Asset Module Tests
+		GetAllRowsPresent();
+		ClickCancelBtnOnCreateAsset();
+		CreateAssetTest();
+		SearchAssetTest();
 		UpdateAssetTest();
-		// 4. Execute SerachAssets
 		DeleteAssetTest();
+
+		AMSlogin.Logout();
+
+		AMSComm.TotalTestCount("18", "6");
 	}
 
-	// Create
-	public void CreatAssetTest() throws InterruptedException, IOException {
+/// Get all the rows present on the asset's main page
+	public void GetAllRowsPresent() throws IOException {
+		AMSComm.TestCaseName("GetAllRowsPresent()");
+		AMSComm.ManualTestCount("1");
+		AMSDash.ClickOnAssetsTab();
+		AMSAssets.SelectItemFromItemsPerPageDropDown("25");
+		AMSComm.VerifyRecordIsPresent();
+		AMSComm.GetRowData("All Assets");
+	}
 
-		// Objects of Below Pages
-		AMSlogin = new LogInPage(driver);
-		AMSDashboard = new DashboardPage(driver);
-		AMSAssets = new AssetPage(driver);
-		AMSComm = new CommonPage(driver);
-
-		AMSComm.TestCaseName("CreateAssetTest");
-		AMSlogin.RefreshPage();
-		// Login to AMS Application
-		AMSlogin.LoginToAMSApplication();
-		// Click on "Master" Tab
-		AMSDashboard.ClickMasterTabBtn();
-		// Click on "Assets" tab inside Master Tab
-		AMSDashboard.ClickAssetsfromMaster();
-
-		// Click on "Create Asset" button on Assets page
+/// Cancel on Create Asset
+	public void ClickCancelBtnOnCreateAsset() {
+		AMSComm.TestCaseName("ClickCancelBtnOnCreateAsset");
+		AMSComm.ManualTestCount("1");
+		AMSDash.ClickOnAssetsTab();
 		AMSAssets.ClickonCreateAssetBtn();
-		// Click on "Cancel" button in form
 		AMSAssets.ClickOnCancelButton();
-		// Click on "Create Asset" button on Assets page
-		AMSAssets.ClickonCreateAssetBtn();
+	}
 
-		// Fill the form //
+/// Create
+	public void CreateAssetTest() throws InterruptedException, IOException {
+		AMSComm.TestCaseName("CreateAssetTest");
+		AMSComm.ManualTestCount("10");
+		AMSDash.ClickOnAssetsTab();
+		AMSAssets.ClickonCreateAssetBtn();
+		// Fill out the form //
 		AMSAssets.EnterAssetNumber("AssetNumber");
 		AMSAssets.EnterAssetSerialNumber("AssetSerialNumber");
 		AMSAssets.SelectLocation("Location");
@@ -69,72 +83,43 @@ public class AssetModuleTest extends BaseClass {
 		AMSAssets.SelectAssetType("AssetType");
 		AMSAssets.EnterCount("Count");
 		AMSAssets.EnterRemark("Remark");
-
-		// Click on "Create" button in form and
-		// Verify the pop is diplayed and validate the error message displayed
 		AMSAssets.ClickOnCreateButton();
-		AMSAssets.VerifyCreateAssetSuccessfullMessage("CreateAssetSuccessfullMessage");
-		AMSlogin.Logout();
+		AMSComm.ValidateMessAfterCreated("SuccessMessAfterCreate");
 	}
 
-	// Read
-	public void SerachAssetTest() throws NumberFormatException, IOException, InterruptedException {
-
-		// Objects of Below Pages
-		AMSlogin = new LogInPage(driver);
-		AMSDashboard = new DashboardPage(driver);
-		AMSAssets = new AssetPage(driver);
-		AMSComm = new CommonPage(driver);
-
-		AMSComm.TestCaseName("SerachAssetTest()");
-		AMSlogin.RefreshPage();
-		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
-		AMSDashboard.ClickMasterTabBtn();
-		AMSDashboard.ClickAssetsfromMaster();
-		AMSAssets.SelectItemFromItemsPerPageDropDown("25");
+/// Read
+	public void SearchAssetTest() throws NumberFormatException, IOException, InterruptedException {
+		AMSComm.TestCaseName("SearchAssetTest()");
+		AMSComm.ManualTestCount("4");
+		AMSDash.ClickOnAssetsTab();
 		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
-		AMSAssets.VerifyRecordDisplayed();
-		// AMSAssets.VerifyDataNotFoundMessageIsPresent();
-		AMSlogin.Logout();
+		AMSComm.GetTableData("Assets");
 	}
 
-	// Update
+/// Update
 	public void UpdateAssetTest() throws NumberFormatException, InterruptedException, IOException {
-
-		// Objects of Below Pages AMSlogin = new LogInPage(driver); AMSDashboard =
-		new DashboardPage(driver);
-		AMSAssets = new AssetPage(driver);
-		AMSComm = new CommonPage(driver);
-
 		AMSComm.TestCaseName("UpdateAssetTest()");
-		AMSlogin.RefreshPage();
-		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
-		AMSDashboard.ClickMasterTabBtn();
-		AMSDashboard.ClickAssetsfromMaster();
-		AMSAssets.clickOnUpdateAssetsIcon(XLUtils.FetchExcelData("AssetNumber"));
+		AMSComm.ManualTestCount("1");
+		AMSDash.ClickOnAssetsTab();
+		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
+		AMSComm.VerifyRecordIsPresent();
+		AMSComm.ClickEditTooltip();
 		AMSAssets.UpdateAssetType("NewAssetType");
 		AMSAssets.UpdateAssetDescription("NewAssetDescription");
-		AMSAssets.ClickUpdateBtn();
-		AMSAssets.UpdateSuccessfullyPopUpMessage("Record Updated Successfully!");
-		AMSlogin.Logout();
+		AMSComm.ClickUpdateButtonInUpdate();
+		AMSComm.ValidateUpdatedSuccessMess("UpdateSuccesMess");
 	}
 
-	// Delete
+/// Delete
 	public void DeleteAssetTest() throws NumberFormatException, IOException, InterruptedException {
-
-		// Objects of Below Pages AMSlogin = new LogInPage(driver); AMSDashboard =
-		new DashboardPage(driver);
-		AMSAssets = new AssetPage(driver);
-		AMSComm = new CommonPage(driver);
-
 		AMSComm.TestCaseName("DeleteAssetTest()");
-		AMSlogin.RefreshPage();
-		AMSlogin.Login(readconfig.getAMSUsername(), readconfig.getAMSPassword());
-		AMSDashboard.ClickMasterTabBtn();
-		AMSDashboard.ClickAssetsfromMaster();
-		AMSAssets.DeleteTheTopMostRecordAfterSearch(XLUtils.FetchExcelData("AssetNumber"));
+		AMSComm.ManualTestCount("1");
+		AMSDash.ClickOnAssetsTab();
+		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
+		AMSComm.VerifyRecordIsPresent();
+		AMSComm.ClickDeleteTooltip();
+		AMSComm.YesDeleteIt("DeleteMessAfterDel");
 		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
 		AMSAssets.VerifyDataNotFoundMessageIsPresent();
-		AMSlogin.Logout();
 	}
 }

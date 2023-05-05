@@ -63,7 +63,7 @@ public class AssetsDepartmentPage extends BasePage {
 	WebElement CopyRightMessage2Loc;
 
 	// Assets Group Edit tooltip
-	@FindBy(xpath = "//td//*[@class='fa fa-edit ml-5']")
+	@FindBy(xpath = "//tr//*[@class='fa fa-edit ml-5']")
 	WebElement AssetGrpEdittooltipLoc;
 
 	// Assets Group Delete tooltip

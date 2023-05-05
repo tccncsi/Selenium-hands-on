@@ -51,7 +51,7 @@ public class AssetPage extends BasePage {
 	WebElement CreateAssetsHeaderMessageLoc;
 
 	// "x" button to cancel or minimize the Create Assets window
-	@FindBy(xpath = "//button/span[contains(.,'×') and @xpath = 1]")
+	@FindBy(xpath = "//button/span[contains(.,'ï¿½') and @xpath = 1]")
 	WebElement CloseAssetWindowBtnXLoc;
 
 // Form Filling
@@ -113,7 +113,7 @@ public class AssetPage extends BasePage {
 	WebElement SuccessfulPopupLoc;
 
 	// Successful pop up message at the end
-	@FindBy(xpath = "//h2[@id='swal2-title']")
+	@FindBy(xpath = "//*[@id='swal2-title']")
 	WebElement SuccessfulPopupMessageLoc; // OR (//h2[normalize-space()='Record Created Successfully!'])[1]
 
 	// Successful pop up OK button
@@ -121,11 +121,11 @@ public class AssetPage extends BasePage {
 	WebElement SuccessfulPopupOKBtnLoc;
 
 	// After search first row loc
-	@FindBy(xpath = "//tbody//tr[1]//td[position()=1]/span[1]")
+	@FindBy(xpath = "//tbody//tr[1]")
 	WebElement FirstRowAfterSearchLoc;
 
 	// Delete asset icon in first row as per search Loc
-	@FindBy(xpath = "//tbody//tr[1]//td//i[@data-toggle='tooltip'][1]")
+	@FindBy(xpath = "//td//*[@class='fa fa-trash']")
 	WebElement DeleteFirstAssetLoc;
 
 	// Are You Sure? Confirmation message
@@ -235,7 +235,7 @@ public class AssetPage extends BasePage {
 		waitForFindElementPresent(SearchByTextboxAssetsWindowLoc);
 		SearchByTextboxAssetsWindowLoc.clear();
 		SearchByTextboxAssetsWindowLoc.sendKeys(AssetsNoOREmployeeNameORCategory);
-		System.out.println("Inside SearchAssetsByText() : Serched Assets is - " + AssetsNoOREmployeeNameORCategory);
+		System.out.println("Inside SearchAssetsByText() : Searched Assets is - " + AssetsNoOREmployeeNameORCategory);
 	}
 
 	public void VerifyRecordDisplayed() {
@@ -450,20 +450,6 @@ public class AssetPage extends BasePage {
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
-	// Click on Update button the first record searched as asset number
-	public void clickOnUpdateAssetsIcon(String AssetToUpdate) {
-		System.out.println("Inside 'UpdateAssets()'");
-		// Search the asset to Update
-		SearchAssetsByText(AssetToUpdate);
-		waitForFindElementPresent(FirstRowAfterSearchLoc);
-		// isDisplayed() method returns boolean value either True or False
-		Boolean Display = FirstRowAfterSearchLoc.isDisplayed();
-		if (Display == true) {
-			// Click on edit tooltip
-			UpdateFirstAsseticonLoc.click();
-		}
-	}
-
 	public void UpdateAssetNumber(String AssetNumber) throws IOException {
 		System.out.println("Inside 'UpdateAssetNumber()'");
 		waitForFindElementPresent(AssetNumberLoc);
@@ -539,12 +525,6 @@ public class AssetPage extends BasePage {
 		// Create object of the Select class
 		Select ARemark = new Select(AssetRemarkLoc);
 		ARemark.selectByVisibleText(XLUtils.FetchExcelData(AssetRemark));
-	}
-
-	public void ClickUpdateBtn() throws IOException {
-		System.out.println("Inside 'ClickUpdateBtn()'");
-		waitForFindElementPresent(AssetUpdateLoc);
-		AssetUpdateLoc.click();
 	}
 
 	public void ClickCloseBtn() throws IOException {

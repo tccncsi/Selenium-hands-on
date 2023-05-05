@@ -23,19 +23,17 @@ public class AssetsGroupModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void AssetsGroupModuleTestExecution() throws Exception {
+	public void ExecuteAssetsGroupModuleTests() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSAssetGrp = new AssetsGroupPage(driver);
-
-		AMSComm.Print(
-				"\nExecute All AssetsGroup Module related Test Cases\n--------------------------------------------------");
+		AMSComm.Print("Executing AssetsGroupModule Testcases...");
 
 		AMSlogin.LoginToAMSApplication();
-		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.NavigateToDashboardPage();
 		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
@@ -45,15 +43,18 @@ public class AssetsGroupModuleTest extends BaseClass {
 		DeleteAssetsGroupTest();
 
 		AMSlogin.Logout();
+
+		AMSComm.TotalTestCount("8", "4");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void CreateAssetsGroupTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsGroupTab();
+		AMSComm.ManualTestCount("3");
 		AMSComm.TestCaseName("CreateAssetsGroupTest");
 		AMSAssetGrp.ClickCreateAssetGroupButton();
-		AMSAssetGrp.EnterAssetGroup("AssetGroup");
+		AMSAssetGrp.EnterAssetGroup("AssetsGroup");
 		AMSAssetGrp.CheckTrue();
 		AMSAssetGrp.ClickCreateButton();
 		// AMSAssetGrp.ClickCancelButton();
@@ -62,31 +63,32 @@ public class AssetsGroupModuleTest extends BaseClass {
 
 	public void SearchAssetsGroupTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsGroupTab();
+		AMSComm.ManualTestCount("1");
+		AMSComm.GetTableData("Assets Group");
 		AMSComm.TestCaseName("SearchRequestTest");
 		AMSAssetGrp.ItemsPerPageDropDown("15");
-		AMSAssetGrp.SearchAssetsGroup("AssetGroup");
-		AMSAssetGrp.VerifyRecordIsPresent();
-		AMSAssetGrp.GetRowData();
+		AMSAssetGrp.SearchAssetsGroup("AssetsGroup");
+		AMSComm.GetTableData("Assets Group");
 	}
 
 	public void UpdateAssetsGroupTest() throws IOException {
 		AMSDashboard.ClickOnAssetsGroupTab();
 		AMSComm.TestCaseName("UpdateAssetsGroupTest");
-		AMSAssetGrp.SearchAssetsGroup("AssetGroup");
-		AMSAssetGrp.VerifyRecordIsPresent();
+		AMSAssetGrp.SearchAssetsGroup("AssetsGroup");
+		AMSComm.GetTableData("Asset Group");
 		AMSAssetGrp.ClickEditTooltip();
-		AMSAssetGrp.EnterAssetGroupToUpdate("NewAssetGroup");
+		AMSAssetGrp.EnterAssetGroupToUpdate("NewAssetsGroup");
 		// AMSAssetGrp.ClickCancelButtonInUpdate();
 		AMSAssetGrp.ClickUpdateButtonInUpdate();
 		AMSAssetGrp.ValidateUpdatedSuccessMess("UpdateSuccesMess");
 	}
 
-	public void DeleteAssetsGroupTest() throws IOException {
+	public void DeleteAssetsGroupTest() throws IOException, InterruptedException {
 		AMSDashboard.ClickOnAssetsGroupTab();
 		AMSComm.TestCaseName("DeleteAssetsGroupTest");
-		AMSAssetGrp.SearchAssetsGroup("NewAssetGroup");
-		AMSAssetGrp.VerifyRecordIsPresent();
-		AMSAssetGrp.ClickDeleteTooltip();
-		AMSAssetGrp.YesDeleteIt("DeleteMessAfterDel");
+		AMSAssetGrp.SearchAssetsGroup("NewAssetsGroup");
+		AMSComm.GetTableData("Asset Group");
+		AMSComm.ClickDeleteTooltip();
+		AMSComm.YesDeleteIt("DeleteMessAfterDel");
 	}
 }

@@ -237,7 +237,7 @@ public class LogInPage extends BasePage {
 		ClickUserProfileIcon();
 		waitForFindElementPresent(LogOutBtnLoc);
 		LogOutBtnLoc.click();
-		System.out.println("\nSign Out completed");
+		System.out.println("\nSign Out completed!");
 	}
 
 	// Click Change Password

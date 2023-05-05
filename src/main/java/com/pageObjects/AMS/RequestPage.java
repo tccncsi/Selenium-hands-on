@@ -120,6 +120,7 @@ public class RequestPage extends BasePage {
 			List<WebElement> rows = driver.findElements(By.xpath(presentrows));
 			if (rows.size() > 0) {
 				System.out.println("Record is present.");
+				GetReqRowData();
 			} else {
 				System.out.println("Record is not present.");
 			}
@@ -136,12 +137,10 @@ public class RequestPage extends BasePage {
 		try {
 			List<WebElement> rows = driver.findElements(By.xpath(presentrows));
 			if (rows.size() > 0) {
-				System.out.println("Record is present.");
 				String Status = SixthColLoc.getText();
 				Assert.assertEquals(Status, ExStatus);
 				System.out.println("Status : " + Status);
 			} else {
-				System.out.println("Record is not present.");
 			}
 		} catch (NoSuchElementException e) {
 			// TODO: handle exception

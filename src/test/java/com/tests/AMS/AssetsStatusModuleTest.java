@@ -23,19 +23,16 @@ public class AssetsStatusModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void AssetsGroupModuleTestExecution() throws Exception {
+	public void ExecuteAssetsStatusModuleTests() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSAssetStatus = new AssetsStatusPage(driver);
-
-		AMSComm.Print(
-				"\nExecute All AssetsGroup Module related Test Cases\n--------------------------------------------------");
-
+		AMSComm.Print("Executing Assets Status Module Testcases...");
 		AMSlogin.LoginToAMSApplication();
-		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.NavigateToDashboardPage();
 		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
@@ -46,6 +43,8 @@ public class AssetsStatusModuleTest extends BaseClass {
 		DeleteAssetsStatusTest();
 
 		AMSlogin.Logout();
+		
+		AMSComm.TotalTestCount("20", "5");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,34 +53,35 @@ public class AssetsStatusModuleTest extends BaseClass {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("SearchAssetsStatusTest");
 		AMSAssetStatus.ItemsPerPageDropDown("15");
-		AMSAssetStatus.VerifyRecordIsPresent();
-		AMSAssetStatus.GetRowData();
+		AMSComm.GetTableData("Asset Status");
 	}
-	
+
 	public void CreateAssetsStatusTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("CreateAssetsStatusTest");
+		AMSComm.ManualTestCount("8");
 		AMSAssetStatus.ClickCreateAssetStatusButton();
 		AMSAssetStatus.EnterAssetStatusName("AssetStatusName");
 		AMSAssetStatus.ClickCreateButton();
 		// AMSAssetStatus.ClickCancelButton();
-		AMSAssetStatus.ValidateMessAfterAssetStatus("SuccessMessAfterCreate");
+		AMSComm.ValidateMessAfterCreated("SuccessMessAfterCreate");
 	}
 
 	public void SearchAssetsStatusTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("SearchAssetsStatusTest");
+		AMSComm.ManualTestCount("3");
 		AMSAssetStatus.ItemsPerPageDropDown("15");
 		AMSAssetStatus.SearchAssetsStatus("AssetStatusName");
-		AMSAssetStatus.VerifyRecordIsPresent();
-		AMSAssetStatus.GetRowData();
+		AMSComm.GetTableData("Asset Status");
 	}
 
 	public void UpdateAssetsStatusTest() throws IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("UpdateAssetsStatusTest");
+		AMSComm.ManualTestCount("4");
 		AMSAssetStatus.SearchAssetsStatus("AssetStatusName");
-		AMSAssetStatus.VerifyRecordIsPresent();
+		AMSComm.GetTableData("Asset Status");
 		AMSAssetStatus.ClickEditTooltip();
 		AMSAssetStatus.EnterAssetStatusNameToUpdate("NewAssetStatusName");
 		// AMSAssetStatus.ClickCancelButtonInUpdate();
@@ -92,9 +92,9 @@ public class AssetsStatusModuleTest extends BaseClass {
 	public void DeleteAssetsStatusTest() throws IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("DeleteAssetsStatusTest");
+		AMSComm.ManualTestCount("4");
 		AMSAssetStatus.SearchAssetsStatus("NewAssetStatusName");
-		AMSAssetStatus.VerifyRecordIsPresent();
-		AMSAssetStatus.GetRowData();
+		AMSComm.GetTableData("Asset Status");
 		AMSAssetStatus.ClickDeleteTooltip();
 		AMSAssetStatus.YesDeleteIt("DeleteMessAfterDel");
 	}

@@ -1,9 +1,12 @@
 package com.pageObjects.AMS;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.base.BasePage;
 
 public class DashboardPage extends BasePage {
@@ -16,21 +19,17 @@ public class DashboardPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>LOCATORS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
+//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>LOCATORS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
 ///* Elements on Dashboard Page
 
-	// Cancel button update password pop up window
+	// Cancel button update password pop-up window
 	@FindBy(xpath = "//button[starts-with(text(),'Cancel')]")
 	WebElement CancelBtnUpdatePasswordPopUpLoc;
 
 	// Dashboard home button Loc
 	@FindBy(xpath = "//span[contains(text(),'Dashboard')]/parent::a")
 	WebElement DashboardHomeTabBtnLoc;
-
-	// NCS Logo
-	@FindBy(xpath = "//img[@src='./assets/images/logoncsi.svg']")
-	WebElement NCSLogoLoc;
 
 	// Sidebar Toggle button
 	@FindBy(xpath = "//a[contains(@class,'sidebar-toggle') and @role='button']")
@@ -56,11 +55,12 @@ public class DashboardPage extends BasePage {
 	@FindBy(xpath = "//div[@class='grids']/*[@class='col col-data']")
 	WebElement DashboardElementsGrid;
 
-	public String EleGrid = "//div[@class='grids']";
-	public String Elements = "/*[@class='col col-data']";
-	public String Ref = "/div/p";
-	public String Count = "/div/span";
+	public String EleGridElements = "//div[@class='grids']/*[@class='col col-data']";
+	public String Count = "/div/p";
+	public String Ref = "/div/span";
 
+	@FindBy(xpath = "//div[@class=\"charts mt-2\"]/p")
+	WebElement SecondChartOnDashLoc;
 ///----------------------------------------------------------------------------------------------------------------------------
 
 ///* Inside About Us Tab
@@ -95,7 +95,7 @@ public class DashboardPage extends BasePage {
 	@FindBy(xpath = "(// div[@class='card-body'])[2]/*[@class='card-text']")
 	WebElement ProjectsCardTextLoc;
 
-	// Hours Of support
+	// Hours Of Support
 	@FindBy(xpath = "(// div[@class='card-body'])[3]")
 	WebElement HrsOfSupportCardLoc; // Element present or not
 	@FindBy(xpath = "(// div[@class='card-body'])[3]/*[@class='card-title']")
@@ -132,14 +132,20 @@ public class DashboardPage extends BasePage {
 	WebElement LocationCardInfoLoc; // Card Information
 
 	// Email
-	@FindBy(xpath = "//div[@class='card']//div[@class='card-body']")
+	@FindBy(xpath = "//div[@class='col mt-4'][1]//div[@class='card']")
 	WebElement EmailCardLoc; // Card
-	@FindBy(xpath = "//*[contains(text(),'Email')]")
+	@FindBy(xpath = "//div[@class='col mt-4'][1]//div[@class='card']//*[@class='titlecard']")
 	WebElement EmailCardTitleLoc; // Card Title
+	@FindBy(xpath = "//div[@class='col mt-4'][1]//div[@class='card']//span[@class='text-left mt-2']")
+	WebElement EmailValue;
 
 	// Call
-	@FindBy(xpath = "//div//*[contains(text(),'Call')]")
-	WebElement CallElementLoc; // Card
+	@FindBy(xpath = "//div[@class='col mt-4'][2]//div[@class='card']")
+	WebElement CallCardLoc; // Card
+	@FindBy(xpath = "//div[@class='col mt-4'][2]//div[@class='card']//*[@class='titlecard']")
+	WebElement CallTitleLoc;
+	@FindBy(xpath = "//div[@class='col mt-4'][2]//div[@class='card']//span[@class='text-left mt-2']")
+	WebElement CallValueLoc;
 
 ///----------------------------------------------------------------------------------------------------------------------------
 
@@ -191,24 +197,28 @@ public class DashboardPage extends BasePage {
 	WebElement UtilityTabButtonLoc;
 
 	// Bulk Asset Import Button
-	@FindBy(xpath = "//a[contains(text(),'Bulk Asset Import')]")
+	@FindBy(xpath = "//*[contains(text(),'Bulk Asset Import')]")
 	WebElement BulkAssetImportTabLoc;
 
 	// Header of Bulk Asset Import Tab
-	@FindBy(xpath = "//label[@class='heading']")
+	@FindBy(xpath = "//div//label[@class='heading']")
 	WebElement HeadingBulkAssetImportLoc;
 
 	// Bulk Employee Import Button
-	@FindBy(xpath = "//a[contains(text(),'Bulk Employee Import')]")
+	@FindBy(xpath = "//*[contains(text(),'Bulk Employee Import')]")
 	WebElement BulkEmployeeImportTabLoc;
 
 	// Header of Bulk Employee Import Tab
-	@FindBy(xpath = "//label[@class='heading']")
+	@FindBy(xpath = "//div//label[@class='heading']")
 	WebElement HeadingBulkEmployeeImportLoc;
 
 	// Utility Tracker Button
-	@FindBy(xpath = "//a[contains(text(),'Utility Tracker')]")
+	@FindBy(xpath = "//*[contains(text(),'Utility Tracker')]")
 	WebElement UtilityTrackerTabLoc;
+
+	// Utility Tracker Header
+	@FindBy(xpath = "//*[@class='title']")
+	WebElement UtilityTrackerHeaderLoc;
 
 ///----------------------------------------------------------------------------------------------------------------------------
 
@@ -260,35 +270,212 @@ public class DashboardPage extends BasePage {
 
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>METHODS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
-	// Click on Cancel Button on update password pop up window
+///* On Dashboard page
+
+	// Navigate to The dashboard page
+	public void NavigateToDashboardPage() {
+		waitForFindElementPresent(DashboardHomeTabBtnLoc);
+		DashboardHomeTabBtnLoc.click();
+		AMSComm = new CommonPage(driver);
+		System.out.println("Current Page URL is : " + AMSComm.getPageURL());
+		System.out.println("Inside Dashboard Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Dashboard");
+		System.out.println("Current page header : " + HederMess);
+	}
+
+	// Click on the Cancel Button on the update password pop-up window
 	public void ClickCancelBtnOnChangePasswordPopup() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		waitForFindElementPresent(CancelBtnUpdatePasswordPopUpLoc);
 		CancelBtnUpdatePasswordPopUpLoc.click();
 	}
 
-	// Home button on DashboardMainTest page
+	// Home button on the Dashboard page
 	public void ClickDashboardHomeBtn() throws InterruptedException {
-		AMSComm = new CommonPage(driver);
 		waitForFindElementPresent(DashboardHomeTabBtnLoc);
 		DashboardHomeTabBtnLoc.click();
-		System.out.println("Current Page URL is : " + AMSComm.getPageURL());
-		System.out.println("Inside Dashboard Tab");
 	}
+
+	// Click on the Sidebar Toggle button
+	public void ClickSidebarToggleButton() throws InterruptedException {
+		waitForFindElementPresent(SideBarToggleLoc);
+		SideBarToggleLoc.click();
+	}
+
+	// Click the Notification bell icon
+	public void ClickNotificationBell() throws InterruptedException {
+		waitForFindElementPresent(NotificationBelliconLoc);
+		NotificationBelliconLoc.click();
+		System.out.println("Clicked on Notification Bell");
+		System.out.println("Current page title : " + TabsTitleLoc.getText());
+	}
+
+	// Validate the logged-in username on the dashboard
+	public void AssertLoggedInUsername(String Username) {
+		String ActualUsrname = LoggedInUserNameLoc.getText();
+		Assert.assertEquals(ActualUsrname, "Welcome " + Username);
+		System.out.println("Logged in UserName : " + ActualUsrname);
+	}
+
+	// Second chart present on dashboard home page
+	public void TextsOnDashboard() {
+		System.out.println("Second Chart Title : " + SecondChartOnDashLoc.getText());
+	}
+
+	// Find Grids and verify whether the lelementsclickable or not
+	public void FindGridElements(String Gridnum) throws InterruptedException {
+		ClickDashboardHomeBtn();
+		// To locate the Grid
+		WebElement myGrids = driver.findElement(By.xpath(EleGridElements + "[" + Gridnum + "]"));
+		WebElement myGridElement1 = driver.findElement(By.xpath(EleGridElements + "[" + Gridnum + "]" + Count));
+		WebElement myGridElement2 = driver.findElement(By.xpath(EleGridElements + "[" + Gridnum + "]" + Ref));
+		System.out.println("Grid Reference : " + myGridElement2.getText());
+		System.out.println("Grid Value : " + myGridElement1.getText());
+		myGrids.click();
+	}
+
+///* About Us
+
+	// Click About Us Button
+	public void ClickAboutUsBtn() {
+		waitForFindElementPresent(AboutUsBtnLoc);
+		AboutUsBtnLoc.click();
+	}
+
+	// About Us Header
+	public void ValidateAboutUsHeader() {
+		waitForFindElementPresent(AboutUsHeaderLoc);
+		System.out.println("Header -> " + AboutUsHeaderLoc.getText());
+	}
+
+	// Our Purpose (Title + Information)
+	public void ValidateOurPurposeText() {
+		waitForFindElementPresent(OurPurposeTitleLoc);
+		waitForFindElementPresent(OurPurposeInfoLoc);
+		System.out.println("Title : " + OurPurposeTitleLoc.getText());
+		System.out.println("Information : " + OurPurposeInfoLoc.getText());
+	}
+
+	// Clients (Card + Title + Text)
+	public void ValidateClientsCardElements() {
+		waitForFindElementPresent(ClientsCardLoc);
+		waitForFindElementPresent(ClientsCardTitleLoc);
+		waitForFindElementPresent(ClientsCardTextLoc);
+		// Check Clients card is displayed or not
+		ClientsCardLoc.isDisplayed();
+		System.out.println("Clients Card is present");
+		// Get the Clients card's title and text
+		System.out.println("Card Title : " + ClientsCardTitleLoc.getText());
+		System.out.println("Reference : " + ClientsCardTextLoc.getText());
+	}
+
+	// Project (Card + Title + Text)
+	public void ValidateProjectsCardElements() {
+		waitForFindElementPresent(ProjectsCardLoc);
+		waitForFindElementPresent(ProjectsCardTitleLoc);
+		waitForFindElementPresent(ProjectsCardTextLoc);
+		// Check whether Clients cdisplayedlayd or not
+		ProjectsCardLoc.isDisplayed();
+		System.out.println("Project Card is present");
+		// Get the Project card's title and text
+		System.out.println("Card Title : " + ProjectsCardTitleLoc.getText());
+		System.out.println("Reference : " + ProjectsCardTextLoc.getText());
+	}
+
+	// Hours Of support (Card + Title + Text)
+	public void ValidateHoursCardElements() {
+		waitForFindElementPresent(HrsOfSupportCardLoc);
+		waitForFindElementPresent(HrsOfSupportCardTitleLoc);
+		waitForFindElementPresent(HrsOfSupportCardTextLoc);
+		// Check Clients cis displayed and or not
+		HrsOfSupportCardLoc.isDisplayed();
+		System.out.println("Hours Of support Card is present");
+		// Get Hours Of support card's title and text
+		System.out.println("Card Title : " + HrsOfSupportCardTitleLoc.getText());
+		System.out.println("Reference : " + HrsOfSupportCardTextLoc.getText());
+	}
+
+	// Employees (Card + Title + Text)
+	public void ValidateEmployeeCardElements() {
+		waitForFindElementPresent(EmployeesCardLoc);
+		waitForFindElementPresent(EmployeesCardTitleLoc);
+		waitForFindElementPresent(EmployeesCardTextLoc);
+		// Check Clients card is displayed or not
+		EmployeesCardLoc.isDisplayed();
+		System.out.println("Employees Card is present");
+		// Gthe et Employees card's title and text
+		System.out.println("Card Title : " + EmployeesCardTitleLoc.getText());
+		System.out.println("Reference : " + EmployeesCardTextLoc.getText());
+	}
+
+///* Contact
+
+	// Clthe ick Contact Button
+	public void ClickContactBtn() {
+		waitForFindElementPresent(ContactButtonLoc);
+		ContactButtonLoc.click();
+	}
+
+	// Contact Us Header
+	public void ValidateContactUsHeader() {
+		waitForFindElementPresent(ContactUsHeaderLoc);
+		System.out.println("Title : " + ContactUsHeaderLoc.getText());
+	}
+
+	// Location (Card + Title + Text)
+	public void ValidateLocationCardElements() {
+		waitForFindElementPresent(LocationCardLoc);
+		waitForFindElementPresent(LocationCardTitleLoc);
+		waitForFindElementPresent(LocationCardInfoLoc);
+		// Check Location cis and display or not
+		LocationCardLoc.isDisplayed();
+		System.out.println("Location Card is present");
+		// Get the Location card's title and text
+		System.out.println("Card Title : " + LocationCardTitleLoc.getText());
+		System.out.println("Reference : " + LocationCardInfoLoc.getText());
+	}
+
+	// Email (Card + Title + Text)
+	public void ValidateEmailCardElements() {
+		waitForFindElementPresent(EmailCardLoc);
+		// Check Email card is displayed or not
+		EmailCardLoc.isDisplayed();
+		System.out.println("Email Card is present");
+		// Get the Email card's title and text
+		System.out.println("Card Title : " + EmailCardTitleLoc.getText());
+		System.out.println("Reference : " + EmailValue.getText());
+	}
+
+	// Call (Card + Title + Text)
+	public void ValidateCallCardElements() {
+		waitForFindElementPresent(CallCardLoc);
+		// Check Call card is displayed or not
+		CallCardLoc.isDisplayed();
+		System.out.println("Call Card is present");
+		// Get the Call card's title and text
+		System.out.println("Card Title : " + CallTitleLoc.getText());
+		System.out.println("Reference : " + CallValueLoc.getText());
+	}
+
+///* Master Module
 
 	// Click on Master dropdown
 	public void ClickMasterTabBtn() throws InterruptedException {
-		Thread.sleep(2000);
 		waitForFindElementPresent(MasterTabBtnLoc);
 		MasterTabBtnLoc.click();
 		System.out.println("Inside Master Tab");
 	}
 
 	// Click/Select Assets from Master Dropdown
-	public void ClickAssetsfromMaster() {
+	public void ClickOnAssetsTab() {
 		waitForFindElementPresent(AssetsBtnLoc);
 		AssetsBtnLoc.click();
 		System.out.println("Inside Assets Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Assets");
 	}
 
 	// Click/Select Assets from Master Dropdown
@@ -296,6 +483,9 @@ public class DashboardPage extends BasePage {
 		waitForFindElementPresent(EmployeeBtnLoc);
 		EmployeeBtnLoc.click();
 		System.out.println("Inside Employee Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Employee");
 	}
 
 	// Click/Select Request from Master Dropdown
@@ -303,41 +493,100 @@ public class DashboardPage extends BasePage {
 		waitForFindElementPresent(RequestTabBtnLoc);
 		RequestTabBtnLoc.click();
 		System.out.println("Inside Request Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Request");
 	}
 
 	// Click/Select Assets Group from Master Dropdown
 	public void ClickOnAssetsGroupTab() {
 		waitForFindElementPresent(AssetsGroupBtnLoc);
 		AssetsGroupBtnLoc.click();
-		System.out.println("\nInside AssetsGroup Tab");
+		System.out.println("Inside AssetsGroup Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Asset Group");
 	}
 
 	// Click/Select Assets Department from Master Dropdown
 	public void ClickOnAssetsDepartmentTab() {
 		waitForFindElementPresent(AssetsDepartmentBtnLoc);
 		AssetsDepartmentBtnLoc.click();
-		System.out.println("\nInside AssetsDepartment Tab");
+		System.out.println("Inside AssetsDepartment Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Asset Department");
 	}
 
 	// Click/Select Assets Vendor from Master Dropdown
 	public void ClickOnAssetsVendorTab() {
 		waitForFindElementPresent(AssetsVendorBtnLoc);
 		AssetsVendorBtnLoc.click();
-		System.out.println("\nInside AssetsVendor Tab");
+		System.out.println("Inside AssetsVendor Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Vendor");
 	}
 
 	// Click/Select Assets Status from Master Dropdown
 	public void ClickOnAssetsStatusTab() {
 		waitForFindElementPresent(AssetsStatusBtnLoc);
 		AssetsStatusBtnLoc.click();
-		System.out.println("\nInside AssetsStatus Tab");
+		System.out.println("Inside AssetsStatus Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Asset Status");
 	}
 
 	// Click/Select User from Master Dropdown
 	public void ClickOnUserTab() {
 		waitForFindElementPresent(UserBtnLoc);
 		UserBtnLoc.click();
-		System.out.println("\nInside User Tab");
+		System.out.println("Inside User Tab");
+		// Header of the page
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Users");
 	}
 
+///* Utility Module
+
+	// Click on Utility dropdown/button
+	public void ClickUtilityTabBtn() throws InterruptedException {
+		waitForFindElementPresent(UtilityTabButtonLoc);
+		UtilityTabButtonLoc.click();
+		System.out.println("Inside Utility Tab");
+	}
+
+	// Bulk Asset Import Button
+	public void ClickOnBulkAssetImportTab() {
+		waitForFindElementPresent(BulkAssetImportTabLoc);
+		BulkAssetImportTabLoc.click();
+		System.out.println("Inside BulkAssetImport Tab");
+		// Header of Bulk Asset Import Tab
+		String HederMess = HeadingBulkAssetImportLoc.getText();
+		Assert.assertEquals(HederMess, "Import Asset Details");
+		System.out.println("Header Message on current page : " + HederMess);
+	}
+
+	// Bulk Employee Import Button
+	public void ClickOnBulkEmployeeImportTab() {
+		waitForFindElementPresent(BulkEmployeeImportTabLoc);
+		BulkEmployeeImportTabLoc.click();
+		System.out.println("Inside BulkEmployeeImport Tab");
+		// Header of Bulk Employee Import Tab
+		String HederMess = HeadingBulkEmployeeImportLoc.getText();
+		Assert.assertEquals(HederMess, "Import Employee Details");
+		System.out.println("Header Message on current page : " + HederMess);
+	}
+
+	// // Utility Tracker Button
+	public void ClickOnUtilityTrackerTab() {
+		waitForFindElementPresent(UtilityTrackerTabLoc);
+		UtilityTrackerTabLoc.click();
+		System.out.println("Inside UtilityTracker Tab");
+		// Header of Bulk Utility Tracker Tab
+		String HederMess = TabsTitleLoc.getText();
+		Assert.assertEquals(HederMess, "Utility Tracker");
+		System.out.println("Header Message on current page : " + HederMess);
+	}
 }

@@ -73,7 +73,7 @@ public class BaseClass {
 
 	@AfterClass
 	public void teardown() {
-		// driver.quit();
+		driver.quit();
 		System.out.println("\nEnd of Execution!");
 	}
 

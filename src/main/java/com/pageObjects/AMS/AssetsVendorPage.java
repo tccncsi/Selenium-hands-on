@@ -383,6 +383,6 @@ public class AssetsVendorPage extends BasePage {
 		Assert.assertEquals(Mess, XLUtils.FetchExcelData(ExMess));
 		waitForFindElementPresent(ClickOKBtnDeleteLoc);
 		ClickOKBtnDeleteLoc.click();
-		System.out.println("Mess");
+		System.out.println(Mess);
 	}
 }

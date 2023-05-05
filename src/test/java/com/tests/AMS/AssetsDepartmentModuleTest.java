@@ -23,19 +23,16 @@ public class AssetsDepartmentModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void AssetsGroupModuleTestExecution() throws Exception {
+	public void ExecuteAssetsDepartmentModuleTests() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSAssetDepart = new AssetsDepartmentPage(driver);
-
-		AMSComm.Print(
-				"\nExecute All AssetsGroup Module related Test Cases\n--------------------------------------------------");
-
+		AMSComm.Print("Executing Login Testcases...");
 		AMSlogin.LoginToAMSApplication();
-		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.NavigateToDashboardPage();
 		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
@@ -45,6 +42,8 @@ public class AssetsDepartmentModuleTest extends BaseClass {
 		DeleteAssetsDepartmentTest();
 
 		AMSlogin.Logout();
+
+		AMSComm.TotalTestCount("0", "4");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -64,29 +63,26 @@ public class AssetsDepartmentModuleTest extends BaseClass {
 		AMSComm.TestCaseName("SearchAssetsDepartmentTest");
 		AMSAssetDepart.ItemsPerPageDropDown("15");
 		AMSAssetDepart.SearchAssetsDepartment("AssetDepartment");
-		AMSAssetDepart.VerifyRecordIsPresent();
-		AMSAssetDepart.GetRowData();
+		AMSComm.GetTableData("Assets Department");
 	}
 
 	public void UpdateAssetsDepartmentTest() throws IOException {
 		AMSDashboard.ClickOnAssetsDepartmentTab();
 		AMSComm.TestCaseName("UpdateAssetsDepartmentTest");
 		AMSAssetDepart.SearchAssetsDepartment("AssetDepartment");
-		AMSAssetDepart.VerifyRecordIsPresent();
 		AMSAssetDepart.ClickEditTooltip();
 		AMSAssetDepart.EnterAssetDepartmentToUpdate("NewAssetDepartment");
 		// AMSAssetDepart.ClickCancelButtonInUpdate();
-		AMSAssetDepart.ClickUpdateButtonInUpdate();
-		AMSAssetDepart.ValidateUpdatedSuccessMess("UpdateSuccesMess");
+		AMSComm.ClickUpdateButtonInUpdate();
+		AMSComm.ValidateUpdatedSuccessMess("UpdateSuccesMess");
 	}
 
-	public void DeleteAssetsDepartmentTest() throws IOException {
+	public void DeleteAssetsDepartmentTest() throws IOException, InterruptedException {
 		AMSDashboard.ClickOnAssetsDepartmentTab();
 		AMSComm.TestCaseName("DeleteAssetsDepartmentTest");
 		AMSAssetDepart.SearchAssetsDepartment("NewAssetDepartment");
-		AMSAssetDepart.VerifyRecordIsPresent();
-		AMSAssetDepart.GetRowData();
-		AMSAssetDepart.ClickDeleteTooltip();
-		AMSAssetDepart.YesDeleteIt("DeleteMessAfterDel");
+		AMSComm.GetTableData("Assets Department");
+		AMSComm.ClickDeleteTooltip();
+		AMSComm.YesDeleteIt("DeleteMessAfterDel");
 	}
 }

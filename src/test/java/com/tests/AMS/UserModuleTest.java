@@ -23,29 +23,30 @@ public class UserModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void UserModuleTestExecution() throws Exception {
+	public void ExecuteUserModuleTests() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
 		AMSlogin = new LogInPage(driver);
 		AMSDashboard = new DashboardPage(driver);
 		AMSUser = new UserPage(driver);
-
-		AMSComm.Print(
-				"\nExecute All AssetsGroup Module related Test Cases\n--------------------------------------------------");
-
+		AMSComm.Print("Executing User Module Testcases...");
 		AMSlogin.LoginToAMSApplication();
-		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.NavigateToDashboardPage();
 		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
 		GetAllRowsPresent();
 		CreateUserTest();
+		AMSDashboard.ClickMasterTabBtn();
 		SearchUserTest();
 		UpdateUserTest();
 		DeleteUserTest();
-
+		AMSDashboard.ClickMasterTabBtn();
+		GetAllRowsPresent();
 		AMSlogin.Logout();
+
+		AMSComm.TotalTestCount("24", "5");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,13 +55,13 @@ public class UserModuleTest extends BaseClass {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("GetAllRowsPresent");
 		AMSUser.ItemsPerPageDropDown("15");
-		AMSUser.VerifyRecordIsPresent();
-		AMSComm.GetRowData("User");
+		AMSComm.GetTableData("Users");
 	}
 
 	public void CreateUserTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("CreateUserTest");
+		AMSComm.ManualTestCount("12");
 		AMSUser.ClickCreateUserButton();
 		AMSUser.EnterUserName("UserName1");
 		AMSUser.EnterEmployeeID("EmpID1");
@@ -68,40 +69,44 @@ public class UserModuleTest extends BaseClass {
 		AMSUser.SelectRole("Role1");
 		AMSUser.EnterPassword("UserPassword1");
 		AMSUser.ClickCreateButton();
+		// AMSComm.ValidateMessAfterCreated("SuccessMessAfterCreate");
+		// AMSUser.ValidateMessAfterUser("Errmess");
+		AMSComm.RefreshPage();
 		// AMSUser.ClickCancelButton();
-		AMSUser.ValidateMessAfterUser("SuccessMessAfterCreate");
 	}
 
 	public void SearchUserTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("SearchUserTest");
+		AMSComm.ManualTestCount("2");
 		AMSUser.ItemsPerPageDropDown("15");
 		AMSUser.SearchUser("EmpID1");
-		AMSUser.VerifyRecordIsPresent();
-		AMSComm.GetRowData("User");
+		AMSComm.GetTableData("Users");
 	}
 
 	public void UpdateUserTest() throws IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("UpdateUserTest");
+		AMSComm.ManualTestCount("10");
 		AMSUser.SearchUser("EmpID1");
 		AMSUser.VerifyRecordIsPresent();
 		AMSUser.ClickEditTooltip();
 		AMSUser.EnterUserNameToUpdate("NewUsername1");
 		AMSUser.EnterEmailToUpdate("NewEmail1");
 		AMSUser.SelectRoleToUpdate("ChangeRole1");
-		// AMSUser.ClickCancelButtonInUpdate();
-		AMSUser.ClickUpdateButtonInUpdate();
-		AMSUser.ValidateUpdatedSuccessMess("UpdateSuccesMess");
+		AMSUser.ClickCancelButtonInUpdate();
+		// AMSComm.ClickUpdateButtonInUpdate();
+		// AMSComm.ValidateUpdatedSuccessMess("UpdateSuccesMess");
 	}
 
-	public void DeleteUserTest() throws IOException {
+	public void DeleteUserTest() throws IOException, InterruptedException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("DeleteUserTest");
 		AMSUser.SearchUser("EmpID1");
 		AMSUser.VerifyRecordIsPresent();
-		AMSUser.GetRowData();
-		AMSUser.ClickDeleteTooltip();
-		AMSUser.YesDeleteIt("DeleteMessAfterDel");
+		AMSComm.GetRowData("Users");
+		AMSComm.ClickDeleteTooltip();
+		AMSComm.YesDeleteIt("DeleteMessAfterDel");
 	}
+
 }

@@ -23,7 +23,7 @@ public class RequestModuleTest extends BaseClass {
 
 	// Execution Method
 	@Test(priority = 1, enabled = true)
-	public void RequestModuleTestExecution() throws Exception {
+	public void ExecuteRequestModuleTests() throws Exception {
 
 		// Objects of Below Pages //
 		AMSComm = new CommonPage(driver);
@@ -31,10 +31,10 @@ public class RequestModuleTest extends BaseClass {
 		AMSDashboard = new DashboardPage(driver);
 		AMSReq = new RequestPage(driver);
 
-		AMSComm.Print("\nExecute All Request Module related Test Cases");
+		AMSComm.Print("Executing RequestModule Testcases...");
 
 		AMSlogin.LoginToAMSApplication();
-		AMSDashboard.ClickDashboardHomeBtn();
+		AMSDashboard.NavigateToDashboardPage();
 		AMSDashboard.ClickMasterTabBtn();
 
 // 		*** All Test Methods ***
@@ -45,21 +45,18 @@ public class RequestModuleTest extends BaseClass {
 		CheckRejectedRequests();
 
 		AMSlogin.Logout();
+		
+		AMSComm.TotalTestCount("0", "5");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void SearchRequestTest() throws InterruptedException, IOException {
-
 		AMSComm.TestCaseName("SearchRequestTest");
-
 		AMSDashboard.ClickOnRequestTab();
-
 		AMSReq.ItemsPerPageDropDown("15");
 		AMSReq.SearchRequest("4632300004");
-		// AMSReq.VerifyRecordDisplayed();
 		AMSReq.VerifyRecordIsPresent();
-		AMSReq.GetReqRowData();
 	}
 
 	public void CheckAllRequests() throws InterruptedException {
@@ -74,6 +71,7 @@ public class RequestModuleTest extends BaseClass {
 		AMSComm.TestCaseName("CheckApprovedRequests");
 		AMSDashboard.ClickOnRequestTab();
 		AMSReq.ClickApprovedButton();
+		AMSReq.VerifyRecordIsPresent();
 		AMSReq.ValidateStatus(AMSReq.getTextApprovedButton());
 	}
 
@@ -81,6 +79,7 @@ public class RequestModuleTest extends BaseClass {
 		AMSComm.TestCaseName("CheckPendingRequests");
 		AMSDashboard.ClickOnRequestTab();
 		AMSReq.ClickPendingButton();
+		AMSReq.VerifyRecordIsPresent();
 		AMSReq.ValidateStatus(AMSReq.getTextPendingButton());
 	}
 
@@ -88,6 +87,7 @@ public class RequestModuleTest extends BaseClass {
 		AMSComm.TestCaseName("CheckRejectedRequests");
 		AMSDashboard.ClickOnRequestTab();
 		AMSReq.ClickRejectedButton();
+		AMSReq.VerifyRecordIsPresent();
 		AMSReq.ValidateStatus(AMSReq.getTextRejectedButton());
 	}
 }

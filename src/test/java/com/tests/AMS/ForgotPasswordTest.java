@@ -18,7 +18,7 @@ public class ForgotPasswordTest extends BaseClass {
 	public ReadConfig readconfig = new ReadConfig();
 
 	@Test(priority = 1, enabled = true)
-	public void ExecuteAllFPTCs() throws Exception {
+	public void ExecuteForgotPasswordTests() throws Exception {
 		// Objects of required classes
 		AMSlogin = new LogInPage(driver);
 		AMSComm = new CommonPage(driver);
@@ -28,10 +28,13 @@ public class ForgotPasswordTest extends BaseClass {
 		ForgotPasswordBackButtonTest();
 		// Execute LoginPageAssertionTest
 		ForgotPasswordSendOTPButtonTest();
+
+		AMSComm.TotalTestCount("7", "2");
 	}
 
 	public void ForgotPasswordBackButtonTest() throws NumberFormatException, IOException {
 		AMSComm.TestCaseName("ForgotPasswordBackButtonTest");
+		AMSComm.ManualTestCount("1");
 		AMSlogin.RefreshPage();
 		// Click on Forgot Password Link
 		AMSlogin.ClickForgotPasswordLink();
@@ -39,12 +42,13 @@ public class ForgotPasswordTest extends BaseClass {
 		AMSlogin.EnterEmailOnForgotPasswordPage(XLUtils.FetchExcelData("WrongUsername"));
 		// Click Back Button
 		AMSlogin.ClickBackButton();
-		// Check User back to the login page
+		// Check the User back to the login page
 		AMSlogin.AfterReturnToLoginPage(XLUtils.FetchExcelData("LoginPageURL"));
 	}
 
 	public void ForgotPasswordSendOTPButtonTest() throws NumberFormatException, IOException {
 		AMSComm.TestCaseName("ForgotPasswordSendOTPButtonTest");
+		AMSComm.ManualTestCount("6");
 		AMSlogin.RefreshPage();
 		// Click on Forgot Password Link
 		AMSlogin.ClickForgotPasswordLink();
