@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-TCC-TestRunner" class="navigator-link">
-              <span class="suite-name border-failed">TCC-TestRunner</span>
+              <span class="suite-name border-passed">TCC-TestRunner</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-TCC-TestRunner" class="hide-methods failed suite-TCC-TestRunner"> (hide)</a> <!-- hide-methods failed suite-TCC-TestRunner -->
-                      <a href="#" panel-name="suite-TCC-TestRunner" class="show-methods failed suite-TCC-TestRunner"> (show)</a> <!-- show-methods failed suite-TCC-TestRunner -->
-                    </span>
-                    <div class="method-list-content failed suite-TCC-TestRunner">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TCC-TestRunner" title="com.tests.AMS.DashboardModuleTest" class="method navigator-link" hash-for-method="ExecuteDashboardTests">ExecuteDashboardTests</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-TCC-TestRunner -->
+                    <span class="method-stats">11 methods,   11 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -146,6 +132,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TCC-TestRunner" title="com.tests.AMS.DashboardModuleTest" class="method navigator-link" hash-for-method="ExecuteDashboardTests">ExecuteDashboardTests</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-TCC-TestRunner" title="com.tests.AMS.ForgotPasswordTest" class="method navigator-link" hash-for-method="ExecuteForgotPasswordTests">ExecuteForgotPasswordTests</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -176,48 +167,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TCC-TestRunner" class="panel TCC-TestRunner">
-          <div class="suite-TCC-TestRunner-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.tests.AMS.DashboardModuleTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="ExecuteDashboardTests">
-                  </a> <!-- ExecuteDashboardTests -->
-                  <span class="method-name">ExecuteDashboardTests</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[@class=&apos;heading&apos;]&quot;}
-  (Session info: chrome=112.0.5615.138)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-413IDC&apos;, ip: &apos;10.176.44.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\P1345365\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59539}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 75fcb2b4340eb8a386186e9f1825a67c
-*** Element info: {Using=xpath, value=//label[@class=&apos;heading&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.getText(Unknown Source)
-	at com.pageObjects.AMS.DashboardPage.ClickOnBulkAssetImportTab(DashboardPage.java:565)
-	at com.tests.AMS.DashboardModuleTest.UtilityModuleTest(DashboardModuleTest.java:103)
-	at com.tests.AMS.DashboardModuleTest.ExecuteDashboardTests(DashboardModuleTest.java:39)
-... Removed 34 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TCC-TestRunner-class-failed -->
           <div class="suite-TCC-TestRunner-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -281,14 +230,14 @@ Session ID: 75fcb2b4340eb8a386186e9f1825a67c
           <div class="suite-TCC-TestRunner-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.tests.AMS.AssetsDepartmentModuleTest</span>
+              <span class="class-name">com.tests.AMS.DashboardModuleTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ExecuteAssetsDepartmentModuleTests">
-                  </a> <!-- ExecuteAssetsDepartmentModuleTests -->
-                  <span class="method-name">ExecuteAssetsDepartmentModuleTests</span>
+                  <a name="ExecuteDashboardTests">
+                  </a> <!-- ExecuteDashboardTests -->
+                  <span class="method-name">ExecuteDashboardTests</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -304,6 +253,21 @@ Session ID: 75fcb2b4340eb8a386186e9f1825a67c
                   <a name="ExecuteAssetsStatusModuleTests">
                   </a> <!-- ExecuteAssetsStatusModuleTests -->
                   <span class="method-name">ExecuteAssetsStatusModuleTests</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TCC-TestRunner-class-passed -->
+          <div class="suite-TCC-TestRunner-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tests.AMS.AssetsDepartmentModuleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ExecuteAssetsDepartmentModuleTests">
+                  </a> <!-- ExecuteAssetsDepartmentModuleTests -->
+                  <span class="method-name">ExecuteAssetsDepartmentModuleTests</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -439,47 +403,47 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ExecuteAssetModuleTests')
 data.setCell(0, 2, 'com.tests.AMS.AssetModuleTest')
-data.setCell(0, 3, 20392);
+data.setCell(0, 3, 19684);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ExecuteAllEmployeeTCs')
 data.setCell(1, 2, 'com.tests.AMS.EmployeeModuleTest')
-data.setCell(1, 3, 12815);
+data.setCell(1, 3, 13117);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'ExecuteUserModuleTests')
 data.setCell(2, 2, 'com.tests.AMS.UserModuleTest')
-data.setCell(2, 3, 10506);
+data.setCell(2, 3, 10638);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'ExecuteAssetsGroupModuleTests')
-data.setCell(3, 2, 'com.tests.AMS.AssetsGroupModuleTest')
-data.setCell(3, 3, 8793);
+data.setCell(3, 1, 'ExecuteDashboardTests')
+data.setCell(3, 2, 'com.tests.AMS.DashboardModuleTest')
+data.setCell(3, 3, 8992);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'ExecuteAssetsVendorModuleTests')
-data.setCell(4, 2, 'com.tests.AMS.AssetsVendorModuleTest')
-data.setCell(4, 3, 8691);
+data.setCell(4, 1, 'ExecuteAssetsGroupModuleTests')
+data.setCell(4, 2, 'com.tests.AMS.AssetsGroupModuleTest')
+data.setCell(4, 3, 8761);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'ExecuteAssetsDepartmentModuleTests')
-data.setCell(5, 2, 'com.tests.AMS.AssetsDepartmentModuleTest')
-data.setCell(5, 3, 8455);
+data.setCell(5, 1, 'ExecuteAssetsVendorModuleTests')
+data.setCell(5, 2, 'com.tests.AMS.AssetsVendorModuleTest')
+data.setCell(5, 3, 8582);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'ExecuteAssetsStatusModuleTests')
-data.setCell(6, 2, 'com.tests.AMS.AssetsStatusModuleTest')
-data.setCell(6, 3, 8237);
+data.setCell(6, 1, 'ExecuteAssetsDepartmentModuleTests')
+data.setCell(6, 2, 'com.tests.AMS.AssetsDepartmentModuleTest')
+data.setCell(6, 3, 8432);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'ExecuteLoginTests')
-data.setCell(7, 2, 'com.tests.AMS.LoginTest')
-data.setCell(7, 3, 6473);
+data.setCell(7, 1, 'ExecuteAssetsStatusModuleTests')
+data.setCell(7, 2, 'com.tests.AMS.AssetsStatusModuleTest')
+data.setCell(7, 3, 8315);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'ExecuteDashboardTests')
-data.setCell(8, 2, 'com.tests.AMS.DashboardModuleTest')
-data.setCell(8, 3, 5142);
+data.setCell(8, 1, 'ExecuteLoginTests')
+data.setCell(8, 2, 'com.tests.AMS.LoginTest')
+data.setCell(8, 3, 7359);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'ExecuteRequestModuleTests')
 data.setCell(9, 2, 'com.tests.AMS.RequestModuleTest')
-data.setCell(9, 3, 4314);
+data.setCell(9, 3, 4818);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'ExecuteForgotPasswordTests')
 data.setCell(10, 2, 'com.tests.AMS.ForgotPasswordTest')
-data.setCell(10, 3, 2910);
+data.setCell(10, 3, 2142);
 window.suiteTableData['TCC-TestRunner']= { tableData: data, tableDiv: 'times-div-TCC-TestRunner'}
 return data;
 }
@@ -517,163 +481,161 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteLoginTests</span>
-                <span class="method-start">6371 ms</span>
+                <span class="method-start">6508 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">12850 ms</span>
+                <span class="method-start">13875 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.ForgotPasswordTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">13066 ms</span>
+                <span class="method-start">14125 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteForgotPasswordTests</span>
-                <span class="method-start">16769 ms</span>
+                <span class="method-start">18149 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">19680 ms</span>
+                <span class="method-start">20292 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.DashboardModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">19926 ms</span>
+                <span class="method-start">20501 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">ExecuteDashboardTests</span>
-                <span class="method-start">23690 ms</span>
+                <span class="method-start">24063 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">28963 ms</span>
+                <span class="method-start">33056 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.AssetModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">29224 ms</span>
+                <span class="method-start">33312 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteAssetModuleTests</span>
-                <span class="method-start">32898 ms</span>
+                <span class="method-start">37115 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">53290 ms</span>
+                <span class="method-start">56800 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.EmployeeModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">53637 ms</span>
+                <span class="method-start">57049 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteAllEmployeeTCs</span>
-                <span class="method-start">57919 ms</span>
+                <span class="method-start">60590 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">70734 ms</span>
+                <span class="method-start">73708 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.RequestModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">70969 ms</span>
+                <span class="method-start">73969 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteRequestModuleTests</span>
-                <span class="method-start">74933 ms</span>
+                <span class="method-start">77563 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">79248 ms</span>
+                <span class="method-start">82381 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.AssetsGroupModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">79474 ms</span>
+                <span class="method-start">82600 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteAssetsGroupModuleTests</span>
-                <span class="method-start">83766 ms</span>
+                <span class="method-start">86013 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">92559 ms</span>
+                <span class="method-start">94775 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.AssetsDepartmentModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">92793 ms</span>
+                <span class="method-start">94987 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteAssetsDepartmentModuleTests</span>
-                <span class="method-start">97015 ms</span>
+                <span class="method-start">98547 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">105471 ms</span>
+                <span class="method-start">106980 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.AssetsVendorModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">105695 ms</span>
+                <span class="method-start">107206 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteAssetsVendorModuleTests</span>
-                <span class="method-start">110069 ms</span>
+                <span class="method-start">110798 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">118760 ms</span>
+                <span class="method-start">119380 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.AssetsStatusModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">119033 ms</span>
+                <span class="method-start">119585 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteAssetsStatusModuleTests</span>
-                <span class="method-start">124657 ms</span>
+                <span class="method-start">123257 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">132895 ms</span>
+                <span class="method-start">131573 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.AMS.UserModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, http://10.176.41.10:8080/UatAms)</span>
-                <span class="method-start">133132 ms</span>
+                <span class="method-start">131805 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">ExecuteUserModuleTests</span>
-                <span class="method-start">137621 ms</span>
+                <span class="method-start">135616 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">148127 ms</span>
+                <span class="method-start">146255 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

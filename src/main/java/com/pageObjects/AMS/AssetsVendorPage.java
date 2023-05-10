@@ -17,8 +17,6 @@ import com.utilities.XLUtils;
 
 public class AssetsVendorPage extends BasePage {
 
-	LogInPage AMSLogin;
-
 	// Function to call the driver
 	public AssetsVendorPage(WebDriver driver) {
 		super(driver);

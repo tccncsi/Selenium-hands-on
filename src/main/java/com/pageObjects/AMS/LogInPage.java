@@ -19,10 +19,6 @@ public class LogInPage extends BasePage {
 
 //^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//||>WEB-ELEMENT LOCATORS<||\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\*//^\\
 
-	// NCS Logo
-	@FindBy(xpath = "//nav//a[1]")
-	WebElement NCSlogoLoc;
-
 	// Login Window Header on Landing page of AMS Application
 	@FindBy(xpath = "//*[contains(@class,'card-title')]")
 	WebElement LoginHeadingLoc;

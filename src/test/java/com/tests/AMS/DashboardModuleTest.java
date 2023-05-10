@@ -34,14 +34,15 @@ public class DashboardModuleTest extends BaseClass {
 		// Execute DashboardMainPageTest
 		DashboardMainPageTest();
 		AboutUsModuleTest();
-		ContactModuleTest();	
-		MasterModuleTest();		
-		UtilityModuleTest();		
-		FindGridElementsTest();		
-		
+		ContactModuleTest();
+		MasterModuleTest();
+		UtilityModuleTest();
+		ReportsModuleTest();
+		FindGridElementsTest();
+
 		AMSlogin.Logout();
-		
-		AMSComm.TotalTestCount("3", "6");
+
+		AMSComm.TotalTestCount("4", "7");
 	}
 
 	public void DashboardMainPageTest() throws NumberFormatException, IOException, InterruptedException {
@@ -116,5 +117,22 @@ public class DashboardModuleTest extends BaseClass {
 		AMSDash.FindGridElements("3");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.FindGridElements("4");
+	}
+
+	public void ReportsModuleTest() throws InterruptedException {
+		AMSComm.TestCaseName("ReportsModuleTest()");
+		AMSComm.ManualTestCount("1");
+		AMSDash.ClickDashboardHomeBtn();
+		AMSDash.ClickReportsTab();
+		AMSDash.ClickOnAuditTrackBtn();
+		AMSDash.ClickOnAssetReportBtn();
+		AMSDash.ClickOnAssetTransferReportBtn();
+		AMSDash.ClickOnAssetGroupReportBtn();
+		AMSDash.ClickOnEmployeeReportBtn();
+		AMSDash.ClickOnAssetDepartmentReportBtn();
+		AMSDash.ClickOnAssetVendorReportBtn();
+		AMSDash.ClickOnAssetStatusReportBtn();
+		AMSDash.ClickOnUsersReportBtn();
+		AMSDash.ClickOnLoginTrackerBtn();
 	}
 }
