@@ -60,7 +60,6 @@ public class AssetModuleTest extends BaseClass {
 /// Cancel on Create Asset
 	public void ClickCancelBtnOnCreateAsset() {
 		AMSComm.TestCaseName("ClickCancelBtnOnCreateAsset");
-		AMSComm.ManualTestCount("1");
 		AMSDash.ClickOnAssetsTab();
 		AMSAssets.ClickonCreateAssetBtn();
 		AMSAssets.ClickOnCancelButton();
@@ -69,7 +68,6 @@ public class AssetModuleTest extends BaseClass {
 /// Create
 	public void CreateAssetTest() throws InterruptedException, IOException {
 		AMSComm.TestCaseName("CreateAssetTest");
-		AMSComm.ManualTestCount("10");
 		AMSDash.ClickOnAssetsTab();
 		AMSAssets.ClickonCreateAssetBtn();
 		// Fill out the form //
@@ -90,7 +88,6 @@ public class AssetModuleTest extends BaseClass {
 /// Read
 	public void SearchAssetTest() throws NumberFormatException, IOException, InterruptedException {
 		AMSComm.TestCaseName("SearchAssetTest()");
-		AMSComm.ManualTestCount("4");
 		AMSDash.ClickOnAssetsTab();
 		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
 		AMSComm.GetTableData("Assets");
@@ -99,7 +96,6 @@ public class AssetModuleTest extends BaseClass {
 /// Update
 	public void UpdateAssetTest() throws NumberFormatException, InterruptedException, IOException {
 		AMSComm.TestCaseName("UpdateAssetTest()");
-		AMSComm.ManualTestCount("1");
 		AMSDash.ClickOnAssetsTab();
 		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
 		AMSComm.VerifyRecordIsPresent();
@@ -113,7 +109,6 @@ public class AssetModuleTest extends BaseClass {
 /// Delete
 	public void DeleteAssetTest() throws NumberFormatException, IOException, InterruptedException {
 		AMSComm.TestCaseName("DeleteAssetTest()");
-		AMSComm.ManualTestCount("1");
 		AMSDash.ClickOnAssetsTab();
 		AMSAssets.SearchAssetsByText(XLUtils.FetchExcelData("AssetNumber"));
 		AMSComm.VerifyRecordIsPresent();

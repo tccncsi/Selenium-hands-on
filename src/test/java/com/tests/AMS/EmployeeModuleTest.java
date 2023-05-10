@@ -43,7 +43,7 @@ public class EmployeeModuleTest extends BaseClass {
 
 		AMSlogin.Logout();
 
-		AMSComm.TotalTestCount("14", "5");
+		AMSComm.TotalTestCount("14", "6");
 	}
 
 	/// Get all the rows present on the asset's main page

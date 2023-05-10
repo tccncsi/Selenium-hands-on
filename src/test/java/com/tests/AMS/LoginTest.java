@@ -36,7 +36,6 @@ public class LoginTest extends BaseClass {
 	// Test 1 for Assertion
 	public void LoginPageAssertionTest() throws IOException {
 		AMSComm.TestCaseName("LoginPageAssertionTest()");
-		AMSComm.ManualTestCount("1");
 		AMSComm.RefreshPage();
 		// Assert elements on screen
 		AMSlogin.AssertURL(XLUtils.FetchExcelData("LoginPageURL"));
@@ -51,7 +50,6 @@ public class LoginTest extends BaseClass {
 	// Test 2 for Valid Login
 	public void LoginValidCredTest() throws NumberFormatException, IOException, InterruptedException {
 		AMSComm.TestCaseName("LoginValidCredTest()");
-		AMSComm.ManualTestCount("5");
 		AMSlogin.RefreshPage();
 		// Enter Correct Username & Password
 		AMSlogin.EnterUsername(XLUtils.FetchExcelData("ValidUsername"));
@@ -65,7 +63,6 @@ public class LoginTest extends BaseClass {
 	// Test 3 for Invalid Credentials
 	public void LoginInValidCredTest() throws NumberFormatException, IOException, InterruptedException {
 		AMSComm.TestCaseName("LoginInValidCredTest()");
-		AMSComm.ManualTestCount("3");
 		AMSlogin.RefreshPage();
 		// Enter Wrong Username & Password
 		AMSlogin.EnterUsername(XLUtils.FetchExcelData("InvalidUsername"));
@@ -78,7 +75,6 @@ public class LoginTest extends BaseClass {
 	// Test 4 for Blank Credentials fields
 	public void LoginBlankCredTest() throws NumberFormatException, IOException {
 		AMSComm.TestCaseName("LoginBlankCredTest()");
-		AMSComm.ManualTestCount("1");
 		AMSlogin.RefreshPage();
 		// Do not enter Username & Password
 		AMSlogin.EnterUsername("");

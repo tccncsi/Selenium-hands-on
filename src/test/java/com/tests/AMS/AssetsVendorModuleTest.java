@@ -43,7 +43,7 @@ public class AssetsVendorModuleTest extends BaseClass {
 
 		AMSlogin.Logout();
 
-		AMSComm.TotalTestCount("0", "4");
+		AMSComm.TotalTestCount("20", "4");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

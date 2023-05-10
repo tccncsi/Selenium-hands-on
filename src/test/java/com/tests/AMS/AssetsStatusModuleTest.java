@@ -59,7 +59,6 @@ public class AssetsStatusModuleTest extends BaseClass {
 	public void CreateAssetsStatusTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("CreateAssetsStatusTest");
-		AMSComm.ManualTestCount("8");
 		AMSAssetStatus.ClickCreateAssetStatusButton();
 		AMSAssetStatus.EnterAssetStatusName("AssetStatusName");
 		AMSAssetStatus.ClickCreateButton();
@@ -70,7 +69,6 @@ public class AssetsStatusModuleTest extends BaseClass {
 	public void SearchAssetsStatusTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("SearchAssetsStatusTest");
-		AMSComm.ManualTestCount("3");
 		AMSAssetStatus.ItemsPerPageDropDown("15");
 		AMSAssetStatus.SearchAssetsStatus("AssetStatusName");
 		AMSComm.GetTableData("Asset Status");
@@ -79,7 +77,6 @@ public class AssetsStatusModuleTest extends BaseClass {
 	public void UpdateAssetsStatusTest() throws IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("UpdateAssetsStatusTest");
-		AMSComm.ManualTestCount("4");
 		AMSAssetStatus.SearchAssetsStatus("AssetStatusName");
 		AMSComm.GetTableData("Asset Status");
 		AMSAssetStatus.ClickEditTooltip();
@@ -92,7 +89,6 @@ public class AssetsStatusModuleTest extends BaseClass {
 	public void DeleteAssetsStatusTest() throws IOException {
 		AMSDashboard.ClickOnAssetsStatusTab();
 		AMSComm.TestCaseName("DeleteAssetsStatusTest");
-		AMSComm.ManualTestCount("4");
 		AMSAssetStatus.SearchAssetsStatus("NewAssetStatusName");
 		AMSComm.GetTableData("Asset Status");
 		AMSAssetStatus.ClickDeleteTooltip();

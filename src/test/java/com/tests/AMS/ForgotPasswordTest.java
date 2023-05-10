@@ -34,7 +34,6 @@ public class ForgotPasswordTest extends BaseClass {
 
 	public void ForgotPasswordBackButtonTest() throws NumberFormatException, IOException {
 		AMSComm.TestCaseName("ForgotPasswordBackButtonTest");
-		AMSComm.ManualTestCount("1");
 		AMSlogin.RefreshPage();
 		// Click on Forgot Password Link
 		AMSlogin.ClickForgotPasswordLink();
@@ -48,7 +47,6 @@ public class ForgotPasswordTest extends BaseClass {
 
 	public void ForgotPasswordSendOTPButtonTest() throws NumberFormatException, IOException {
 		AMSComm.TestCaseName("ForgotPasswordSendOTPButtonTest");
-		AMSComm.ManualTestCount("6");
 		AMSlogin.RefreshPage();
 		// Click on Forgot Password Link
 		AMSlogin.ClickForgotPasswordLink();

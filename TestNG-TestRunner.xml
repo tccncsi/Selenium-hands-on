@@ -19,7 +19,6 @@
 			<class name="com.tests.AMS.AssetsDepartmentModuleTest" />
 			<class name="com.tests.AMS.AssetsVendorModuleTest" />
 			<class name="com.tests.AMS.AssetsStatusModuleTest" />
-
 			<class name="com.tests.AMS.UserModuleTest" />
 		</classes>
 	</test>

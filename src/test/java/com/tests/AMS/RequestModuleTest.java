@@ -46,7 +46,7 @@ public class RequestModuleTest extends BaseClass {
 
 		AMSlogin.Logout();
 		
-		AMSComm.TotalTestCount("0", "5");
+		AMSComm.TotalTestCount("6", "5");
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

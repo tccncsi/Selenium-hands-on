@@ -47,7 +47,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void DashboardMainPageTest() throws NumberFormatException, IOException, InterruptedException {
 		AMSComm.TestCaseName("DashboardMainPageTest()");
-		AMSComm.ManualTestCount("1");
 		AMSDash.NavigateToDashboardPage();
 		AMSDash.ClickSidebarToggleButton();
 		AMSDash.AssertLoggedInUsername(XLUtils.FetchExcelData("AMSUsername"));
@@ -57,7 +56,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void AboutUsModuleTest() throws InterruptedException {
 		AMSComm.TestCaseName("AboutUsModuleTest()");
-		AMSComm.ManualTestCount("0");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.ClickAboutUsBtn();
 		AMSDash.ValidateAboutUsHeader();
@@ -70,7 +68,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void ContactModuleTest() throws InterruptedException {
 		AMSComm.TestCaseName("ContactModuleTest()");
-		AMSComm.ManualTestCount("0");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.ClickContactBtn();
 		AMSDash.ValidateContactUsHeader();
@@ -81,7 +78,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void MasterModuleTest() throws InterruptedException {
 		AMSComm.TestCaseName("MasterModuleTest()");
-		AMSComm.ManualTestCount("1");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.ClickMasterTabBtn();
 		// Inside Master verify each module/tab button is clickable
@@ -97,7 +93,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void UtilityModuleTest() throws InterruptedException {
 		AMSComm.TestCaseName("UtilityModuleTest()");
-		AMSComm.ManualTestCount("1");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.ClickUtilityTabBtn();
 		// Inside Utility verify each module/tab button is clickable
@@ -108,7 +103,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void FindGridElementsTest() throws InterruptedException {
 		AMSComm.TestCaseName("FindGridElementsTest()");
-		AMSComm.ManualTestCount("0");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.FindGridElements("1");
 		AMSDash.ClickDashboardHomeBtn();
@@ -121,7 +115,6 @@ public class DashboardModuleTest extends BaseClass {
 
 	public void ReportsModuleTest() throws InterruptedException {
 		AMSComm.TestCaseName("ReportsModuleTest()");
-		AMSComm.ManualTestCount("1");
 		AMSDash.ClickDashboardHomeBtn();
 		AMSDash.ClickReportsTab();
 		AMSDash.ClickOnAuditTrackBtn();

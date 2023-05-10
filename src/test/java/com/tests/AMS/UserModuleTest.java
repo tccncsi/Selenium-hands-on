@@ -61,7 +61,6 @@ public class UserModuleTest extends BaseClass {
 	public void CreateUserTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("CreateUserTest");
-		AMSComm.ManualTestCount("12");
 		AMSUser.ClickCreateUserButton();
 		AMSUser.EnterUserName("UserName1");
 		AMSUser.EnterEmployeeID("EmpID1");
@@ -78,7 +77,6 @@ public class UserModuleTest extends BaseClass {
 	public void SearchUserTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("SearchUserTest");
-		AMSComm.ManualTestCount("2");
 		AMSUser.ItemsPerPageDropDown("15");
 		AMSUser.SearchUser("EmpID1");
 		AMSComm.GetTableData("Users");
@@ -87,7 +85,6 @@ public class UserModuleTest extends BaseClass {
 	public void UpdateUserTest() throws IOException {
 		AMSDashboard.ClickOnUserTab();
 		AMSComm.TestCaseName("UpdateUserTest");
-		AMSComm.ManualTestCount("10");
 		AMSUser.SearchUser("EmpID1");
 		AMSUser.VerifyRecordIsPresent();
 		AMSUser.ClickEditTooltip();

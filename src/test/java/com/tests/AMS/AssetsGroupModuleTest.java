@@ -51,7 +51,6 @@ public class AssetsGroupModuleTest extends BaseClass {
 
 	public void CreateAssetsGroupTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsGroupTab();
-		AMSComm.ManualTestCount("3");
 		AMSComm.TestCaseName("CreateAssetsGroupTest");
 		AMSAssetGrp.ClickCreateAssetGroupButton();
 		AMSAssetGrp.EnterAssetGroup("AssetsGroup");
@@ -63,7 +62,6 @@ public class AssetsGroupModuleTest extends BaseClass {
 
 	public void SearchAssetsGroupTest() throws InterruptedException, IOException {
 		AMSDashboard.ClickOnAssetsGroupTab();
-		AMSComm.ManualTestCount("1");
 		AMSComm.GetTableData("Assets Group");
 		AMSComm.TestCaseName("SearchRequestTest");
 		AMSAssetGrp.ItemsPerPageDropDown("15");

@@ -1,2 +1,0 @@
-@FindBy(xpath = "")
-	WebElement a;
