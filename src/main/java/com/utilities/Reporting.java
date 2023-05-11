@@ -87,6 +87,7 @@ public class Reporting implements ITestListener {
 																							// information to the report
 																							// with GREEN color
 																							// highlighted
+		logger.log(Status.PASS, MarkupHelper.createLabel("This Automation covers "+readconfig.getTestcaseCounts(tr.getName())+" manual test cases", ExtentColor.GREEN));
 	}
 
 	public void onTestFailure(ITestResult tr) {
@@ -96,6 +97,8 @@ public class Reporting implements ITestListener {
 		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the failed information
 																							// to the report with RED
 																							// color highlighted
+		logger.log(Status.FAIL, MarkupHelper.createLabel("This Automation covers "+readconfig.getTestcaseCounts(tr.getName())+" manual test cases", ExtentColor.RED));
+		
 		System.out.println(tr.getName());
 		this.driver = ((BaseClass) tr.getInstance()).driver;
 		String screenshotPath = captureScreen(driver, tr.getName(), readconfig.getScreenshotPath());

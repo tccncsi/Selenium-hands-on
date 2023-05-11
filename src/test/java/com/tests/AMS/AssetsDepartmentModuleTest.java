@@ -2,6 +2,7 @@ package com.tests.AMS;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
@@ -44,6 +45,7 @@ public class AssetsDepartmentModuleTest extends BaseClass {
 		AMSlogin.Logout();
 
 		AMSComm.TotalTestCount("18", "4");
+		
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

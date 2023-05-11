@@ -2,6 +2,7 @@ package com.tests.AMS;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
@@ -43,7 +44,6 @@ public class AssetModuleTest extends BaseClass {
 		DeleteAssetTest();
 
 		AMSlogin.Logout();
-
 		AMSComm.TotalTestCount("18", "6");
 	}
 

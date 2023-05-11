@@ -22,7 +22,7 @@ public class EmployeeModuleTest extends BaseClass {
 	public ReadConfig readconfig = new ReadConfig();
 
 	@Test(priority = 1, enabled = true)
-	public void ExecuteAllEmployeeTCs() throws Exception {
+	public void ExecuteEmployeeModuleTests() throws Exception {
 		// Objects of Below Pages
 		AMSComm = new CommonPage(driver);
 		AMSlogin = new LogInPage(driver);

@@ -116,6 +116,11 @@ public class ReadConfig {
 	public String getProductText() {
 		return pro.getProperty("productText");
 	}
+	
+	public String getTestcaseCounts(String testname) {
+		return pro.getProperty(testname);
+	}
+	
 
 	// ****************** End of Editing/code ***************
 }
