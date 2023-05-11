@@ -48,7 +48,7 @@ public class DashboardPage extends BasePage {
 ///* Inside Dashboard Page
 
 	// Logged In User Name
-	@FindBy(xpath = "//*[@class='title']")
+	@FindBy(xpath = "//*[contains(text(),'Welcom')]")
 	WebElement LoggedInUserNameLoc;
 
 	// Dashboard Grid Elements

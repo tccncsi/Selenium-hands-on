@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="147.142" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="166.12" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="C:\Users\P1345365\.cache\selenium\chromedriver\win32\112.0.5615.49\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\P1345365\eclipse\java-2023-3\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\P1345365\AppData\Local\Temp\surefire15812847768987079033\surefirebooter13498863587847297990.jar C:\Users\P1345365\AppData\Local\Temp\surefire15812847768987079033 2023-05-05T15-26-56_760-jvmRun1 surefire15266514765851865491tmp surefire_014787295488631387031tmp"/>
+    <property name="sun.java.command" value="C:\Users\P1345365\AppData\Local\Temp\surefire7727237956632248393\surefirebooter7700067719450671871.jar C:\Users\P1345365\AppData\Local\Temp\surefire7727237956632248393 2023-05-11T09-48-50_065-jvmRun1 surefire15482605646815058357tmp surefire_09232433963771563959tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\target\test-classes;D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\target\classes;C:\Users\P1345365\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\P1345365\.m2\repository\org\fluttercode\datafactory\datafactory\0.8\datafactory-0.8.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-java\3.12.0\selenium-java-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-api\3.12.0\selenium-api-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.12.0\selenium-chrome-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.12.0\selenium-edge-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.12.0\selenium-firefox-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.12.0\selenium-ie-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.12.0\selenium-opera-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.12.0\selenium-remote-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.12.0\selenium-safari-driver-3.12.0.jar;C:\Users\P1345365\.m2\repository\org\seleniumhq\selenium\selenium-support\3.12.0\selenium-support-3.12.0.jar;C:\Users\P1345365\.m2\repository\net\bytebuddy\byte-buddy\1.8.3\byte-buddy-1.8.3.jar;C:\Users\P1345365\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\P1345365\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\P1345365\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\P1345365\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\P1345365\.m2\repository\com\google\guava\guava\23.6-jre\guava-23.6-jre.jar;C:\Users\P1345365\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\P1345365\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\P1345365\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\P1345365\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\P1345365\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\P1345365\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\P1345365\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\P1345365\.m2\repository\com\squareup\okhttp3\okhttp\3.9.1\okhttp-3.9.1.jar;C:\Users\P1345365\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar;C:\Users\P1345365\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\P1345365\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\P1345365\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\P1345365\.m2\repository\com\opencsv\opencsv\5.2\opencsv-5.2.jar;C:\Users\P1345365\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\P1345365\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\P1345365\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\P1345365\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar;C:\Users\P1345365\.m2\repository\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar;C:\Users\P1345365\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar;C:\Users\P1345365\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\P1345365\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\P1345365\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;C:\Users\P1345365\.m2\repository\com\aventstack\extentreports\3.1.5\extentreports-3.1.5.jar;C:\Users\P1345365\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\P1345365\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar;C:\Users\P1345365\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar;C:\Users\P1345365\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar;C:\Users\P1345365\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar;C:\Users\P1345365\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar;C:\Users\P1345365\.m2\repository\org\apache\commons\commons-lang3\3.0\commons-lang3-3.0.jar;C:\Users\P1345365\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\P1345365\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\P1345365\.m2\repository\com\paulhammant\ngwebdriver\1.1.5\ngwebdriver-1.1.5.jar;C:\Users\P1345365\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.0\webdrivermanager-5.3.0.jar;C:\Users\P1345365\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\P1345365\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\P1345365\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\P1345365\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\P1345365\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\P1345365\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\P1345365\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\P1345365\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\P1345365\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\P1345365\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\P1345365\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\P1345365\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\P1345365\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\P1345365\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\P1345365\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\P1345365\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\P1345365\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\P1345365\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\P1345365\.m2\repository\net\rcarz\jira-client\0.5\jira-client-0.5.jar;C:\Users\P1345365\.m2\repository\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;C:\Users\P1345365\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;C:\Users\P1345365\.m2\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;C:\Users\P1345365\.m2\repository\joda-time\joda-time\2.3\joda-time-2.3.jar;C:\Users\P1345365\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\P1345365\.m2\repository\org\mockito\mockito-all\1.9.0\mockito-all-1.9.0.jar;C:\Users\P1345365\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\P1345365\AppData\Local\Temp\surefire15812847768987079033\surefirebooter13498863587847297990.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\P1345365\AppData\Local\Temp\surefire7727237956632248393\surefirebooter7700067719450671871.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10"/>
@@ -59,13 +59,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="ExecuteLoginTests" classname="com.tests.AMS.LoginTest" time="7.361">
+  <testcase name="ExecuteLoginTests" classname="com.tests.AMS.LoginTest" time="6.639">
     <system-out><![CDATA[ INFO [main] (BaseClass.java:70)- url is opened
 Executing Login Testcases...
 
 Inside LoginPageAssertionTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Actual URL(http://10.176.41.10:8080/UatAms/#/login) And Expected URL(http://10.176.41.10:8080/UatAms/#/login) Matches
 Actual Title(AssetModule) And Expected Title(AssetModule) Matches
 After Assertion AMS LOGIN = AMS LOGIN Matched 
@@ -75,21 +74,18 @@ After Assertion Forgot Password ? = Forgot Password ? Matched
 
 Inside LoginValidCredTest()
 ------------------------------------------------
-Manual Testcases Covered : 5
 Login Succussful!
 
 Sign Out completed!
 
 Inside LoginInValidCredTest()
 ------------------------------------------------
-Manual Testcases Covered : 3
 Authentication Failed Popup displayed is :true
 Actual Error Message -> User name or password wrong !
 Expected Error Message -> User name or password wrong !
 
 Inside LoginBlankCredTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Error Message below Username Textbox displayed? -> true
 Actual Message : username is required
 Error Message below Password Textbox displayed? -> true
@@ -102,15 +98,15 @@ Total Automation Testcase Count : 4
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 28656
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 30000
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:27:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:48:53 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteForgotPasswordTests" classname="com.tests.AMS.ForgotPasswordTest" time="2.139">
+  <testcase name="ExecuteForgotPasswordTests" classname="com.tests.AMS.ForgotPasswordTest" time="1.934">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -118,7 +114,6 @@ Executing Fogot Password Testcases...
 
 Inside ForgotPasswordBackButtonTest
 ------------------------------------------------
-Manual Testcases Covered : 1
 After navigation current url is http://10.176.41.10:8080/UatAms/#/resetPassword
 After clicking on Back Button on Forgot Password Page user navigates to Login Page
 Check it through url
@@ -127,7 +122,6 @@ User navigated to Login Page.
 
 Inside ForgotPasswordSendOTPButtonTest
 ------------------------------------------------
-Manual Testcases Covered : 6
 After navigation current url is http://10.176.41.10:8080/UatAms/#/resetPassword
 Error message displayed is :true
 Error Message is Enter valid email address
@@ -136,15 +130,15 @@ Error Message is Enter valid email address
 Total Manual Testcase Count : 7
 Total Automation Testcase Count : 2
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 29314
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 10387
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:27:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:49:04 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteDashboardTests" classname="com.tests.AMS.DashboardModuleTest" time="8.992">
+  <testcase name="ExecuteDashboardTests" classname="com.tests.AMS.DashboardModuleTest" time="11.341">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -156,7 +150,6 @@ Current page header : Dashboard
 
 Inside DashboardMainPageTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
 Inside Dashboard Tab
 Current page header : Dashboard
@@ -167,7 +160,6 @@ Current page title : Request
 
 Inside AboutUsModuleTest()
 ------------------------------------------------
-Manual Testcases Covered : 0
 Header -> About Us
 Title : Our Purpose
 Information : We advance our communities by partnering with governments and enterprises to harness technology. We do this by bringing people together to make the extraordinary happen.
@@ -186,7 +178,6 @@ Reference : Employees
 
 Inside ContactModuleTest()
 ------------------------------------------------
-Manual Testcases Covered : 0
 Title : Contact Us
 Location Card is present
 Card Title : Location
@@ -200,7 +191,6 @@ Reference : 087 number here
 
 Inside MasterModuleTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Inside Master Tab
 Inside Assets Tab
 Inside Employee Tab
@@ -213,16 +203,28 @@ Inside User Tab
 
 Inside UtilityModuleTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Inside Utility Tab
 Inside BulkAssetImport Tab
 Inside BulkEmployeeImport Tab
 Inside UtilityTracker Tab
 Header Message on current page : Utility Tracker
 
+Inside ReportsModuleTest()
+------------------------------------------------
+Inside ClickReportsTab Tab
+Inside Audio Track Tab
+Inside Asset Report Tab
+Inside Asset Transfer Report Tab
+Inside Asset Group Report Tab
+Inside Employee Report Tab
+Inside Asset Department Report Tab
+Inside Asset Vendor Report Tab
+Inside Asset Status Report Tab
+Inside Users Report Tab
+Inside Login Tracker Tab
+
 Inside FindGridElementsTest()
 ------------------------------------------------
-Manual Testcases Covered : 0
 Grid Reference : Total IT Assets
 Grid Value : 1300
 Grid Reference : Assets Allocated
@@ -235,18 +237,18 @@ Grid Value :
 Sign Out completed!
 
 -------------------------------------------------------
-Total Manual Testcase Count : 3
-Total Automation Testcase Count : 6
+Total Manual Testcase Count : 4
+Total Automation Testcase Count : 7
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 36203
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 44480
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:27:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:49:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteAssetModuleTests" classname="com.tests.AMS.AssetModuleTest" time="19.689">
+  <testcase name="ExecuteAssetModuleTests" classname="com.tests.AMS.AssetModuleTest" time="20.76">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -405,14 +407,12 @@ IT Redington  HP ProBook 4. Allocated
 
 Inside ClickCancelBtnOnCreateAsset
 ------------------------------------------------
-Manual Testcases Covered : 1
 Inside Assets Tab
 'ClickOnCancelButton()'
 Clicked on 'Cancel' button
 
 Inside CreateAssetTest
 ------------------------------------------------
-Manual Testcases Covered : 10
 Inside Assets Tab
 Inside 'EnterAssetNumber()'
 Inside 'EnterAssetSerialNumber()'
@@ -430,7 +430,6 @@ Message displayed is Record Created Successfully!
 
 Inside SearchAssetTest()
 ------------------------------------------------
-Manual Testcases Covered : 4
 Inside Assets Tab
 Inside SearchAssetsByText() : Searched Assets is - 4632301662
 1 Record is present.
@@ -445,7 +444,6 @@ IT Redington  This is Dell. Available
 
 Inside UpdateAssetTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Inside Assets Tab
 Inside SearchAssetsByText() : Searched Assets is - 4632301662
 1 Record is present.
@@ -455,7 +453,6 @@ Record Updated Successfully!
 
 Inside DeleteAssetTest()
 ------------------------------------------------
-Manual Testcases Covered : 1
 Inside Assets Tab
 Inside SearchAssetsByText() : Searched Assets is - 4632301662
 1 Record is present.
@@ -469,15 +466,15 @@ Sign Out completed!
 Total Manual Testcase Count : 18
 Total Automation Testcase Count : 6
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 33229
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 4139
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:27:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:49:27 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteAllEmployeeTCs" classname="com.tests.AMS.EmployeeModuleTest" time="13.118">
+  <testcase name="ExecuteAllEmployeeTCs" classname="com.tests.AMS.EmployeeModuleTest" time="13.467">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -492,7 +489,7 @@ Inside GetAllRowsPresent()
 ------------------------------------------------
 Inside Employee Tab
 Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - 15
-15 Records are present.
+Record is not present.
 
 Table of All Employees : 
 ----------------------------------
@@ -584,17 +581,17 @@ Sign Out completed!
 
 -------------------------------------------------------
 Total Manual Testcase Count : 14
-Total Automation Testcase Count : 5
+Total Automation Testcase Count : 6
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 12609
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 42953
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:27:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:49:52 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteRequestModuleTests" classname="com.tests.AMS.RequestModuleTest" time="4.817">
+  <testcase name="ExecuteRequestModuleTests" classname="com.tests.AMS.RequestModuleTest" time="4.632">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -648,18 +645,18 @@ Status : Rejected
 Sign Out completed!
 
 -------------------------------------------------------
-Total Manual Testcase Count : 0
+Total Manual Testcase Count : 6
 Total Automation Testcase Count : 5
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 21337
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 27023
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:28:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:50:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteAssetsGroupModuleTests" classname="com.tests.AMS.AssetsGroupModuleTest" time="8.762">
+  <testcase name="ExecuteAssetsGroupModuleTests" classname="com.tests.AMS.AssetsGroupModuleTest" time="8.836">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -670,12 +667,10 @@ Inside Dashboard Tab
 Current page header : Dashboard
 Inside Master Tab
 Inside AssetsGroup Tab
-Manual Testcases Covered : 3
 
 Inside CreateAssetsGroupTest
 ------------------------------------------------
 Inside AssetsGroup Tab
-Manual Testcases Covered : 1
 2 Records are present.
 
 Table of Assets Group : 
@@ -729,15 +724,15 @@ Sign Out completed!
 Total Manual Testcase Count : 8
 Total Automation Testcase Count : 4
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 45721
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 15405
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:28:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:50:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteAssetsDepartmentModuleTests" classname="com.tests.AMS.AssetsDepartmentModuleTest" time="8.431">
+  <testcase name="ExecuteAssetsDepartmentModuleTests" classname="com.tests.AMS.AssetsDepartmentModuleTest" time="8.294">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -788,18 +783,18 @@ Deleted!
 Sign Out completed!
 
 -------------------------------------------------------
-Total Manual Testcase Count : 0
+Total Manual Testcase Count : 18
 Total Automation Testcase Count : 4
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 33019
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 31484
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:28:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:50:36 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteAssetsVendorModuleTests" classname="com.tests.AMS.AssetsVendorModuleTest" time="8.58">
+  <testcase name="ExecuteAssetsVendorModuleTests" classname="com.tests.AMS.AssetsVendorModuleTest" time="8.752">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -855,18 +850,18 @@ Deleted!
 Sign Out completed!
 
 -------------------------------------------------------
-Total Manual Testcase Count : 0
+Total Manual Testcase Count : 20
 Total Automation Testcase Count : 4
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 41458
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 26286
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:28:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:50:52 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteAssetsStatusModuleTests" classname="com.tests.AMS.AssetsStatusModuleTest" time="8.314">
+  <testcase name="ExecuteAssetsStatusModuleTests" classname="com.tests.AMS.AssetsStatusModuleTest" time="8.292">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -903,13 +898,11 @@ Inside AssetsStatus Tab
 
 Inside CreateAssetsStatusTest
 ------------------------------------------------
-Manual Testcases Covered : 8
 Message displayed is Record Created Successfully!
 Inside AssetsStatus Tab
 
 Inside SearchAssetsStatusTest
 ------------------------------------------------
-Manual Testcases Covered : 3
 Inside ItemsPerPageDropDown() : Selected Item is - 15
 Inside SearchAssetsStatus()
 Serched Assets Status for Asset Status Name(AssetStatusName)
@@ -923,7 +916,6 @@ Inside AssetsStatus Tab
 
 Inside UpdateAssetsStatusTest
 ------------------------------------------------
-Manual Testcases Covered : 4
 Inside SearchAssetsStatus()
 Serched Assets Status for Asset Status Name(AssetStatusName)
 1 Record is present.
@@ -937,7 +929,6 @@ Inside AssetsStatus Tab
 
 Inside DeleteAssetsStatusTest
 ------------------------------------------------
-Manual Testcases Covered : 4
 Inside SearchAssetsStatus()
 Serched Assets Status for Asset Status Name(NewAssetStatusName)
 1 Record is present.
@@ -954,15 +945,15 @@ Sign Out completed!
 Total Manual Testcase Count : 20
 Total Automation Testcase Count : 5
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 33576
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 7824
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:28:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:51:08 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="ExecuteUserModuleTests" classname="com.tests.AMS.UserModuleTest" time="10.639">
+  <testcase name="ExecuteUserModuleTests" classname="com.tests.AMS.UserModuleTest" time="11.058">
     <system-out><![CDATA[
 End of Execution!
  INFO [main] (BaseClass.java:70)- url is opened
@@ -1001,14 +992,12 @@ Inside User Tab
 
 Inside CreateUserTest
 ------------------------------------------------
-Manual Testcases Covered : 12
 Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - Role1
 Inside Master Tab
 Inside User Tab
 
 Inside SearchUserTest
 ------------------------------------------------
-Manual Testcases Covered : 2
 Inside ItemsPerPageDropDown() : Selected Item is - 15
 Inside SearchUser()
 Serched Users Status for User Name(P1345365)
@@ -1022,7 +1011,6 @@ Inside User Tab
 
 Inside UpdateUserTest
 ------------------------------------------------
-Manual Testcases Covered : 10
 Inside SearchUser()
 Serched Users Status for User Name(P1345365)
 1 Record is present.
@@ -1073,11 +1061,11 @@ Sign Out completed!
 Total Manual Testcase Count : 24
 Total Automation Testcase Count : 5
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 4105
+    <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 31692
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 05, 2023 3:29:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 11, 2023 9:51:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>

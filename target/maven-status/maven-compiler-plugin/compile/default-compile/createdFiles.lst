@@ -9,6 +9,7 @@ com\utilities\TestListener.class
 com\base\Page.class
 com\base\BaseClass.class
 com\pageObjects\AMS\AssetsStatusPage.class
+com\pageObjects\AMS\Random.class
 com\utilities\Reporting.class
 com\pageObjects\AMS\AssetsDepartmentPage.class
 com\utilities\XLUtils.class

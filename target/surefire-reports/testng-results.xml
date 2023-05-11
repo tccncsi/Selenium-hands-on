@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-05T09:56:58Z" name="TCC-TestRunner" finished-at="2023-05-05T09:59:25Z" duration-ms="146555">
+  <suite started-at="2023-05-11T04:18:51Z" name="TCC-TestRunner" finished-at="2023-05-11T04:21:36Z" duration-ms="165545">
     <groups>
     </groups>
-    <test started-at="2023-05-05T09:56:58Z" name="AMS Test" finished-at="2023-05-05T09:59:25Z" duration-ms="146555">
+    <test started-at="2023-05-11T04:18:51Z" name="AMS Test" finished-at="2023-05-11T04:21:36Z" duration-ms="165545">
       <class name="com.tests.AMS.AssetModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetModuleTest@355ce81c]" started-at="2023-05-05T09:57:31Z" name="setup" finished-at="2023-05-05T09:57:35Z" duration-ms="3803" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetModuleTest@29647f75]" started-at="2023-05-11T04:19:25Z" name="setup" finished-at="2023-05-11T04:19:29Z" duration-ms="4244" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,17 +23,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteAssetModuleTests()[pri:1, instance:com.tests.AMS.AssetModuleTest@355ce81c]" started-at="2023-05-05T09:57:35Z" name="ExecuteAssetModuleTests" finished-at="2023-05-05T09:57:55Z" duration-ms="19684" status="PASS">
+        <test-method signature="ExecuteAssetModuleTests()[pri:1, instance:com.tests.AMS.AssetModuleTest@29647f75]" started-at="2023-05-11T04:19:29Z" name="ExecuteAssetModuleTests" finished-at="2023-05-11T04:19:50Z" duration-ms="20753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteAssetModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetModuleTest@355ce81c]" started-at="2023-05-05T09:57:55Z" name="teardown" finished-at="2023-05-05T09:57:55Z" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetModuleTest@29647f75]" started-at="2023-05-11T04:19:50Z" name="teardown" finished-at="2023-05-11T04:19:50Z" duration-ms="374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.AssetModuleTest -->
       <class name="com.tests.AMS.DashboardModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.DashboardModuleTest@2892dae4]" started-at="2023-05-05T09:57:19Z" name="setup" finished-at="2023-05-05T09:57:22Z" duration-ms="3562" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.DashboardModuleTest@355ce81c]" started-at="2023-05-11T04:19:09Z" name="setup" finished-at="2023-05-11T04:19:13Z" duration-ms="4418" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,17 +49,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteDashboardTests()[pri:1, instance:com.tests.AMS.DashboardModuleTest@2892dae4]" started-at="2023-05-05T09:57:22Z" name="ExecuteDashboardTests" finished-at="2023-05-05T09:57:31Z" duration-ms="8992" status="PASS">
+        <test-method signature="ExecuteDashboardTests()[pri:1, instance:com.tests.AMS.DashboardModuleTest@355ce81c]" started-at="2023-05-11T04:19:13Z" name="ExecuteDashboardTests" finished-at="2023-05-11T04:19:25Z" duration-ms="11342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteDashboardTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.DashboardModuleTest@2892dae4]" started-at="2023-05-05T09:57:31Z" name="teardown" finished-at="2023-05-05T09:57:31Z" duration-ms="256" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.DashboardModuleTest@355ce81c]" started-at="2023-05-11T04:19:25Z" name="teardown" finished-at="2023-05-11T04:19:25Z" duration-ms="280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.DashboardModuleTest -->
       <class name="com.tests.AMS.EmployeeModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.EmployeeModuleTest@29647f75]" started-at="2023-05-05T09:57:55Z" name="setup" finished-at="2023-05-05T09:57:59Z" duration-ms="3541" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.EmployeeModuleTest@3315d2d7]" started-at="2023-05-11T04:19:50Z" name="setup" finished-at="2023-05-11T04:19:55Z" duration-ms="4636" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,17 +75,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteAllEmployeeTCs()[pri:1, instance:com.tests.AMS.EmployeeModuleTest@29647f75]" started-at="2023-05-05T09:57:59Z" name="ExecuteAllEmployeeTCs" finished-at="2023-05-05T09:58:12Z" duration-ms="13117" status="PASS">
+        <test-method signature="ExecuteAllEmployeeTCs()[pri:1, instance:com.tests.AMS.EmployeeModuleTest@3315d2d7]" started-at="2023-05-11T04:19:55Z" name="ExecuteAllEmployeeTCs" finished-at="2023-05-11T04:20:09Z" duration-ms="13465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteAllEmployeeTCs -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.EmployeeModuleTest@29647f75]" started-at="2023-05-05T09:58:12Z" name="teardown" finished-at="2023-05-05T09:58:12Z" duration-ms="261" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.EmployeeModuleTest@3315d2d7]" started-at="2023-05-11T04:20:09Z" name="teardown" finished-at="2023-05-11T04:20:09Z" duration-ms="240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.EmployeeModuleTest -->
       <class name="com.tests.AMS.AssetsDepartmentModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsDepartmentModuleTest@5fa07e12]" started-at="2023-05-05T09:58:33Z" name="setup" finished-at="2023-05-05T09:58:37Z" duration-ms="3560" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsDepartmentModuleTest@55b53d44]" started-at="2023-05-11T04:20:35Z" name="setup" finished-at="2023-05-11T04:20:42Z" duration-ms="7184" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,43 +101,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteAssetsDepartmentModuleTests()[pri:1, instance:com.tests.AMS.AssetsDepartmentModuleTest@5fa07e12]" started-at="2023-05-05T09:58:37Z" name="ExecuteAssetsDepartmentModuleTests" finished-at="2023-05-05T09:58:45Z" duration-ms="8432" status="PASS">
+        <test-method signature="ExecuteAssetsDepartmentModuleTests()[pri:1, instance:com.tests.AMS.AssetsDepartmentModuleTest@55b53d44]" started-at="2023-05-11T04:20:42Z" name="ExecuteAssetsDepartmentModuleTests" finished-at="2023-05-11T04:20:50Z" duration-ms="8295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteAssetsDepartmentModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsDepartmentModuleTest@5fa07e12]" started-at="2023-05-05T09:58:45Z" name="teardown" finished-at="2023-05-05T09:58:45Z" duration-ms="226" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsDepartmentModuleTest@55b53d44]" started-at="2023-05-11T04:20:50Z" name="teardown" finished-at="2023-05-11T04:20:50Z" duration-ms="284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.AssetsDepartmentModuleTest -->
-      <class name="com.tests.AMS.AssetsStatusModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsStatusModuleTest@482bce4f]" started-at="2023-05-05T09:58:58Z" name="setup" finished-at="2023-05-05T09:59:01Z" duration-ms="3672" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://10.176.41.10:8080/UatAms]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="ExecuteAssetsStatusModuleTests()[pri:1, instance:com.tests.AMS.AssetsStatusModuleTest@482bce4f]" started-at="2023-05-05T09:59:01Z" name="ExecuteAssetsStatusModuleTests" finished-at="2023-05-05T09:59:10Z" duration-ms="8315" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ExecuteAssetsStatusModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsStatusModuleTest@482bce4f]" started-at="2023-05-05T09:59:10Z" name="teardown" finished-at="2023-05-05T09:59:10Z" duration-ms="232" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.tests.AMS.AssetsStatusModuleTest -->
       <class name="com.tests.AMS.AssetsGroupModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsGroupModuleTest@d6e7bab]" started-at="2023-05-05T09:58:21Z" name="setup" finished-at="2023-05-05T09:58:24Z" duration-ms="3413" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsGroupModuleTest@5fa07e12]" started-at="2023-05-11T04:20:21Z" name="setup" finished-at="2023-05-11T04:20:25Z" duration-ms="4761" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -153,17 +127,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteAssetsGroupModuleTests()[pri:1, instance:com.tests.AMS.AssetsGroupModuleTest@d6e7bab]" started-at="2023-05-05T09:58:24Z" name="ExecuteAssetsGroupModuleTests" finished-at="2023-05-05T09:58:33Z" duration-ms="8761" status="PASS">
+        <test-method signature="ExecuteAssetsGroupModuleTests()[pri:1, instance:com.tests.AMS.AssetsGroupModuleTest@5fa07e12]" started-at="2023-05-11T04:20:25Z" name="ExecuteAssetsGroupModuleTests" finished-at="2023-05-11T04:20:34Z" duration-ms="8838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteAssetsGroupModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsGroupModuleTest@d6e7bab]" started-at="2023-05-05T09:58:33Z" name="teardown" finished-at="2023-05-05T09:58:33Z" duration-ms="212" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsGroupModuleTest@5fa07e12]" started-at="2023-05-11T04:20:34Z" name="teardown" finished-at="2023-05-11T04:20:35Z" duration-ms="270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.AssetsGroupModuleTest -->
       <class name="com.tests.AMS.RequestModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.RequestModuleTest@3315d2d7]" started-at="2023-05-05T09:58:12Z" name="setup" finished-at="2023-05-05T09:58:16Z" duration-ms="3594" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.RequestModuleTest@d6e7bab]" started-at="2023-05-11T04:20:09Z" name="setup" finished-at="2023-05-11T04:20:16Z" duration-ms="6983" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -179,17 +153,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteRequestModuleTests()[pri:1, instance:com.tests.AMS.RequestModuleTest@3315d2d7]" started-at="2023-05-05T09:58:16Z" name="ExecuteRequestModuleTests" finished-at="2023-05-05T09:58:20Z" duration-ms="4818" status="PASS">
+        <test-method signature="ExecuteRequestModuleTests()[pri:1, instance:com.tests.AMS.RequestModuleTest@d6e7bab]" started-at="2023-05-11T04:20:16Z" name="ExecuteRequestModuleTests" finished-at="2023-05-11T04:20:20Z" duration-ms="4633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteRequestModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.RequestModuleTest@3315d2d7]" started-at="2023-05-05T09:58:20Z" name="teardown" finished-at="2023-05-05T09:58:21Z" duration-ms="219" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.RequestModuleTest@d6e7bab]" started-at="2023-05-11T04:20:20Z" name="teardown" finished-at="2023-05-11T04:20:21Z" duration-ms="255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.RequestModuleTest -->
-      <class name="com.tests.AMS.AssetsVendorModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsVendorModuleTest@55b53d44]" started-at="2023-05-05T09:58:45Z" name="setup" finished-at="2023-05-05T09:58:49Z" duration-ms="3592" status="PASS">
+      <class name="com.tests.AMS.AssetsStatusModuleTest">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsStatusModuleTest@366647c2]" started-at="2023-05-11T04:21:07Z" name="setup" finished-at="2023-05-11T04:21:12Z" duration-ms="4944" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -205,17 +179,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteAssetsVendorModuleTests()[pri:1, instance:com.tests.AMS.AssetsVendorModuleTest@55b53d44]" started-at="2023-05-05T09:58:49Z" name="ExecuteAssetsVendorModuleTests" finished-at="2023-05-05T09:58:57Z" duration-ms="8582" status="PASS">
+        <test-method signature="ExecuteAssetsStatusModuleTests()[pri:1, instance:com.tests.AMS.AssetsStatusModuleTest@366647c2]" started-at="2023-05-11T04:21:12Z" name="ExecuteAssetsStatusModuleTests" finished-at="2023-05-11T04:21:20Z" duration-ms="8296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExecuteAssetsStatusModuleTests -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsStatusModuleTest@366647c2]" started-at="2023-05-11T04:21:20Z" name="teardown" finished-at="2023-05-11T04:21:20Z" duration-ms="293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.tests.AMS.AssetsStatusModuleTest -->
+      <class name="com.tests.AMS.AssetsVendorModuleTest">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.AssetsVendorModuleTest@482bce4f]" started-at="2023-05-11T04:20:50Z" name="setup" finished-at="2023-05-11T04:20:58Z" duration-ms="7279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://10.176.41.10:8080/UatAms]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="ExecuteAssetsVendorModuleTests()[pri:1, instance:com.tests.AMS.AssetsVendorModuleTest@482bce4f]" started-at="2023-05-11T04:20:58Z" name="ExecuteAssetsVendorModuleTests" finished-at="2023-05-11T04:21:06Z" duration-ms="8753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteAssetsVendorModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsVendorModuleTest@55b53d44]" started-at="2023-05-05T09:58:57Z" name="teardown" finished-at="2023-05-05T09:58:58Z" duration-ms="205" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.AssetsVendorModuleTest@482bce4f]" started-at="2023-05-11T04:21:06Z" name="teardown" finished-at="2023-05-11T04:21:07Z" duration-ms="257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.AssetsVendorModuleTest -->
       <class name="com.tests.AMS.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.LoginTest@40cb8df7]" started-at="2023-05-05T09:56:58Z" name="setup" finished-at="2023-05-05T09:57:05Z" duration-ms="6500" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.LoginTest@13b13b5d]" started-at="2023-05-11T04:18:51Z" name="setup" finished-at="2023-05-11T04:18:56Z" duration-ms="4896" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -231,17 +231,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteLoginTests()[pri:1, instance:com.tests.AMS.LoginTest@40cb8df7]" started-at="2023-05-05T09:57:05Z" name="ExecuteLoginTests" finished-at="2023-05-05T09:57:12Z" duration-ms="7359" status="PASS">
+        <test-method signature="ExecuteLoginTests()[pri:1, instance:com.tests.AMS.LoginTest@13b13b5d]" started-at="2023-05-11T04:18:56Z" name="ExecuteLoginTests" finished-at="2023-05-11T04:19:02Z" duration-ms="6640" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteLoginTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.LoginTest@40cb8df7]" started-at="2023-05-05T09:57:12Z" name="teardown" finished-at="2023-05-05T09:57:12Z" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.LoginTest@13b13b5d]" started-at="2023-05-11T04:19:02Z" name="teardown" finished-at="2023-05-11T04:19:03Z" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.LoginTest -->
       <class name="com.tests.AMS.UserModuleTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.UserModuleTest@366647c2]" started-at="2023-05-05T09:59:10Z" name="setup" finished-at="2023-05-05T09:59:14Z" duration-ms="3811" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.UserModuleTest@6a6afff2]" started-at="2023-05-11T04:21:20Z" name="setup" finished-at="2023-05-11T04:21:25Z" duration-ms="4973" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -257,17 +257,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteUserModuleTests()[pri:1, instance:com.tests.AMS.UserModuleTest@366647c2]" started-at="2023-05-05T09:59:14Z" name="ExecuteUserModuleTests" finished-at="2023-05-05T09:59:24Z" duration-ms="10638" status="PASS">
+        <test-method signature="ExecuteUserModuleTests()[pri:1, instance:com.tests.AMS.UserModuleTest@6a6afff2]" started-at="2023-05-11T04:21:25Z" name="ExecuteUserModuleTests" finished-at="2023-05-11T04:21:36Z" duration-ms="11058" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteUserModuleTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.UserModuleTest@366647c2]" started-at="2023-05-05T09:59:24Z" name="teardown" finished-at="2023-05-05T09:59:25Z" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.UserModuleTest@6a6afff2]" started-at="2023-05-11T04:21:36Z" name="teardown" finished-at="2023-05-11T04:21:36Z" duration-ms="252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.tests.AMS.UserModuleTest -->
       <class name="com.tests.AMS.ForgotPasswordTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.ForgotPasswordTest@13b13b5d]" started-at="2023-05-05T09:57:12Z" name="setup" finished-at="2023-05-05T09:57:16Z" duration-ms="4024" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.tests.AMS.ForgotPasswordTest@2892dae4]" started-at="2023-05-11T04:19:03Z" name="setup" finished-at="2023-05-11T04:19:07Z" duration-ms="4096" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -283,11 +283,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ExecuteForgotPasswordTests()[pri:1, instance:com.tests.AMS.ForgotPasswordTest@13b13b5d]" started-at="2023-05-05T09:57:16Z" name="ExecuteForgotPasswordTests" finished-at="2023-05-05T09:57:18Z" duration-ms="2142" status="PASS">
+        <test-method signature="ExecuteForgotPasswordTests()[pri:1, instance:com.tests.AMS.ForgotPasswordTest@2892dae4]" started-at="2023-05-11T04:19:07Z" name="ExecuteForgotPasswordTests" finished-at="2023-05-11T04:19:09Z" duration-ms="1940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExecuteForgotPasswordTests -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.ForgotPasswordTest@13b13b5d]" started-at="2023-05-05T09:57:18Z" name="teardown" finished-at="2023-05-05T09:57:19Z" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.tests.AMS.ForgotPasswordTest@2892dae4]" started-at="2023-05-11T04:19:09Z" name="teardown" finished-at="2023-05-11T04:19:09Z" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
