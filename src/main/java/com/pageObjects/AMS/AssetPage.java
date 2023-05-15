@@ -50,10 +50,11 @@ public class AssetPage extends BasePage {
 	@FindBy(xpath = "//*[@id='exampleModalLongTitle']")
 	WebElement CreateAssetsHeaderMessageLoc;
 
+	/*
 	// "x" button to cancel or minimize the Create Assets window
 	@FindBy(xpath = "//button/span[contains(.,'�') and @xpath = 1]")
 	WebElement CloseAssetWindowBtnXLoc;
-
+*/
 // Form Filling
 
 	// Asset Number textbox
@@ -529,22 +530,28 @@ public class AssetPage extends BasePage {
 
 	public void ClickCloseBtn() throws IOException {
 		System.out.println("Inside 'ClickCloseBtn()'");
+		
 		waitForFindElementPresent(AssetCloseLoc);
 		AssetCloseLoc.click();
 	}
 
 	public void UpdateSuccessfullyPopUpMessage(String ExpectedMessage) {
 		System.out.println("Inside 'UpdateSuccessfullyPopUpMessage()'");
+		
 		waitForFindElementPresent(UpdateSuccessPopUp);
+		
 		// isDisplayed() method returns boolean value either True or False
 		Boolean Display = UpdateSuccessPopUp.isDisplayed();
+		
 		// To print the value
 		System.out.println("Successful Popup displayed :" + Display);
 
 		String Mess = UpdateSuccessMessage.getText();
 		// Assert to check that message is corrent
 		Assert.assertEquals(Mess, ExpectedMessage);
+		
 		System.out.println("Successful Popup Message Matches -> " + Mess);
+		
 		// Click on OK button
 		UpdateSuccessOKBtn.click();
 	}

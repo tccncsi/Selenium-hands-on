@@ -2,6 +2,7 @@ com\tests\AMS\AssetsDepartmentModuleTest.class
 com\tests\AMS\EmployeeModuleTest.class
 com\tests\AMS\ForgotPasswordTest.class
 com\tests\AMS\AssetModuleTest.class
+com\tests\AMS\LoginTrackerModuleTest.class
 com\tests\AMS\DashboardModuleTest.class
 com\tests\AMS\UserModuleTest.class
 com\tests\AMS\AssetsVendorModuleTest.class
