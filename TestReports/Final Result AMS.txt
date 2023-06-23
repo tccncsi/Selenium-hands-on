@@ -1,0 +1,1017 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36mSeleniumFramework:SeleniumFramework[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding SeleniumFramework 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mSeleniumFramework[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory D:\Projects\Projects\Selenabler_Framework\Selenabler2.0\src\main\resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mSeleniumFramework[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mSeleniumFramework[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 10 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mSeleniumFramework[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M5:test[m [1m(default-test)[m @ [36mSeleniumFramework[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running [1mTestSuite[m
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 24559
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully. INFO [main] (BaseClass.java:70)- url is opened
+
+Jun 23, 2023 5:22:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Executing Login Testcases...
+
+Inside LoginPageAssertionTest()
+------------------------------------------------
+Actual URL(http://10.176.41.10:8080/UatAms/#/login) And Expected URL(http://10.176.41.10:8080/UatAms/#/login) Matches
+Actual Title(AssetModule) And Expected Title(AssetModule) Matches
+After Assertion AMS LOGIN = AMS LOGIN Matched 
+After Assertion Username = Username Matched 
+After Assertion Password = Password Matched 
+After Assertion Forgot Password ? = Forgot Password ? Matched 
+
+Inside LoginValidCredTest()
+------------------------------------------------
+Login Succussful!
+
+Sign Out completed!
+
+Inside LoginInValidCredTest()
+------------------------------------------------
+Authentication Failed Popup displayed is :true
+Actual Error Message -> User name or password wrong !
+Expected Error Message -> User name or password wrong !
+
+Inside LoginBlankCredTest()
+------------------------------------------------
+Error Message below Username Textbox displayed? -> true
+Actual Message : username is required
+Error Message below Password Textbox displayed? -> true
+Actual Message : password is required
+
+-------------------------------------------------------
+Total Manual Testcase Count : 10
+Total Automation Testcase Count : 4
+Start
+
+End of Execution!
+ing ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 35776
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:23:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing Fogot Password Testcases...
+
+Inside ForgotPasswordBackButtonTest
+------------------------------------------------
+After navigation current url is http://10.176.41.10:8080/UatAms/#/resetPassword
+After clicking on Back Button on Forgot Password Page user navigates to Login Page
+Check it through url
+Actual URL(http://10.176.41.10:8080/UatAms/#/login) And Expected URL(http://10.176.41.10:8080/UatAms/#/login) Matches
+User navigated to Login Page.
+
+Inside ForgotPasswordSendOTPButtonTest
+------------------------------------------------
+After navigation current url is http://10.176.41.10:8080/UatAms/#/resetPassword
+Error message displayed is :true
+Error Message is Enter valid email address
+
+-------------------------------------------------------
+Total Manual Testcase Count : 7
+Total Automation Testcase Count : 2
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 23754
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:23:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing Dashboard Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+
+Inside DashboardMainPageTest()
+------------------------------------------------
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Logged in UserName : Welcome PiyushChoraria
+Second Chart Title : Asset By Status
+Clicked on Notification Bell
+Current page title : Request
+
+Inside AboutUsModuleTest()
+------------------------------------------------
+Header -> About Us
+Title : Our Purpose
+Information : We advance our communities by partnering with governments and enterprises to harness technology. We do this by bringing people together to make the extraordinary happen.
+Clients Card is present
+Card Title : 310
+Reference : Clients
+Project Card is present
+Card Title : 427
+Reference : Projects
+Hours Of support Card is present
+Card Title : 1143
+Reference : Hours of support
+Employees Card is present
+Card Title : 700
+Reference : Employees
+
+Inside ContactModuleTest()
+------------------------------------------------
+Title : Contact Us
+Location Card is present
+Card Title : Location
+Reference : NCSI Technologies (India) Private Limited 5th Floor, It-7, VITP Private Limited-SEZ, Qubix business park Pvt. Ltd-SEZ, Blue Ridge Township, Phase 1, Hinjawadi, Pune-411057
+Email Card is present
+Card Title : Email
+Reference : hr@ncs.com.sg
+Call Card is present
+Card Title : Call
+Reference : 087 number here
+
+Inside MasterModuleTest()
+------------------------------------------------
+Inside Master Tab
+Inside Assets Tab
+Inside Employee Tab
+Inside Request Tab
+Inside AssetsGroup Tab
+Inside AssetsDepartment Tab
+Inside AssetsVendor Tab
+Inside AssetsStatus Tab
+Inside User Tab
+
+Inside UtilityModuleTest()
+------------------------------------------------
+Inside Utility Tab
+Inside BulkAssetImport Tab
+Inside BulkEmployeeImport Tab
+Inside UtilityTracker Tab
+Header Message on current page : Utility Tracker
+
+Inside ReportsModuleTest()
+------------------------------------------------
+Inside ClickReportsTab Tab
+Inside Audio Track Tab
+Inside Asset Report Tab
+Inside Asset Transfer Report Tab
+Inside Asset Group Report Tab
+Inside Employee Report Tab
+Inside Asset Department Report Tab
+Inside Asset Vendor Report Tab
+Inside Asset Status Report Tab
+Inside Users Report Tab
+Inside Login Tracker Tab
+
+Inside FindGridElementsTest()
+------------------------------------------------
+Grid Reference : Total IT Assets
+Grid Value : 
+Grid Reference : Assets Allocated
+Grid Value : 
+Grid Reference : Assets Available
+Grid Value : 
+Grid Reference : Assets Discarded
+Grid Value : 
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 4
+Total Automation Testcase Count : 7
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 29321
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:23:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing AssetModule Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+
+Inside GetAllRowsPresent()
+------------------------------------------------
+Manual Testcases Covered : 1
+Inside Assets Tab
+Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - 25
+Record is not present.
+
+Table of All Assets : 
+----------------------------------
+4632300027
+Computer IT-03
+Movable IT STOCK 5CD9050D6V
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300026
+Computer IT-03
+Movable IT STOCK 5CD9050D6T
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300025
+Computer IT-03
+Movable IT STOCK 5CD9050D6D
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300024
+Computer IT-03
+Movable IT STOCK 5CD9050D6B
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300023
+Computer IT-03
+Movable IT STOCK 5CD9050D69
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300022
+Computer IT-03
+Movable Chaitali Satam
+P1341550 5CD9050D68
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300021
+Computer IT-03
+Movable Pampana Pallavi
+P1343810 5CD9050D67
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300020
+Computer IT-03
+Movable IT STOCK 5CD9050D5T
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300019
+Computer IT-03
+Movable Rajkumar Sriniv
+P1343041 5CD9050D5S
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300018
+Computer IT-03
+Movable Mirunalini Math
+P1340065 5CD9050D5P
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300017
+Computer IT-03
+Movable Shivani Sunil G
+P1351193 5CD9050D5N
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300016
+Computer IT-03
+Movable IT STOCK 5CD9050D56
+IT Redington  HP ProBook 4. Pending   
+-------------------------------------
+4632300014
+Computer IT-03
+Movable IT STOCK 5CD9050D54
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300013
+Computer IT-03
+Movable  5CD9050D53
+IT Redington  HP ProBook 4. Discard   
+-------------------------------------
+4632300012
+Computer IT-03
+Movable Chaitanya Gomas
+P1340872 5CD9050D52
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300011
+Computer IT-03
+Movable Ankit Sharma
+P1322118 5CD9050D4N
+IT Redington  HP ProBook 4. Allocated   
+-------------------------------------
+4632300010
+Computer IT-03
+Movable IT STOCK 5CD9050D4M
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300009
+Computer IT-03
+Movable IT
+P000000 5CD9050D4L
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300008
+Computer IT-03
+Movable  5CD9050D4K
+IT Redington  HP ProBook 4. Discard   
+-------------------------------------
+4632300007
+Computer IT-03
+Movable Krishna Mettu 5CD9050D4J
+IT Redington  HP ProBook 4. Pending   
+-------------------------------------
+4632300005
+Computer IT-03
+Movable IT STOCK 5CD9050D46
+IT Redington  HP ProBook 4. Pending   
+-------------------------------------
+4632300004
+Computer IT-03
+Movable IT
+P000000 5CD9050D45
+IT Redington  HP ProBook 4. Available   
+-------------------------------------
+4632300003
+Computer IT-03
+Movable IT STOCK 5CD9050D44
+IT Redington  HP ProBook 4. Pending   
+-------------------------------------
+4632300002
+Computer IT-03
+Movable IT STOCK 5CD9050D43
+IT Redington  HP ProBook 4. Pending   
+-------------------------------------
+4632300001
+Computer IT-03
+Movable IT STOCK 5CD9050D5R
+IT Redington  HP ProBook 4. Pending   
+-------------------------------------
+
+Inside ClickCancelBtnOnCreateAsset
+------------------------------------------------
+Inside Assets Tab
+'ClickOnCancelButton()'
+Clicked on 'Cancel' button
+
+Inside CreateAssetTest
+------------------------------------------------
+Inside Assets Tab
+Inside 'EnterAssetNumber()'
+Inside 'EnterAssetSerialNumber()'
+Inside 'SelectLocation()'
+Inside 'EnterAssetDescription()'
+Inside 'SelectAssetGroup()'
+Inside 'SelectDepartment()'
+Inside 'SelectVendor()'
+Inside 'SelectAssetType()'
+Inside 'EnterCount()'
+Inside 'EnterRemark()'
+'ClickOnCreateButton()'
+Clicked on 'Create' button
+Message displayed is Record Created Successfully!
+
+Inside SearchAssetTest()
+------------------------------------------------
+Inside Assets Tab
+Inside SearchAssetsByText() : Searched Assets is - 4632301662
+1 Record is present.
+
+Table of Assets : 
+----------------------------------
+4632301662
+Computer IT-03
+Movable  7Q4GYP8
+IT Redington  This is Dell. Available   
+-------------------------------------
+
+Inside UpdateAssetTest()
+------------------------------------------------
+Inside Assets Tab
+Inside SearchAssetsByText() : Searched Assets is - 4632301662
+1 Record is present.
+Inside 'UpdateAssetType()'
+Inside 'UpdateAssetDescription()'
+Record Updated Successfully!
+
+Inside DeleteAssetTest()
+------------------------------------------------
+Inside Assets Tab
+Inside SearchAssetsByText() : Searched Assets is - 4632301662
+1 Record is present.
+Deleted!
+Inside SearchAssetsByText() : Searched Assets is - 4632301662
+Record deleted!
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 18
+Total Automation Testcase Count : 6
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 42689
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:23:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing Employee Module Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+
+Inside GetAllRowsPresent()
+------------------------------------------------
+Inside Employee Tab
+Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - 15
+15 Records are present.
+
+Table of All Employees : 
+----------------------------------
+1356233  Mayur Rajendra Path Active Jan 9, 2023 mayur.pathak@in.ncs-i.com  
+-------------------------------------
+1356664  Rupesh Sahu Active Jan 30, 2023 rupeshsahu.sahu@in.ncs-i.com  
+-------------------------------------
+1344840 Aamir Niaz Sayed Active Feb 28, 2022 aamir.sayed@in.ncs-i.com  
+-------------------------------------
+1346556 Aarti Sanjay Shinde Active Mar 30, 2022 aarti.shinde@in.ncs-i.com  
+-------------------------------------
+1357123 Abhijeet Balaso Mane Active Feb 22, 2023 abhijeet.mane@in.ncs-i.com  
+-------------------------------------
+1341908 Abhijeet Bhaurkar Active Oct 18, 2021 abhijeet.bhaurkar@in.ncs-i.com  
+-------------------------------------
+1326095 Abhijeet Binduraj Ni Active Jul 9, 2019 abhijeet.nikumbh@in.ncs-i.com  
+-------------------------------------
+1355870 Abhishek Bhardwaj Active May 31, 2022 abhishek.bhardwaj@in.ncs-i.com  
+-------------------------------------
+1349183 Abhishek Gupta Active Jul 25, 2022 abhishek.gupta@in.ncs-i.com  
+-------------------------------------
+1350233 Abhishek Laxman Phar Active Sep 8, 2022 abhishek.pharate@in.ncs-i.com  
+-------------------------------------
+1355871 Abhishek Pandey Active May 31, 2022 abhishek.pandey@in.ncs-i.com  
+-------------------------------------
+1347460 Abhishek Prashant Bh Active May 25, 2022 abhishek.bhandare@in.ncs-i.com  
+-------------------------------------
+1345366 Abhishek Ramchandra Active Jan 24, 2022 abhishek.sawant@in.ncs-i.com  
+-------------------------------------
+1348240 Abhishek Shrikant Ka Active Jun 27, 2022 abhishek.kane@in.ncs-i.com  
+-------------------------------------
+1343098 Aboli Ashokrao Patil Active Apr 1, 2022 aboli.patil@in.ncs-i.com  
+-------------------------------------
+
+Inside CreateEmployeewindowCloseAction()
+------------------------------------------------
+Manual Testcases Covered : 1
+Inside Employee Tab
+ClickCreateEmployeeButton()
+Close the 'Create Employee' window
+
+Inside CreateEmployeeTest()
+------------------------------------------------
+Manual Testcases Covered : 7
+Inside Employee Tab
+ClickCreateEmployeeButton()
+Inside EnterEmployeeId()
+Inside EnterEmployeeName()
+Inside SelectStatus()
+Inside EnterDateOfJoining()
+Inside EnterEmail()
+Message displayed is Record Created Successfully!
+
+Inside SearchEmployeeTest
+------------------------------------------------
+Inside Employee Tab
+Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - 15
+Inside SearchEmployee()
+Serched Employee -> ravi.bopara@in.ncs-i.com
+1 Record is present.
+
+Table of Employees : 
+----------------------------------
+1345384.0 Ravi Bopara Active Jan 24, 2022 ravi.bopara@in.ncs-i.com  
+-------------------------------------
+
+Inside UpdateEmployeeTest
+------------------------------------------------
+Inside Employee Tab
+Inside SearchEmployee()
+Serched Employee -> ravi.bopara@in.ncs-i.com
+1 Record is present.
+Inside UpdateEmpStatus()
+Inside UpdateEmpEmail()
+Record Updated Successfully!
+
+Inside DeleteEmployeeTest
+------------------------------------------------
+Inside Employee Tab
+Inside SearchEmployee()
+Serched Employee -> ravi.shah@in.ncs-i.com
+1 Record is present.
+Deleted!
+Inside SearchEmployee()
+Serched Employee -> ravi.shah@in.ncs-i.com
+Message is 'Data Not Found...!'
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 14
+Total Automation Testcase Count : 6
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 14579
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:24:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing RequestModule Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+
+Inside SearchRequestTest
+------------------------------------------------
+Inside Request Tab
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+Inside SearchRequest()
+Serched Request for Asset Number(4632300004)
+Record is present.
+Row Data => |4632300004|Transfer|4/11/23
+3:55 PM|Rejected|Amol N Patil|
+
+Inside CheckAllRequests
+------------------------------------------------
+Inside Request Tab
+Inside ClickAllButton()
+Record is present.
+Row Data => |4632300004|Transfer|4/11/23
+3:55 PM|Rejected||
+All
+
+Inside CheckApprovedRequests
+------------------------------------------------
+Inside Request Tab
+Inside ClickApprovedButton()
+Record is present.
+Row Data => |4632300001|Discard||Approved|IT|
+Status : Approved
+
+Inside CheckPendingRequests
+------------------------------------------------
+Inside Request Tab
+Inside ClickPendingButton()
+Record is not present.
+
+Inside CheckRejectedRequests
+------------------------------------------------
+Inside Request Tab
+Inside ClickRejectedButton()
+Record is present.
+Row Data => |4632300004|Transfer|4/11/23
+3:55 PM|Rejected||
+Status : Rejected
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 6
+Total Automation Testcase Count : 5
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 11381
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:24:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing AssetsGroupModule Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+Inside AssetsGroup Tab
+
+Inside CreateAssetsGroupTest
+------------------------------------------------
+Inside AssetsGroup Tab
+2 Records are present.
+
+Table of Assets Group : 
+----------------------------------
+1 Computer HW (36Mth)  
+-------------------------------------
+2 Office Eq (36Mth)  
+-------------------------------------
+
+Inside SearchRequestTest
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+Inside SearchAssetsGroup()
+Serched Assets Group for Asset Group Name(AssetsGroup)
+1 Record is present.
+
+Table of Assets Group : 
+----------------------------------
+1 Office Eq (36Mth)  
+-------------------------------------
+Inside AssetsGroup Tab
+
+Inside UpdateAssetsGroupTest
+------------------------------------------------
+Inside SearchAssetsGroup()
+Serched Assets Group for Asset Group Name(AssetsGroup)
+1 Record is present.
+
+Table of Asset Group : 
+----------------------------------
+1 Office Eq (36Mth)  
+-------------------------------------
+ActMessage
+Inside AssetsGroup Tab
+
+Inside DeleteAssetsGroupTest
+------------------------------------------------
+Inside SearchAssetsGroup()
+Serched Assets Group for Asset Group Name(NewAssetsGroup)
+1 Record is present.
+
+Table of Asset Group : 
+----------------------------------
+1 Office Eq (60Mth)  
+-------------------------------------
+Deleted!
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 8
+Total Automation Testcase Count : 4
+
+
+End of Execution!
+ INFO [main] (BaseClass.java:70)- url is opened
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 26096
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:24:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Executing Login Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+Inside AssetsDepartment Tab
+
+Inside CreateAssetsDepartmentTest
+------------------------------------------------
+Inside AssetsDepartment Tab
+
+Inside SearchAssetsDepartmentTest
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+Inside SearchAssetsDepartment()
+Serched Assets Department for Asset Department Name(AssetDepartment)
+1 Record is present.
+
+Table of Assets Department : 
+----------------------------------
+1 Testing  
+-------------------------------------
+Inside AssetsDepartment Tab
+
+Inside UpdateAssetsDepartmentTest
+------------------------------------------------
+Inside SearchAssetsDepartment()
+Serched Assets Department for Asset Department Name(AssetDepartment)
+Record Updated Successfully!
+Inside AssetsDepartment Tab
+
+Inside DeleteAssetsDepartmentTest
+------------------------------------------------
+Inside SearchAssetsDepartment()
+Serched Assets Department for Asset Department Name(NewAssetDepartment)
+1 Record is present.
+
+Table of Assets Department : 
+----------------------------------
+1 HR  
+-------------------------------------
+Deleted!
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 18
+Total Automation Testcase Count : 4
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 23170
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:24:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing Assets Vendor Module Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+Inside AssetsVendor Tab
+
+Inside CreateAssetsVendorTest
+------------------------------------------------
+Inside AssetsVendor Tab
+
+Inside SearchAssetsVendorTest
+------------------------------------------------
+Inside SearchAssetsVendor()
+Serched Assets Vendor for Asset Vendor Name(AssetVendorName)
+1 Record is present.
+
+Table of Asset Vendor : 
+----------------------------------
+1 Orient technologies 46100028  
+-------------------------------------
+Inside AssetsVendor Tab
+
+Inside UpdateAssetsVendorTest
+------------------------------------------------
+Inside SearchAssetsVendor()
+Serched Assets Vendor for Asset Vendor Name(AssetVendorName)
+1 Record is present.
+
+Table of Asset Vendor : 
+----------------------------------
+1 Orient technologies 46100028  
+-------------------------------------
+ActMessage
+Inside AssetsVendor Tab
+
+Inside DeleteAssetsVendorTest
+------------------------------------------------
+Inside SearchAssetsVendor()
+Serched Assets Vendor for Asset Vendor Name(NewAssetVendorName)
+1 Record is present.
+
+Table of Asset Vendor : 
+----------------------------------
+1 Dynamic Distributors 46100034  
+-------------------------------------
+Deleted!
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 20
+Total Automation Testcase Count : 4
+
+
+End of Execution!
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 12714
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:25:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ INFO [main] (BaseClass.java:70)- url is opened
+Executing Assets Status Module Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+Inside AssetsStatus Tab
+
+Inside SearchAssetsStatusTest
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+7 Records are present.
+
+Table of Asset Status : 
+----------------------------------
+1 Allocated  
+-------------------------------------
+2 Discard  
+-------------------------------------
+3 Active  
+-------------------------------------
+4 Deactive  
+-------------------------------------
+5 Approved  
+-------------------------------------
+6 Declined  
+-------------------------------------
+7 Available  
+-------------------------------------
+Inside AssetsStatus Tab
+
+Inside CreateAssetsStatusTest
+------------------------------------------------
+Message displayed is Record Created Successfully!
+Inside AssetsStatus Tab
+
+Inside SearchAssetsStatusTest
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+Inside SearchAssetsStatus()
+Serched Assets Status for Asset Status Name(AssetStatusName)
+1 Record is present.
+
+Table of Asset Status : 
+----------------------------------
+1 Not Present  
+-------------------------------------
+Inside AssetsStatus Tab
+
+Inside UpdateAssetsStatusTest
+------------------------------------------------
+Inside SearchAssetsStatus()
+Serched Assets Status for Asset Status Name(AssetStatusName)
+1 Record is present.
+
+Table of Asset Status : 
+----------------------------------
+1 Not Present  
+-------------------------------------
+Record Updated Successfully!
+Inside AssetsStatus Tab
+
+Inside DeleteAssetsStatusTest
+------------------------------------------------
+Inside SearchAssetsStatus()
+Serched Assets Status for Asset Status Name(NewAssetStatusName)
+1 Record is present.
+
+Table of Asset Status : 
+----------------------------------
+1 Present  
+-------------------------------------
+Deleted!
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 20
+Total Automation Testcase Count : 5
+
+
+End of Execution!
+ INFO [main] (BaseClass.java:70)- url is opened
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 39985
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 23, 2023 5:25:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Executing User Module Testcases...
+Login Succussful!
+Current Page URL is : http://10.176.41.10:8080/UatAms/#/home/dashboard
+Inside Dashboard Tab
+Current page header : Dashboard
+Inside Master Tab
+Inside User Tab
+
+Inside GetAllRowsPresent
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+8 Records are present.
+
+Table of Users : 
+----------------------------------
+P1320820 ParagJadhav ADMIN parag.jadhav@ncs.com.sg INITIAL  
+-------------------------------------
+P1320802 PiyushChoraria ADMIN piyush.choraria@ncs.com.sg INITIAL  
+-------------------------------------
+P1324223 Amol Patil USER amoln.patil@in.ncs-i.com ACTIVE  
+-------------------------------------
+P1347100 Vaibhav Shirole USER vaibhav.shirole@in.ncs-i.com INITIAL  
+-------------------------------------
+P1322149 SuvajitDas USER suvajit.das@ncs.com.sg INITIAL  
+-------------------------------------
+P1320001 admin ADMIN admin.hrms@ncs.com.sg INITIAL  
+-------------------------------------
+P1346897 Shivam USER shivam.upadhyay@ncs.com.sg INITIAL  
+-------------------------------------
+P1322118 ankit ADMIN ankit.sharma@ncs.com.sg INITIAL  
+-------------------------------------
+Inside User Tab
+
+Inside CreateUserTest
+------------------------------------------------
+Inside SelectItemFromItemsPerPageDropDown() : Selected Item is - Role1
+Inside Master Tab
+Inside User Tab
+
+Inside SearchUserTest
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+Inside SearchUser()
+Serched Users Status for User Name(P1345365)
+1 Record is present.
+
+Table of Users : 
+----------------------------------
+P1345365 AkashD ADMIN akash.dhole@ncs.com.sg INITIAL  
+-------------------------------------
+Inside User Tab
+
+Inside UpdateUserTest
+------------------------------------------------
+Inside SearchUser()
+Serched Users Status for User Name(P1345365)
+1 Record is present.
+Selected Role is - USER
+Inside User Tab
+
+Inside DeleteUserTest
+------------------------------------------------
+Inside SearchUser()
+Serched Users Status for User Name(P1345365)
+1 Record is present.
+
+Table of Users : 
+----------------------------------
+P1345365 AkashD ADMIN akash.dhole@ncs.com.sg INITIAL  
+-------------------------------------
+Deleted!
+Inside Master Tab
+Inside User Tab
+
+Inside GetAllRowsPresent
+------------------------------------------------
+Inside ItemsPerPageDropDown() : Selected Item is - 15
+8 Records are present.
+
+Table of Users : 
+----------------------------------
+P1320820 ParagJadhav ADMIN parag.jadhav@ncs.com.sg INITIAL  
+-------------------------------------
+P1320802 PiyushChoraria ADMIN piyush.choraria@ncs.com.sg INITIAL  
+-------------------------------------
+P1324223 Amol Patil USER amoln.patil@in.ncs-i.com ACTIVE  
+-------------------------------------
+P1347100 Vaibhav Shirole USER vaibhav.shirole@in.ncs-i.com INITIAL  
+-------------------------------------
+P1322149 SuvajitDas USER suvajit.das@ncs.com.sg INITIAL  
+-------------------------------------
+P1320001 admin ADMIN admin.hrms@ncs.com.sg INITIAL  
+-------------------------------------
+P1346897 Shivam USER shivam.upadhyay@ncs.com.sg INITIAL  
+-------------------------------------
+P1322118 ankit ADMIN ankit.sharma@ncs.com.sg INITIAL  
+-------------------------------------
+
+Sign Out completed!
+
+-------------------------------------------------------
+Total Manual Testcase Count : 24
+Total Automation Testcase Count : 5
+
+
+End of Execution!
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 155.391 s - in [1mTestSuite[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 11, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  02:42 min
+[[1;34mINFO[m] Finished at: 2023-06-23T17:25:27+05:30
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

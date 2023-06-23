@@ -101,6 +101,7 @@ public class Reporting implements ITestListener {
 		
 		System.out.println(tr.getName());
 		this.driver = ((BaseClass) tr.getInstance()).driver;
+		
 		String screenshotPath = captureScreen(driver, tr.getName(), readconfig.getScreenshotPath());
 
 		File file = new File(screenshotPath);
