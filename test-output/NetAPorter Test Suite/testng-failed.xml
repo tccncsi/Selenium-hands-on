@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [NetAPorter Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Homepage test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.net-a-porter.com/"/>
+    <classes>
+      <class name="com.NCS.testcases.LanguageTest">
+        <methods>
+          <include name="LanguageChangeToAlbania"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.NCS.testcases.LanguageTest -->
+    </classes>
+  </test> <!-- Homepage test(failed) -->
+</suite> <!-- Failed suite [NetAPorter Test Suite] -->
