@@ -7,12 +7,11 @@
 		<listener class-name="com.utilities.Reporting" />
 		 <!-- <listener class-name="com.utilities.TestListener" /> -->
 	</listeners>
-	<test name="Demo Test">
+	<test name="NetAPorter Test">
 		<parameter name="browser" value="chrome" />
-		<parameter name="url" value="https://www.amazon.in" />
+		<parameter name="url" value="https://www.net-a-porter.com/" />
 		<classes>
-		    <class name = "com.testCases.AmazonPageTest"/>
-		    <class name = "com.testCases.AmazonAddProductPageTest"/>	
+			<class name="com.testCases.LanguageChangeTest" />
 		</classes>
 	</test>
 </suite>

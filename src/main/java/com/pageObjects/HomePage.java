@@ -154,7 +154,7 @@ public class HomePage extends BasePage {
 	}
 	
 	public String getDobErrorMessage() {
-		return DOBError.getText();
+		return getText(DOBError);
 	}
 	
 	public void clickCASubmitForm() {
@@ -162,6 +162,9 @@ public class HomePage extends BasePage {
 	}
 	
 	public void clickImageCloseButton() {
+		waitForFindElementPresent(ImageCloseButton);
 		ImageCloseButton.click();
 	}
+	
+	
 }
