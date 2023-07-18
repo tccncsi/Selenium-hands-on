@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [NetAPorter Test Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Homepage test(failed)">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://www.net-a-porter.com/"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.NCS.testcases.LanguageTest">
+      <class name="com.testCases.AmazonPageTest">
         <methods>
-          <include name="LanguageChangeToAlbania"/>
+          <include name="searchProductOnAmazon"/>
           <include name="teardown"/>
+          <include name="loginToAmazon"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.NCS.testcases.LanguageTest -->
+      </class> <!-- com.testCases.AmazonPageTest -->
     </classes>
-  </test> <!-- Homepage test(failed) -->
-</suite> <!-- Failed suite [NetAPorter Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

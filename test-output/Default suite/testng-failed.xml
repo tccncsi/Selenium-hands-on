@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.NCS.testcases.LanguageTest">
+      <class name="com.testCases.AmazonPageTest">
         <methods>
-          <include name="LanguageChange"/>
+          <include name="searchProductOnAmazon"/>
           <include name="teardown"/>
+          <include name="loginToAmazon"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.NCS.testcases.LanguageTest -->
+      </class> <!-- com.testCases.AmazonPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
