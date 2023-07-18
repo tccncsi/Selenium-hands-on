@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import com.advance_selenium.net_a_porter_website.utilities.XLUtils;
+
 
 public class BasePage extends Page{
 
@@ -109,6 +111,64 @@ public class BasePage extends Page{
 		}
 		return flag;
 	}
+	
+	 public static String checkIssueDescription(String testCaseName) throws IOException 
+	  {
+			String testCase = null;
+			String issueDes = "";
+			testCase = XLUtils.FetchExcelTestCaseData(testCaseName);
+			
+			String[] testCaseDetails = null;
+			if (testCase != null)
+				testCaseDetails = testCase.split("\n\n");
+
+			if (testCaseDetails != null && testCaseDetails.length > 0) {
+				/* Test case details from excel sheet */
+				
+				  String teststepcolumn = testCaseDetails[2].toString();
+				  if(flag==0)
+				  {
+					  issueDes = testCaseDetails[3].toString();
+					  issueDes = issueDes + " ";
+				  }
+				  else
+				  {
+					  String[] testSteps = null;
+					  testSteps = teststepcolumn.split("\n");
+					  //testSteps = teststepcolumn.split("\\."); 
+					  if(testSteps !=null && testSteps.length > 0) 
+					  { 
+						  System.out.println("------***********------");
+						      
+						   for(int i=0;i<flag;i++) 
+						  {
+					        
+					         issueDescription = testSteps[i].toString();
+					         
+					         if(flag>0)
+					         {
+					        	 issueDes = issueDes + issueDescription + " ";
+					        	 if(i!=flag-1)
+					        	 {
+					        		 issueDes = issueDes + "\n";
+						        	 	 
+					        	 }
+					        	 //System.out.println(issueDes);
+					         }
+					        
+					      } 
+				  }
+				  
+				    
+				  }
+
+			}
+			issueDes = issueDes + "is failed";
+			
+			return issueDes;	
+
+	  }
+	  
 	
 	
 	public static String getFailedStep(String issueDescriptionNew) throws IOException
