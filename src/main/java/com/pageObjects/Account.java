@@ -80,10 +80,11 @@ public class Account extends BasePage{
 	}
 	
 	@FindBy(xpath="//span[contains(text(),'14 years old')]")
-	WebElement invalidddob;
+	WebElement invaliddob;
 	
 	public String get_invaliddob() {
-		return invalidddob.getText();
+		waitForFindElementPresent(invaliddob);
+		return getText(invaliddob);
 	}
 	
 	@FindBy(xpath="//button[text()='Create Account']")

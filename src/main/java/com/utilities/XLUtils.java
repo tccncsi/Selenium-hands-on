@@ -304,47 +304,105 @@ public class XLUtils {
 		return al;
 	}
 
+//	public static String FetchExcelTestCaseData(String TestcaseName) throws IOException {
+//
+//		String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\TestCases.xlsx";
+//		String temp[][] = new String[2][2];
+//
+//		File f = new File(path);
+//		FileInputStream fis = new FileInputStream(f);
+//		XSSFWorkbook wb = new XSSFWorkbook(fis);
+//		int x = 0;
+//		int y = 0;
+//
+//		for (int a = 0; a < wb.getNumberOfSheets(); a++) {
+//			// System.out.println("Current sheet name is "+wb.getNumberOfSheets());
+//			String sheetName = wb.getSheetName(a);
+//			XSSFSheet xs = wb.getSheet(sheetName);
+//			int rowno = xs.getLastRowNum();
+//			String data[][] = new String[rowno][xs.getRow(0).getLastCellNum()];
+//
+//			for (int i = 0; i < rowno; i++) {
+//				int cellno = xs.getRow(i).getLastCellNum();
+//				// System.out.println("Row count is "+rowno+" and cell count is "+cellno);
+//
+//				for (int j = 0; j < cellno; j++) {
+//					data[i][j] = xs.getRow(i).getCell(j).toString();
+//					// System.out.println(data[i][j]);
+//					if (data[i][j].equalsIgnoreCase(TestcaseName) && data[i][j] != null) {
+//						data[i][j + 1] = xs.getRow(i).getCell(j + 1).toString();
+//						data[i][j + 2] = xs.getRow(i).getCell(j + 2).toString();
+//						data[i][j + 3] = xs.getRow(i).getCell(j + 3).toString();
+//						data[i][j + 4] = xs.getRow(i).getCell(j + 4).toString();
+//						
+//						temp[x][y] = data[i][j + 1] + "\n\n" + data[i][j + 2] + "\n\n" + data[i][j + 3] +"\n\n" +data[i][j + 4];
+//						break;
+//					}
+//				}
+//
+//			}
+//		}
+//		System.out.println("Excel data: " + temp[x][y]);
+//		return temp[x][y];
+//	}
+	
+	
+	
 	public static String FetchExcelTestCaseData(String TestcaseName) throws IOException {
+	    String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\TestCases.xlsx";
+	    String temp = null;
 
-		String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\TestCases.xlsx";
-		String temp[][] = new String[2][2];
+	 
 
-		File f = new File(path);
-		FileInputStream fis = new FileInputStream(f);
-		XSSFWorkbook wb = new XSSFWorkbook(fis);
-		int x = 0;
-		int y = 0;
+	    File f = new File(path);
+	    FileInputStream fis = new FileInputStream(f);
+	    XSSFWorkbook wb = new XSSFWorkbook(fis);
 
-		for (int a = 0; a < wb.getNumberOfSheets(); a++) {
-			// System.out.println("Current sheet name is "+wb.getNumberOfSheets());
-			String sheetName = wb.getSheetName(a);
-			XSSFSheet xs = wb.getSheet(sheetName);
-			int rowno = xs.getLastRowNum();
-			String data[][] = new String[rowno][xs.getRow(0).getLastCellNum()];
+	 
 
-			for (int i = 0; i < rowno; i++) {
-				int cellno = xs.getRow(i).getLastCellNum();
-				// System.out.println("Row count is "+rowno+" and cell count is "+cellno);
+	    for (int a = 0; a < wb.getNumberOfSheets(); a++) {
+	        String sheetName = wb.getSheetName(a);
+	        XSSFSheet xs = wb.getSheet(sheetName);
+	        int rowno = xs.getLastRowNum();
+	        String data[][] = new String[rowno][xs.getRow(0).getLastCellNum()];
 
-				for (int j = 0; j < cellno; j++) {
-					data[i][j] = xs.getRow(i).getCell(j).toString();
-					// System.out.println(data[i][j]);
-					if (data[i][j].equalsIgnoreCase(TestcaseName) && data[i][j] != null) {
-						data[i][j + 1] = xs.getRow(i).getCell(j + 1).toString();
-						data[i][j + 2] = xs.getRow(i).getCell(j + 2).toString();
-						data[i][j + 3] = xs.getRow(i).getCell(j + 3).toString();
-						data[i][j + 4] = xs.getRow(i).getCell(j + 4).toString();
-						
-						temp[x][y] = data[i][j + 1] + "\n\n" + data[i][j + 2] + "\n\n" + data[i][j + 3] +"\n\n" +data[i][j + 4];
-						break;
-					}
-				}
+	 
 
-			}
-		}
-		System.out.println("Excel data: " + temp[x][y]);
-		return temp[x][y];
+	        for (int i = 0; i < rowno; i++) {
+	            int cellno = xs.getRow(i).getLastCellNum();
+
+	 
+
+	            for (int j = 0; j < cellno; j++) {
+	                XSSFCell cell = xs.getRow(i).getCell(j);
+	                if (cell != null) {
+	                    String cellValue = cell.toString();
+	                    if (cellValue.equalsIgnoreCase(TestcaseName) && cellValue != null) {
+	                        String nextCellValue = xs.getRow(i).getCell(j + 1).toString();
+	                        String nextNextCellValue = xs.getRow(i).getCell(j + 2).toString();
+	                        String nextNextNextCellValue = xs.getRow(i).getCell(j + 3).toString();
+	                        String nextNextNextNextCellValue = xs.getRow(i).getCell(j + 4).toString();
+
+	 
+
+	                        temp = nextCellValue + "\n\n" + nextNextCellValue + "\n\n" + nextNextNextCellValue +
+	                            "\n\n" + nextNextNextNextCellValue;
+	                        break;
+	                    }
+	                }
+	            }
+	        }
+	    }
+
+	 
+
+	    System.out.println("Excel data: " + temp);
+	    return temp;
 	}
+	
+	
+	
+//
 
 	public static void setCellData(String EleName, String text) throws IOException {
 

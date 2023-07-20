@@ -118,61 +118,63 @@ public class Reporting implements ITestListener {
 
 			testCase = XLUtils.FetchExcelTestCaseData(testCaseName);
 			String[] testCaseDetails = null;
-			if (testCase != null)
+			if (testCase != null) {
 				testCaseDetails = testCase.split("\n\n");
 
-			if (testCaseDetails != null && testCaseDetails.length > 0) {
-				/* Test case details from excel sheet */
-				// System.out.println("Test case Module: " + testCaseDetails[0].toString());
-				// System.out.println("Test case Summary: " + testCaseDetails[1].toString());
-				// System.out.println("Test case Steps: " + testCaseDetails[2].toString());
+				if (testCaseDetails != null && testCaseDetails.length > 0) {
+					/* Test case details from excel sheet */
+					// System.out.println("Test case Module: " + testCaseDetails[0].toString());
+					// System.out.println("Test case Summary: " + testCaseDetails[1].toString());
+					// System.out.println("Test case Steps: " + testCaseDetails[2].toString());
 
-				// defect description with all steps till failed
-				String issueDescriptionNew = BasePage.checkIssueDescription(testCaseName);
+					// defect description with all steps till failed
+					String issueDescriptionNew = BasePage.checkIssueDescription(testCaseName);
 
-				// failed step detail to append in summary
-				String defectSummary = BasePage.getFailedStep(issueDescriptionNew);
+					// failed step detail to append in summary
+					String defectSummary = BasePage.getFailedStep(issueDescriptionNew);
 
-				/* Check the Jira Annotation and Jira configutation is enabled or not */
-				System.out.println("Jira config: " + jiraconfig.getIsJiraEnable());
+					/* Check the Jira Annotation and Jira configutation is enabled or not */
+					System.out.println("Jira config: " + jiraconfig.getIsJiraEnable());
 
-				if (isJiraAnnotationPresent(tr) && jiraconfig.getIsJiraEnable()) {
-					String issueSummary = jiraconfig.getJiraEnv() + " | " + testCaseDetails[0].toString() + " | "
-							+ testCaseName + " | " + defectSummary + " in Selenabler Framework";
+					if (isJiraAnnotationPresent(tr) && jiraconfig.getIsJiraEnable()) {
+						String issueSummary = jiraconfig.getJiraEnv() + " | " + testCaseDetails[0].toString() + " | "
+								+ testCaseName + " | " + defectSummary + " in Selenabler Framework";
 
-					// Append automation error logs to the defect description
-					String issueDescription = issueDescriptionNew;
-					issueDescription += "\n" + "\nError/Exception found in selenabler framework: "
-							+ tr.getThrowable().getMessage() + "\n";
+						// Append automation error logs to the defect description
+						String issueDescription = issueDescriptionNew;
+						issueDescription += "\n" + "\nError/Exception found in selenabler framework: "
+								+ tr.getThrowable().getMessage() + "\n";
 
-					JiraServiceProvider JiraServiceProvider = new JiraServiceProvider(jiraconfig.getJiraURL(),
-							jiraconfig.getJiraUsername(), jiraconfig.getJiraToken(), jiraconfig.getJiraProjectKey());
+						JiraServiceProvider JiraServiceProvider = new JiraServiceProvider(jiraconfig.getJiraURL(),
+								jiraconfig.getJiraUsername(), jiraconfig.getJiraToken(),
+								jiraconfig.getJiraProjectKey());
 
-					/* Method call to create new defect in Jira */
-					JiraServiceProvider.createJiraIssue(jiraconfig.getIssueType(), issueSummary, issueDescription,
-							jiraconfig.getJiraReporter(), file);
+						/* Method call to create new defect in Jira */
+						JiraServiceProvider.createJiraIssue(jiraconfig.getIssueType(), issueSummary, issueDescription,
+								jiraconfig.getJiraReporter(), file);
 
-				}
-
-				Boolean flag = readconfig.getDefectLogIsEnable();
-				System.out.println("\nGeneric Defect Utility configuration is: " + flag);
-
-				if (flag) {
-					String issueSummary = readconfig.getDefectEnv() + " | " + testCaseDetails[0].toString() + " | "
-							+ testCaseName + " | " + defectSummary + " in Selenabler Framework";
-
-				 
-					// checking if issue exists under excel already
-					if (XLUtils.isGenericDefectAlreadyPresent(issueSummary)) {
-						XLUtils.CreateDefectExcelDataGeneric(testCaseName, issueSummary, issueDescriptionNew,
-								"Failure Reason from Selenabler Framework:\n" + tr.getThrowable().getMessage(),
-								readconfig.getBrowserName().toString(), readconfig.getDefectEnv(),
-								readconfig.getDefectStatus(), screenshotPath, readconfig.getAttachScreenshotIsEnable());
 					}
 
-				} else {
-					System.out.println(
-							"Jira defect tracking is disabled or add @JiraCreateIssue(isCreateIssue = true) annotation to your test case.");
+					Boolean flag = readconfig.getDefectLogIsEnable();
+					System.out.println("\nGeneric Defect Utility configuration is: " + flag);
+
+					if (flag) {
+						String issueSummary = readconfig.getDefectEnv() + " | " + testCaseDetails[0].toString() + " | "
+								+ testCaseName + " | " + defectSummary + " in Selenabler Framework";
+
+						// checking if issue exists under excel already
+						if (XLUtils.isGenericDefectAlreadyPresent(issueSummary)) {
+							XLUtils.CreateDefectExcelDataGeneric(testCaseName, issueSummary, issueDescriptionNew,
+									"Failure Reason from Selenabler Framework:\n" + tr.getThrowable().getMessage(),
+									readconfig.getBrowserName().toString(), readconfig.getDefectEnv(),
+									readconfig.getDefectStatus(), screenshotPath,
+									readconfig.getAttachScreenshotIsEnable());
+						}
+
+					} else {
+						System.out.println(
+								"Jira defect tracking is disabled or add @JiraCreateIssue(isCreateIssue = true) annotation to your test case.");
+					}
 				}
 			}
 		} catch (IOException e) {

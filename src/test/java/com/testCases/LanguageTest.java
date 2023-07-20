@@ -16,7 +16,7 @@ public class LanguageTest extends BaseClass{
 	Account account;
 	
 	@JiraCreateIssue(isCreateIssue = true)
-	@Test
+	@Test(enabled=true)
 	public void LanguageChangeToChina() throws InterruptedException, IOException{
 		HP = new NetAPorterHP(driver);
 		account = new Account(driver);
@@ -41,7 +41,7 @@ public class LanguageTest extends BaseClass{
 		account.enter_Lastname(XLUtils.getCellData(excelPath, sheetName, 3, coloumnno));
 		account.enter_Title();
 		account.enter_Dob(XLUtils.getCellData(excelPath, sheetName, 4, coloumnno),XLUtils.getCellData(excelPath, sheetName, 5, coloumnno),XLUtils.getCellData(excelPath, sheetName, 6, coloumnno));
-		Assert.assertEquals(account.get_invaliddob(), "You must be at least 14 years old");
+		Assert.assertEquals(account.get_invaliddob(), "You must be at least 14 years ol");
 		account.clear_DOB();
 		account.enter_Dob(XLUtils.getCellData(excelPath, sheetName, 4, coloumnno),XLUtils.getCellData(excelPath, sheetName, 5, coloumnno),XLUtils.getCellData(excelPath, sheetName, 7, coloumnno));
 		account.click_CreateAccountButton();
