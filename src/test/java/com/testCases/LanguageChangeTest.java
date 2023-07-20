@@ -15,6 +15,7 @@ public class LanguageChangeTest extends BaseClass {
 
 	HomePage homepage;
 
+	@JiraCreateIssue(isCreateIssue = true)
 	@Test(enabled = false)
 	public void LanguageChange() {
 		homepage = new HomePage(driver);
@@ -26,12 +27,12 @@ public class LanguageChangeTest extends BaseClass {
 		homepage.selectLanguage();
 		String currentUrlChanges = homepage.getUrl();
 		Assert.assertEquals(currentUrlChanges, "https://www.net-a-porter.com/en-sg/");
-		Assert.assertTrue(false);
+		//Assert.assertTrue(false);
 	}
 
 	@JiraCreateIssue(isCreateIssue = true)
 	@Test
-	public void SignUp() throws InterruptedException {
+	public void SignUp2() throws InterruptedException {
 
 		String excelPath = "src\\main\\java\\com\\testData\\TestData.xlsx";
 		String sheetName = "Sheet1";
@@ -60,11 +61,12 @@ public class LanguageChangeTest extends BaseClass {
 		homepage.enterBirthMonth(IBirthMonth);
 		homepage.enterBirthYear(IBirthYear);
 		Assert.assertEquals(homepage.getDobErrorMessage(), "You must be at least 14 years old");
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		homepage.enterBirthYear("");
 		homepage.enterBirthYear(VBirthYear);
 		homepage.clickCASubmitForm();
+		Assert.assertTrue(false);
 		//Thread.sleep(10000);
-		homepage.clickImageCloseButton();
+		//homepage.clickImageCloseButton();
 	}
 }
