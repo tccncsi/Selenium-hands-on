@@ -1,18 +1,21 @@
 package com.testCases;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
 import com.pageObjects.HomePage;
+import com.utilities.JiraCreateIssue;
 import com.utilities.XLUtils;
 
 public class LanguageChangeTest extends BaseClass {
 
 	HomePage homepage;
 
-	@Test
+	@Test(enabled = false)
 	public void LanguageChange() {
 		homepage = new HomePage(driver);
 		homepage.clickLanguageSelector();
@@ -23,10 +26,11 @@ public class LanguageChangeTest extends BaseClass {
 		homepage.selectLanguage();
 		String currentUrlChanges = homepage.getUrl();
 		Assert.assertEquals(currentUrlChanges, "https://www.net-a-porter.com/en-sg/");
-		//Assert.assertTrue(false);
+		Assert.assertTrue(false);
 	}
 
-	@Test(enabled = true)
+	@JiraCreateIssue(isCreateIssue = true)
+	@Test
 	public void SignUp() throws InterruptedException {
 
 		String excelPath = "src\\main\\java\\com\\testData\\TestData.xlsx";
