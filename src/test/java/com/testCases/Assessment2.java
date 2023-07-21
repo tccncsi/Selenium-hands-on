@@ -65,7 +65,7 @@ public class Assessment2 extends BaseClass{
 				
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void DynamicRedirect() throws IOException {
 		petitehomepage = new PetiteStudioHP(driver);
 		petitehomepage.hover_shopall();
@@ -84,13 +84,6 @@ public class Assessment2 extends BaseClass{
 				}
 			}
 		}
-//			else if(url.contains(petitehomepage.category_text_iter_link(i))) {
-//				System.out.println("Pass : "+url);
-//			}
-//			else {
-//				System.out.println("Fail : "+url);
-//				System.out.println(petitehomepage.category_text_iter_link(i));
-//			}
 		
 		/* For Collection Items */
 		int total_collectionItem=petitehomepage.count_collectionItems();
@@ -106,14 +99,7 @@ public class Assessment2 extends BaseClass{
 				}
 			}
 		}
-//			else if(url.contains(petitehomepage.collection_text_iter_link(j))) {
-//				System.out.println("Pass : "+url);
-//			}
-//			else {
-//				System.out.println("Fail : "+url);
-//				System.out.println(petitehomepage.category_text_iter_link(j));
-//			}
-		
+
 		petitehomepage.click_logo();
 		executor.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 		
@@ -131,6 +117,51 @@ public class Assessment2 extends BaseClass{
 				}
 			}
 		}
+	}
+	
+	@Test
+	public void Redirectlinks2() throws IOException {
+		petitehomepage = new PetiteStudioHP(driver);
+		petitehomepage.hover_shopall();
+		System.out.println("Total Links Found : "+petitehomepage.count_total_all_shops());
+		for(int i=1;i<=petitehomepage.count_total_all_shops();i++) {
+			String url = petitehomepage.fetch_all_shops_link(i);
+			System.out.println(url);
+			if (url=="#" || url=="") {
+				Assert.assertFalse(true);
+			}
+			else {
+				int result=petitehomepage.fetch_httpurlconnection(url);
+				if (result!=200) {
+					Assert.assertFalse(true);
+				}
+			}
+		}
+		petitehomepage.click_logo();
+		executor.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+		
+		
+		System.out.println("Total Links Found : "+petitehomepage.count_footerItems());
+		/* For Footer Items */
+		int total_footerItem=petitehomepage.count_footerItems();
+		for(int k=1;k<=total_footerItem;k++) {
+			String url = petitehomepage.footerItems_iter_link(k);
+			System.out.println(url);
+			if (url=="#" || url=="") {
+				Assert.assertFalse(true);
+			}
+			else {
+				int result=petitehomepage.fetch_httpurlconnection(url);
+				if (result!=200) {
+					Assert.assertFalse(true);
+				}
+			}
+		}
+		
+		
+		
+		
 	}
 	
 	

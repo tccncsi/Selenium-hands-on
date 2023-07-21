@@ -312,4 +312,20 @@ public class PetiteStudioHP extends BasePage{
 		WebElement item = driver.findElement(By.cssSelector(locator));
 		return item.getAttribute("href");
 	}
+	
+	
+//	Version3
+	
+	@FindBy(xpath="//*[@id='shopify-section-header']/div[3]/div[1]/div/div//a")
+	List<WebElement> total_all_shops;
+	
+	public int count_total_all_shops() { 
+	    return total_all_shops.size();
+	}
+	
+	public String fetch_all_shops_link(int number) {
+	String locator="(//*[@id=\"shopify-section-header\"]/div[3]/div[1]/div/div//a)["+number+"]";
+	WebElement item = driver.findElement(By.xpath(locator));
+	return item.getAttribute("href");
+	}
 }
