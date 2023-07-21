@@ -1,5 +1,12 @@
 package com.pageObjects;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -239,4 +246,70 @@ public class PetiteStudioHP extends BasePage{
 		return link;
 	}
 	
+	
+//	Dynamic Elements
+	
+	@FindBy(css = "div#categories_nav > ul > li")
+	List<WebElement> categoryItems;
+	
+	public int count_categoryItems() { 
+	    return categoryItems.size();
+	}
+	
+	
+	public String category_iter_link(int number) {
+		String locator = "div#categories_nav > ul > li" +":nth-child(" +number +") > a";
+		WebElement item = driver.findElement(By.cssSelector(locator));
+		return item.getAttribute("href");
+	}
+	
+	public String category_text_iter_link(int number) {
+		String locator = "div#categories_nav > ul > li" +":nth-child(" +number +") > a";
+		WebElement item = driver.findElement(By.cssSelector(locator));
+		String[] normalising_title=getText(item).toLowerCase().split("\\s+");
+		String result = String.join("-", normalising_title);
+	    return result;
+	}
+	
+	@FindBy(xpath = "((//ul[@class='sub-nav-list'])[2]/li)")
+	List<WebElement> collectionItems;
+	
+	public int count_collectionItems() { 
+	    return collectionItems.size();
+	}
+	
+	public String collection_iter_link(int number) {
+		String locator = "((//ul[@class='sub-nav-list'])[2]/li)[" +number +"]/a";
+		WebElement item = driver.findElement(By.xpath(locator));
+		return item.getAttribute("href");
+	}
+	
+	public String collection_text_iter_link(int number) {
+		String locator = "((//ul[@class='sub-nav-list'])[2]/li)[" +number +"]/a";
+		WebElement item = driver.findElement(By.xpath(locator));
+		String[] normalising_title=getText(item).toLowerCase().split("\\s+");
+		String result = String.join("-", normalising_title);
+	    return result;
+	}
+	
+	public int fetch_httpurlconnection(String url) throws IOException {
+		URL fetch_url = new URL(url);
+		HttpURLConnection connection = (HttpURLConnection) fetch_url.openConnection();
+		connection.setRequestMethod("GET");
+		int responseCode = connection.getResponseCode();
+		return responseCode;
+	}
+	
+	@FindBy(css="footer.site-footer > div > div:nth-child(3) > div:nth-child(2) > ul > li")
+	List<WebElement> footerItems;
+	
+	public int count_footerItems() { 
+	    return footerItems.size();
+	}
+	
+	public String footerItems_iter_link(int number) {
+		String locator = "footer.site-footer > div > div:nth-child(3) > div:nth-child(2) > ul > li:nth-child("+number+") > a";
+		WebElement item = driver.findElement(By.cssSelector(locator));
+		return item.getAttribute("href");
+	}
 }

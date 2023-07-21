@@ -1,5 +1,7 @@
 package com.testCases;
-
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +13,7 @@ public class Assessment2 extends BaseClass{
 	PetiteStudioHP petitehomepage;
 	
 	@JiraCreateIssue(isCreateIssue = true)
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void RedirectLinks() throws InterruptedException {
 		petitehomepage = new PetiteStudioHP(driver);
 		petitehomepage.hover_shopall();
@@ -63,6 +65,74 @@ public class Assessment2 extends BaseClass{
 				
 	}
 
+	@Test
+	public void DynamicRedirect() throws IOException {
+		petitehomepage = new PetiteStudioHP(driver);
+		petitehomepage.hover_shopall();
+		
+		/* For Category Items */
+		int total_categoryItem=petitehomepage.count_categoryItems();
+		for(int i=1; i<total_categoryItem+1; i++) {
+			String url = petitehomepage.category_iter_link(i);
+			if (url=="#" || url=="") {
+				Assert.assertFalse(true);
+			}
+			else {
+				int result=petitehomepage.fetch_httpurlconnection(url);
+				if (result!=200) {
+					Assert.assertFalse(true);
+				}
+			}
+		}
+//			else if(url.contains(petitehomepage.category_text_iter_link(i))) {
+//				System.out.println("Pass : "+url);
+//			}
+//			else {
+//				System.out.println("Fail : "+url);
+//				System.out.println(petitehomepage.category_text_iter_link(i));
+//			}
+		
+		/* For Collection Items */
+		int total_collectionItem=petitehomepage.count_collectionItems();
+		for(int j=1; j<total_collectionItem+1; j++) {
+			String url = petitehomepage.collection_iter_link(j);
+			if (url=="#" || url=="") {
+				Assert.assertFalse(true);
+			}
+			else {
+				int result=petitehomepage.fetch_httpurlconnection(url);
+				if (result!=200) {
+					Assert.assertFalse(true);
+				}
+			}
+		}
+//			else if(url.contains(petitehomepage.collection_text_iter_link(j))) {
+//				System.out.println("Pass : "+url);
+//			}
+//			else {
+//				System.out.println("Fail : "+url);
+//				System.out.println(petitehomepage.category_text_iter_link(j));
+//			}
+		
+		petitehomepage.click_logo();
+		executor.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+		
+		/* For Footer Items */
+		int total_footerItem=petitehomepage.count_footerItems();
+		for(int k=1;k<=total_footerItem;k++) {
+			String url = petitehomepage.footerItems_iter_link(k);
+			if (url=="#" || url=="") {
+				Assert.assertFalse(true);
+			}
+			else {
+				int result=petitehomepage.fetch_httpurlconnection(url);
+				if (result!=200) {
+					Assert.assertFalse(true);
+				}
+			}
+		}
+	}
+	
 	
 	public void extra_code() {
 //		petitehomepage.click_new_arrivallink();
