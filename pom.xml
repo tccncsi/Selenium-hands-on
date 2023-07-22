@@ -26,6 +26,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
+						<!--<useFile>true</useFile>-->
 						<suiteXmlFile>TestNG-DefectLogging.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>

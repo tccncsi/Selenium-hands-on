@@ -1,143 +1,64 @@
 package com.pageObjects;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-
 import com.base.BasePage;
+import org.openqa.selenium.interactions.Actions;
+
 
 public class PetiteStudioHomePage extends BasePage{
 
+	
+	//---------------Shop All Tab--------------------
+    @FindBy(xpath = "//*[text()='Shop All']")
+    private WebElement shopAllLink;
+    
+	//---------------Shop All Links-------------------
+	@FindBy(css = "ul.sub-nav-list li a")
+    private List<WebElement> anchorTags;
+
+	//---------------Help Section Links----------------
+	@FindBy(css = "div.link-list.help-list ul li a")
+	private List<WebElement> helpSectionLinks;
+	
+
+	
 	public PetiteStudioHomePage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
-	// ------------------Locators------------------------------------
-
-	@FindBy(xpath = "//*[text()='Shop All']")
-	WebElement ShopAllLink;
 	
-	
-	//--------------------Shop All-Categories Locators------------------------
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[1]")
-	WebElement NewArrivals;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[2]")
-	WebElement BestSellers;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[3]")
-	WebElement Dresses;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[4]")
-	WebElement Tops;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[5]")
-	WebElement Bottoms;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[6]")
-	WebElement Knitwear;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[7]")
-	WebElement Outerwear;
-	
-	@FindBy(xpath = "//ul[@class='sub-nav-list']/li[8]")
-	WebElement FinalSale;
-	
-	
-	//-------------------------Shop All-Collections Locators---------------------------------
-	@FindBy(xpath = "//div[@class='grid-t-2 grid-d-2'][2]//ul/li[1]")
-	WebElement SummerCollection;
-	
-	@FindBy(xpath = "//div[@class='grid-t-2 grid-d-2'][2]//ul/li[2]")
-	WebElement Suggyl;
-	
-	@FindBy(xpath = "//div[@class='grid-t-2 grid-d-2'][2]//ul/li[3]")
-	WebElement SpringCollection;
-	
-	@FindBy(xpath = "//div[@class='grid-t-2 grid-d-2'][2]//ul/li[4]")
-	WebElement BuvetteCollection;
-	
-	@FindBy(xpath = "//div[@class='grid-t-2 grid-d-2'][2]//ul/li[5]")
-	WebElement BusinessCasual;
-	
-	@FindBy(xpath = "//div[@class='grid-t-2 grid-d-2'][2]//ul/li[6]")
-	WebElement Accessories;
-	
-	@FindBy(css="div.grid-m-hide.grid-t-4.grid-d-5.collection-title > h1")
-	WebElement PageHeading;
-	
-	
-	
+	//Returns List of anchor tags present in <Shop All> section
+    public List<WebElement> getAnchorTags() {
+        return anchorTags;
+    }
+    
+	//Returns List of anchor tags present in <Help> section
+    public List<WebElement> getHelpSectionLinks() {
+        return helpSectionLinks;
+    }
+    
+    
+    //Returns the list of href attributes of all anchor tags found in <Shop All> Section
+    public List<String> getAllAnchorTagsHrefs() {
+        return anchorTags.stream().map(element -> element.getAttribute("href")).collect(Collectors.toList());
+    }
+    
+    //Returns the list of href attributes of all anchor tags found in <Help> Section
+    public List<String> getAllHelpSectionLinksHrefs() {
+        return helpSectionLinks.stream().map(element -> element.getAttribute("href")).collect(Collectors.toList());
+    }
+    
+    //Hover Shop All
     public void hoverOverShopAllLink() {
         Actions actions = new Actions(driver);
-        actions.moveToElement(ShopAllLink).build().perform();
+        actions.moveToElement(shopAllLink).perform();
     }
-    
-    public String getPageHeadingText() {
-    	return PageHeading.getText();
-    }
-    
-	//--------------------Shop All-Categories Methods------------------------
-    public void clickOnNewArrivals() {
-    	NewArrivals.click();
-    }
-    
-    public void clickOnBestSellers() {
-    	BestSellers.click();
-    }
-    
-    public void clickOnDresses() {
-    	Dresses.click();
-    }
-    
-    public void clickOnTops() {
-    	Tops.click();
-    }
-    
-    public void clickOnBottoms() {
-    	Bottoms.click();
-    }
-    
-    public void clickOnKnitwear() {
-    	Knitwear.click();
-    }
-    
-    public void clickOnOuterwear() {
-    	Outerwear.click();
-    }
-    
-    public void clickOnFinalSale() {
-    	FinalSale.click();
-    }
-    
-	//--------------------Shop All-Collections Methods------------------------
-    public void clickOnSummerCollection() {
-    	SummerCollection.click();
-    }
-    
-    public void clickOnSuggyl() {
-    	Suggyl.click();
-    }
-     
-    public void clickOnSpringCollection() {
-    	SpringCollection.click();
-    }
-  
-    public void clickOnBuvetteCollection() {
-    	BuvetteCollection.click();
-    }
-    
-    public void clickOnBusinessCasual() {
-    	BusinessCasual.click();
-    }
-    
-    public void clickOnAccessories() {
-    	BusinessCasual.click();
-    }
-    
-    
-    
+	
 }
