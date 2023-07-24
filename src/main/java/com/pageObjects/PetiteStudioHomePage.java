@@ -2,7 +2,6 @@ package com.pageObjects;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,5 +59,15 @@ public class PetiteStudioHomePage extends BasePage{
         Actions actions = new Actions(driver);
         actions.moveToElement(shopAllLink).perform();
     }
-	
+    
+   
+    // ---------------------------------------- Modified Code ------------------------------------------------
+    public void verifyShopAllLinks() {
+    	verifyHrefLinks(getAllAnchorTagsHrefs());
+    }
+   
+    
+    public void verifyHelpLinks() {
+    	verifyHrefLinks(getAllHelpSectionLinksHrefs());
+    }
 }

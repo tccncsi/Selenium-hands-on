@@ -11,6 +11,7 @@
       <class name="com.testCases.PetiteShopAllTest">
         <methods>
           <include name="ShopAllLinksTest"/>
+          <include name="HelpLinksTest"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>

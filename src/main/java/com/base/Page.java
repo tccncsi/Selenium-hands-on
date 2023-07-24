@@ -1,5 +1,7 @@
 package com.base;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
@@ -16,7 +18,7 @@ public abstract class Page {
 	public Logger logger;
 	public Actions action;
 	public WebDriverWait explicitWait;
-	//public static int flag=0;
+	// public static int flag=0;
 
 	public Page(WebDriver driver) {
 		this.driver = driver;
@@ -34,7 +36,7 @@ public abstract class Page {
 	public abstract WebElement getElement(By locator);
 
 	public abstract String getText(By locator);
-	
+
 	public abstract String getText(WebElement element);
 
 	public abstract void waitForElementPresent(By locator);
@@ -48,7 +50,9 @@ public abstract class Page {
 	public abstract void waitForFindElementClickable(WebElement locator);
 
 	public abstract String findText(WebElement locator);
-	
+
 	public abstract boolean isFileDownloaded(String downloadPath, String fileName);
+
+	public abstract void verifyHrefLinks(List<String> hrefs);
 
 }
