@@ -2,6 +2,11 @@ package com.base;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -199,5 +204,55 @@ public class BasePage extends Page {
 		return temp;
 	}
 
+	int TotalLink = 0;
+	int PassLink = 0;
+	int counter_links = 0;
+	int pass_links = 0;
+
+//	For iteraring through a list of webelements fetching href value and checking if it's a valid url or not 
+	@Override
+	public int validateLinks(List<WebElement> ele, int checkcode) throws IOException {
+	    Iterator<WebElement> items = ele.iterator();
+	    while (items.hasNext()) {
+	        String url = items.next().getAttribute("href");
+	        int[] result = verifyLinks(url,checkcode); // Assuming verifyLinks returns an int array
+	        int currentTotalLink = result[0]; // Get the values from the result array
+	        int currentPassLink = result[1];
+	        TotalLink += currentTotalLink; 
+	        PassLink += currentPassLink;
+	    }
+	    if (TotalLink == 0) {
+	        return 0; 
+	    } else {
+	    	System.out.println("Total Pass ratio : "+PassLink/TotalLink);
+	        return PassLink/TotalLink; 
+	    }
+	}
+
+//	Checking the url is a good url and not a broken url, and checking if it is equal to responseCode expected
+	public int[] verifyLinks(String url,int checkcode) throws IOException {
+	    if (url.equals("#") || url.equals("")) {
+	        counter_links++;
+	        System.out.println("Failed: " + url);
+	    } else {
+	        URL fetch_url = new URL(url);
+	        HttpURLConnection connection = (HttpURLConnection) fetch_url.openConnection();
+	        connection.setRequestMethod("GET");
+	        int responseCode = connection.getResponseCode();
+	        if (responseCode != checkcode) {
+	            counter_links++;
+	            System.out.println("Failed: " + url);
+	        } else {
+	            counter_links++;
+	            pass_links++;
+	        }
+	        connection.disconnect(); // Close the connection to release resources.
+	    }
+	    int[] values = new int[2];
+	    values[0] = counter_links;
+	    values[1] = pass_links;
+	    return values;
+	}
+	
 	
 }

@@ -1,5 +1,8 @@
 package com.base;
 
+import java.io.IOException;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
@@ -50,5 +53,8 @@ public abstract class Page {
 	public abstract String findText(WebElement locator);
 	
 	public abstract boolean isFileDownloaded(String downloadPath, String fileName);
+	
+	public abstract int validateLinks(List<WebElement> ele, int checkcode) throws IOException;
+	
 
 }
