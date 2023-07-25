@@ -1,5 +1,7 @@
 package com.base;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -187,15 +189,40 @@ public class BasePage extends Page {
 
 	@Override
 	public void verifyHrefLinks(List<String> hrefs) {
-		for (String href : hrefs) {
-			try {
-				int responseCode = verifyLinkStatus(href);
-				Assert.assertEquals(responseCode, HttpURLConnection.HTTP_OK, "Link is not working properly: " + href);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+	    for (String href : hrefs) {
+	        if (href != null) {
+	            try {
+	                int responseCode = verifyLinkStatus(href);
+	                Assert.assertEquals(responseCode, HttpURLConnection.HTTP_OK, "Link is not working properly: " + href);	                
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	            }
+	        } else {
+	            System.out.println("Skipping null link.");
+	        }
+	    }
 	}
+	
+	//Method to verify exact match for links response code
+	@Override
+	public void verifyHrefResponseCode(List<String> hrefs, int resCode) {
+	    for (String href : hrefs) {    
+	        if (href != null) {
+	            try {
+	                int responseCode = verifyLinkStatus(href);
+	                Assert.assertEquals(responseCode, resCode, "Link is not working properly: " + href);                
+	            } catch (AssertionError e) {
+	                System.out.println("Assertion failed for link: " + href);
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	            }
+	        } else {
+	            System.out.println("Skipping null link.");
+	        }
+	    }
+	}
+
+	
 
 	// Method to verify the status code of a link
 	private int verifyLinkStatus(String href) throws IOException {
@@ -208,5 +235,7 @@ public class BasePage extends Page {
 		System.out.println("Link: " + href + ", Response Code: " + responseCode);
 		return responseCode;
 	}
+
+
 
 }

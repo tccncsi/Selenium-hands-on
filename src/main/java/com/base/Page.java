@@ -54,5 +54,7 @@ public abstract class Page {
 	public abstract boolean isFileDownloaded(String downloadPath, String fileName);
 
 	public abstract void verifyHrefLinks(List<String> hrefs);
+	
+	public abstract void verifyHrefResponseCode(List<String> hrefs,int resCode);
 
 }

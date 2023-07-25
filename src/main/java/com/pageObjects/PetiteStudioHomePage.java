@@ -70,4 +70,8 @@ public class PetiteStudioHomePage extends BasePage{
     public void verifyHelpLinks() {
     	verifyHrefLinks(getAllHelpSectionLinksHrefs());
     }
+    
+    public void verifyHelpLinksResponseCode() {
+    	verifyHrefResponseCode(getAllHelpSectionLinksHrefs(),404);
+    }
 }

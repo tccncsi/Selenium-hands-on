@@ -26,6 +26,8 @@ public class PetiteShopAllTest extends BaseClass {
         petitehomepage = new PetiteStudioHomePage(driver);
         
         petitehomepage.verifyHelpLinks();  
+        
+        petitehomepage.verifyHelpLinksResponseCode();
     }
     
 
