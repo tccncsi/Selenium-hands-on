@@ -56,5 +56,5 @@ public abstract class Page {
 	
 	public abstract int validateLinks(List<WebElement> ele, int checkcode) throws IOException;
 	
-
+	public abstract String[] fetch_all_href(List<WebElement> url);
 }

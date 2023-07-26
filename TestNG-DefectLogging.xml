@@ -18,13 +18,20 @@
 	
 	 -->
 	
-	<test name="Assessment 2 Test">
+<!-- 	<test name="Assessment 2 Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www.petitestudionyc.com/" />
 		<classes>
 		    <class name = "com.testCases.Assessment2"/>	
 		</classes>
-	</test>
+	</test> -->
 	
+	<test name="Assessment 3 Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www2.hm.com/en_in/index.html" />
+		<classes>
+		    <class name = "com.testCases.Assessment3"/>	
+		</classes>
+	</test>
 	
 </suite>

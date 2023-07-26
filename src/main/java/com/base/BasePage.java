@@ -3,8 +3,6 @@ package com.base;
 import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
@@ -12,10 +10,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.pageObjects.AmazonPage;
-import com.utilities.ReadConfig;
 import com.utilities.XLUtils;
 
 public class BasePage extends Page {
@@ -204,6 +201,7 @@ public class BasePage extends Page {
 		return temp;
 	}
 
+//	flag for counting the total no of links present
 	int TotalLink = 0;
 	int PassLink = 0;
 	int counter_links = 0;
@@ -253,6 +251,31 @@ public class BasePage extends Page {
 	    values[1] = pass_links;
 	    return values;
 	}
+
+//	Fetches all href for WebElements and stores it in a array
+	@Override
+	public String[] fetch_all_href(List<WebElement> url) {
+		String[] all_url = new String[url.size()];
+		Iterator<WebElement> items = url.iterator();
+		int index = 0;
+
+		while (items.hasNext()) {
+		    String url1 = items.next().getAttribute("href");
+		    all_url[index] = url1;
+		    index++;
+		}
+
+		// Print the URLs in the array
+		for (int i = 0; i < all_url.length; i++) {
+		    System.out.println(all_url[i]);
+		}
+
+		System.out.println("Finish");
+	    return all_url;
+	}
+	
+	
+
 	
 	
 }

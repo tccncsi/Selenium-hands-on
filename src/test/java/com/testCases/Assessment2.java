@@ -1,13 +1,10 @@
 package com.testCases;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseClass;
-import com.base.BasePage;
 import com.pageObjects.PetiteStudioHP;
 import com.utilities.JiraCreateIssue;
 
