@@ -32,14 +32,20 @@ public class HMSportPage extends BasePage {
 	@FindBy(css = "ul.products-listing.small li.product-item span.price.regular")
 	List<WebElement> PricesList;
 
-	@FindBy(css = "ul.products-listing.small li.product-item a.item-link")
+	@FindBy(css = "div.image-container > a")
 	List<WebElement> anchorElements;
+	
+	@FindBy(xpath="//ul[@class='products-listing large']/li/article/div/a")
+	List<WebElement> LargeElements;
 
 	@FindBy(css = "div.load-more-products > button")
 	WebElement LoadMoreButton;
 
 	@FindBy(css = "div.load-more-products > h2")
 	WebElement TotalProductsCount;
+	
+	@FindBy(css="form > fieldset.filter-toggleiteminrow.js-filter-toggleiteminrow > ul > li:nth-child(1)")
+	WebElement ImageLargeSize;
 	
 
 	// Method to select Sort By Dropdown
@@ -53,6 +59,12 @@ public class HMSportPage extends BasePage {
 		return RecommendedOption.isSelected();
 	}
 
+	//Method to set image size large
+	public void setImageSizeLarge() {
+		executor.executeScript("arguments[0].scrollIntoView(true);", ImageLargeSize);
+		ImageLargeSize.click();
+	}
+	
 	// Method to select Lowest Price option from dropdown
 	public void selectLowestPriceOption() {
 		clickOnSortBy();
@@ -64,10 +76,12 @@ public class HMSportPage extends BasePage {
 		Recommended.click();
 	}
 
+	//Method to get currect product shown count
 	public String currentProductShown() {
 		return TotalProductsCount.getAttribute("data-items-shown");
 	}
-
+	
+	//Method to get actual product available count
 	public String totalDataShown() {
 		return TotalProductsCount.getAttribute("data-total");
 	}
@@ -76,7 +90,7 @@ public class HMSportPage extends BasePage {
 		return anchorElements.size();
 	}
 
-	// Method to click on the Load More Products button repeatedly until all
+	// Method to click on the Load More Products button repeatedly until all products shown
 	public void clickOnLoadMoreProductsButtonUntilAllShown() throws InterruptedException {
 	    int itemsShown;
 	    int totalItems;
@@ -88,19 +102,14 @@ public class HMSportPage extends BasePage {
 	        if (itemsShown < totalItems) {
 	        	Thread.sleep(2000);
 	            executor.executeScript("arguments[0].click();", LoadMoreButton);
-//	            try {
-//	                Thread.sleep(2000);
-//	            } catch (InterruptedException e) {
-//	                e.printStackTrace();
-//	            }
 	        }
 
 	    } while (itemsShown < totalItems);
-
 	    System.out.println("All products are now shown.");
 	}
 
 
+	//Method to store href into list of string
 	public List<String> getProductHrefLinks() {
 		List<String> productHrefList = new ArrayList<>();
 		List<WebElement> products = anchorElements;

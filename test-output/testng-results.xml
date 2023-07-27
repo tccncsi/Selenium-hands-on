@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-27T04:26:46Z" name="TCC" finished-at="2023-07-27T04:28:26Z" duration-ms="100515">
+  <suite started-at="2023-07-27T10:34:10Z" name="TCC" finished-at="2023-07-27T10:35:47Z" duration-ms="96786">
     <groups>
     </groups>
-    <test started-at="2023-07-27T04:26:46Z" name="HandM Test" finished-at="2023-07-27T04:28:26Z" duration-ms="100515">
+    <test started-at="2023-07-27T10:34:10Z" name="HandM Test" finished-at="2023-07-27T10:35:47Z" duration-ms="96786">
       <class name="com.testCases.HandMTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.testCases.HandMTest@f2ff811]" started-at="2023-07-27T04:26:46Z" name="setup" finished-at="2023-07-27T04:26:58Z" duration-ms="12344" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.testCases.HandMTest@f2ff811]" started-at="2023-07-27T10:34:11Z" name="setup" finished-at="2023-07-27T10:34:22Z" duration-ms="11932" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyRecommendedSortSelectedByDefault()[pri:0, instance:com.testCases.HandMTest@f2ff811]" started-at="2023-07-27T04:26:58Z" name="verifyRecommendedSortSelectedByDefault" finished-at="2023-07-27T04:28:25Z" duration-ms="86521" status="PASS">
+        <test-method signature="verifyRecommendedSortSelectedByDefault()[pri:0, instance:com.testCases.HandMTest@f2ff811]" started-at="2023-07-27T10:34:22Z" name="verifyRecommendedSortSelectedByDefault" finished-at="2023-07-27T10:35:46Z" duration-ms="83558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRecommendedSortSelectedByDefault -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testCases.HandMTest@f2ff811]" started-at="2023-07-27T04:28:25Z" name="teardown" finished-at="2023-07-27T04:28:26Z" duration-ms="1409" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testCases.HandMTest@f2ff811]" started-at="2023-07-27T10:35:46Z" name="teardown" finished-at="2023-07-27T10:35:47Z" duration-ms="1100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
