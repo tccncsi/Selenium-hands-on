@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content passed suite-TCC">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TCC" title="com.testCases.PetiteShopAllTest" class="method navigator-link" hash-for-method="HelpLinksTest">HelpLinksTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TCC" title="com.testCases.PetiteShopAllTest" class="method navigator-link" hash-for-method="ShopAllLinksTest">ShopAllLinksTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TCC" title="com.testCases.HandMTest" class="method navigator-link" hash-for-method="verifyRecommendedSortSelectedByDefault">verifyRecommendedSortSelectedByDefault</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TCC -->
@@ -125,21 +120,14 @@
           <div class="suite-TCC-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.testCases.PetiteShopAllTest</span>
+              <span class="class-name">com.testCases.HandMTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="HelpLinksTest">
-                  </a> <!-- HelpLinksTest -->
-                  <span class="method-name">HelpLinksTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ShopAllLinksTest">
-                  </a> <!-- ShopAllLinksTest -->
-                  <span class="method-name">ShopAllLinksTest</span>
+                  <a name="verifyRecommendedSortSelectedByDefault">
+                  </a> <!-- verifyRecommendedSortSelectedByDefault -->
+                  <span class="method-name">verifyRecommendedSortSelectedByDefault</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,13 +145,13 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.utilities.Reporting&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Petite Studio Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;HandM Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;url&quot; value=&quot;https://www.petitestudionyc.com/&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;https://www2.hm.com/en_in/index.html&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.testCases.PetiteShopAllTest&quot;/&gt;
+      &lt;class name=&quot;com.testCases.HandMTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Petite Studio Test --&gt;
+  &lt;/test&gt; &lt;!-- HandM Test --&gt;
 &lt;/suite&gt; &lt;!-- TCC --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -175,7 +163,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Petite Studio Test (1 class)</span>
+                <span class="test-name">HandM Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,20 +189,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ShopAllLinksTest')
-data.setCell(0, 2, 'com.testCases.PetiteShopAllTest')
-data.setCell(0, 3, 13024);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'HelpLinksTest')
-data.setCell(1, 2, 'com.testCases.PetiteShopAllTest')
-data.setCell(1, 3, 12779);
+data.setCell(0, 1, 'verifyRecommendedSortSelectedByDefault')
+data.setCell(0, 2, 'com.testCases.HandMTest')
+data.setCell(0, 3, 86521);
 window.suiteTableData['TCC']= { tableData: data, tableDiv: 'times-div-TCC'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-TCC">
               </div> <!-- times-div-TCC -->
             </div> <!-- times-div -->
@@ -240,30 +224,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.testCases.PetiteShopAllTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.testCases.HandMTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(chrome, https://www.petitestudionyc.com/)</span>
+                <span class="method-name">setup(chrome, https://www2.hm.com/en_in/index.html)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">HelpLinksTest</span>
-                <span class="method-start">11241 ms</span>
+                <span class="method-name">verifyRecommendedSortSelectedByDefault</span>
+                <span class="method-start">12344 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">24044 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome, https://www.petitestudionyc.com/)</span>
-                <span class="method-start">24680 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">ShopAllLinksTest</span>
-                <span class="method-start">51545 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">64571 ms</span>
+                <span class="method-start">98876 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

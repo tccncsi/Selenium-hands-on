@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="com.utilities.Reporting"/>
   </listeners>
-  <test thread-count="5" name="Petite Studio Test(failed)">
+  <test thread-count="5" name="HandM Test(failed)">
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://www.petitestudionyc.com/"/>
+    <parameter name="url" value="https://www2.hm.com/en_in/index.html"/>
     <classes>
-      <class name="com.testCases.PetiteShopAllTest">
+      <class name="com.testCases.HandMTest">
         <methods>
-          <include name="HelpLinksTest"/>
+          <include name="verifyRecommendedSortSelectedByDefault"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.testCases.PetiteShopAllTest -->
+      </class> <!-- com.testCases.HandMTest -->
     </classes>
-  </test> <!-- Petite Studio Test(failed) -->
+  </test> <!-- HandM Test(failed) -->
 </suite> <!-- Failed suite [TCC] -->

@@ -19,11 +19,21 @@
 	
 	
 	<!-- Petite Studio -->
-	<test name="Petite Studio Test">
+<!-- 	<test name="Petite Studio Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www.petitestudionyc.com/" />
 		<classes>
 			<class name="com.testCases.PetiteShopAllTest" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- H & M Test -->
+	<test name="HandM Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www2.hm.com/en_in/index.html" />
+		<classes>
+			<class name="com.testCases.HandMTest" />
 		</classes>
 	</test>
 </suite>
