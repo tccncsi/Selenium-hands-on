@@ -29,11 +29,21 @@
 	
 	
 	<!-- H & M Test -->
-	<test name="HandM Test">
+<!-- 	<test name="HandM Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www2.hm.com/en_in/index.html" />
 		<classes>
 			<class name="com.testCases.HandMTest" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- American Eagle Test  -->
+		<test name="American Eagle Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.ae.com/" />
+		<classes>
+			<class name="com.testCases.AEAddProductsTest" />
 		</classes>
 	</test>
 </suite>

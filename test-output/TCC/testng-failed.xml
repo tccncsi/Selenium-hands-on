@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="com.utilities.Reporting"/>
   </listeners>
-  <test thread-count="5" name="HandM Test(failed)">
+  <test thread-count="5" name="American Eagle Test(failed)">
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://www2.hm.com/en_in/index.html"/>
+    <parameter name="url" value="https://www.ae.com/"/>
     <classes>
-      <class name="com.testCases.HandMTest">
+      <class name="com.testCases.AEAddProductsTest">
         <methods>
-          <include name="verifyRecommendedSortSelectedByDefault"/>
+          <include name="addProductsTest"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.testCases.HandMTest -->
+      </class> <!-- com.testCases.AEAddProductsTest -->
     </classes>
-  </test> <!-- HandM Test(failed) -->
+  </test> <!-- American Eagle Test(failed) -->
 </suite> <!-- Failed suite [TCC] -->
