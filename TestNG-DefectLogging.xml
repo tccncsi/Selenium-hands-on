@@ -39,11 +39,25 @@
 	
 	
 	<!-- American Eagle Test  -->
-		<test name="American Eagle Test">
+<!-- 		<test name="American Eagle Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www.ae.com/" />
 		<classes>
 			<class name="com.testCases.AEAddProductsTest" />
 		</classes>
-	</test>
+	</test> -->
+	
+	
+	
+	<!-- ***************** Autoverse Practicle Assessments Test ******************** -->
+	
+	<!-- Mankind Test -->
+	<test name="Mankind Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.mankind.co.uk/" />
+		<classes>
+			<class name="com.testCases.MankindTest" />
+		</classes>
+	</test> 
+	
 </suite>

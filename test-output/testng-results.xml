@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-28T12:19:15Z" name="TCC" finished-at="2023-07-28T12:20:11Z" duration-ms="56415">
+  <suite started-at="2023-07-31T18:03:21Z" name="TCC" finished-at="2023-07-31T18:04:03Z" duration-ms="42176">
     <groups>
     </groups>
-    <test started-at="2023-07-28T12:19:15Z" name="American Eagle Test" finished-at="2023-07-28T12:20:11Z" duration-ms="56415">
-      <class name="com.testCases.AEAddProductsTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.testCases.AEAddProductsTest@f2ff811]" started-at="2023-07-28T12:19:15Z" name="setup" finished-at="2023-07-28T12:19:46Z" duration-ms="30880" status="PASS">
+    <test started-at="2023-07-31T18:03:21Z" name="Mankind Test" finished-at="2023-07-31T18:04:03Z" duration-ms="42176">
+      <class name="com.testCases.MankindTest">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.testCases.MankindTest@568ff82]" started-at="2023-07-31T18:03:21Z" name="setup" finished-at="2023-07-31T18:03:33Z" duration-ms="11804" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,22 +16,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.ae.com/]]>
+                <![CDATA[https://www.mankind.co.uk/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addProductsTest()[pri:0, instance:com.testCases.AEAddProductsTest@f2ff811]" started-at="2023-07-28T12:19:46Z" name="addProductsTest" finished-at="2023-07-28T12:20:10Z" duration-ms="23421" status="PASS">
+        <test-method signature="signUpTest()[pri:0, instance:com.testCases.MankindTest@568ff82]" started-at="2023-07-31T18:03:33Z" name="signUpTest" finished-at="2023-07-31T18:04:02Z" duration-ms="28994" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductsTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testCases.AEAddProductsTest@f2ff811]" started-at="2023-07-28T12:20:10Z" name="teardown" finished-at="2023-07-28T12:20:11Z" duration-ms="1733" status="PASS">
+        </test-method> <!-- signUpTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testCases.MankindTest@568ff82]" started-at="2023-07-31T18:04:02Z" name="teardown" finished-at="2023-07-31T18:04:03Z" duration-ms="1173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.testCases.AEAddProductsTest -->
-    </test> <!-- American Eagle Test -->
+      </class> <!-- com.testCases.MankindTest -->
+    </test> <!-- Mankind Test -->
   </suite> <!-- TCC -->
 </testng-results>
