@@ -1,6 +1,7 @@
 package com.base;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -56,5 +57,7 @@ public abstract class Page {
 	
 	public abstract int validateLinks(List<WebElement> ele, int checkcode) throws IOException;
 	
-	public abstract String[] fetch_all_href(List<WebElement> url);
+	public abstract ArrayList<String> fetch_all_href(List<WebElement> element);
+	
+
 }

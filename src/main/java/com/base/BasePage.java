@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -207,6 +208,7 @@ public class BasePage extends Page {
 	int counter_links = 0;
 	int pass_links = 0;
 
+	
 //	For iteraring through a list of webelements fetching href value and checking if it's a valid url or not 
 	@Override
 	public int validateLinks(List<WebElement> ele, int checkcode) throws IOException {
@@ -227,6 +229,7 @@ public class BasePage extends Page {
 	    }
 	}
 
+	
 //	Checking the url is a good url and not a broken url, and checking if it is equal to responseCode expected
 	public int[] verifyLinks(String url,int checkcode) throws IOException {
 	    if (url.equals("#") || url.equals("")) {
@@ -252,30 +255,34 @@ public class BasePage extends Page {
 	    return values;
 	}
 
+	
+	
+	
 //	Fetches all href for WebElements and stores it in a array
 	@Override
-	public String[] fetch_all_href(List<WebElement> url) {
-		String[] all_url = new String[url.size()];
-		Iterator<WebElement> items = url.iterator();
-		int index = 0;
+	public ArrayList<String> fetch_all_href(List<WebElement> element) {
+//		System.out.println(element);
+		ArrayList<String> all_url = new ArrayList<String>();
+		Iterator<WebElement> items = element.iterator();
 
 		while (items.hasNext()) {
 		    String url1 = items.next().getAttribute("href");
-		    all_url[index] = url1;
-		    index++;
+		    all_url.add(url1);
 		}
 
-		// Print the URLs in the array
-		for (int i = 0; i < all_url.length; i++) {
-		    System.out.println(all_url[i]);
-		}
-
+		System.out.println(all_url);
 		System.out.println("Finish");
 	    return all_url;
 	}
-	
-	
+		
 
-	
-	
 }
+
+
+
+
+
+
+
+
+
