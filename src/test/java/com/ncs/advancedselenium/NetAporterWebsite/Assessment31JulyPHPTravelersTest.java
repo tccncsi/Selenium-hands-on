@@ -34,7 +34,7 @@ public class Assessment31JulyPHPTravelersTest extends BaseClass{
 	  
   }
   
-  @Test(enabled=false)
+  @Test//(enabled=false)
   public void validating_password() {
 	  
 	  pthp=new PHPTraveleersHomePage(driver);

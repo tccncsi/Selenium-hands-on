@@ -5,12 +5,14 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
 
 import com.advance_selenium.net_a_porter_website.base.BaseClass;
+import com.advance_selenium.net_a_porter_website.utilities.JiraCreateIssue;
 import com.advancedselenium.net_a_porter_website.pageobject.MissGuidedHomePage;
 
 public class Assessment31JulyMissGuidedTest extends BaseClass{
 	
 	MissGuidedHomePage mghp;
-  @Test
+	@JiraCreateIssue(isCreateIssue = true)
+	@Test
   public void links_test() throws InterruptedException {
 	  
 	  System.out.println("Dummy test for miss guided website");
