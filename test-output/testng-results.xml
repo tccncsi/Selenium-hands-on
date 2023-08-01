@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-31T18:03:21Z" name="TCC" finished-at="2023-07-31T18:04:03Z" duration-ms="42176">
+  <suite started-at="2023-08-01T11:28:06Z" name="TCC" finished-at="2023-08-01T11:29:17Z" duration-ms="71416">
     <groups>
     </groups>
-    <test started-at="2023-07-31T18:03:21Z" name="Mankind Test" finished-at="2023-07-31T18:04:03Z" duration-ms="42176">
-      <class name="com.testCases.MankindTest">
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.testCases.MankindTest@568ff82]" started-at="2023-07-31T18:03:21Z" name="setup" finished-at="2023-07-31T18:03:33Z" duration-ms="11804" status="PASS">
+    <test started-at="2023-08-01T11:28:06Z" name="The Frankie Shop Test" finished-at="2023-08-01T11:29:17Z" duration-ms="71416">
+      <class name="com.testCases.FrankieShopTest">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.testCases.FrankieShopTest@f2ff811]" started-at="2023-08-01T11:28:06Z" name="setup" finished-at="2023-08-01T11:28:18Z" duration-ms="12482" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,22 +16,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.mankind.co.uk/]]>
+                <![CDATA[https://thefrankieshop.com/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="signUpTest()[pri:0, instance:com.testCases.MankindTest@568ff82]" started-at="2023-07-31T18:03:33Z" name="signUpTest" finished-at="2023-07-31T18:04:02Z" duration-ms="28994" status="PASS">
+        <test-method signature="FrankieShopFilterTest()[pri:0, instance:com.testCases.FrankieShopTest@f2ff811]" started-at="2023-08-01T11:28:18Z" name="FrankieShopFilterTest" finished-at="2023-08-01T11:29:16Z" duration-ms="57347" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signUpTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testCases.MankindTest@568ff82]" started-at="2023-07-31T18:04:02Z" name="teardown" finished-at="2023-07-31T18:04:03Z" duration-ms="1173" status="PASS">
+        </test-method> <!-- FrankieShopFilterTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testCases.FrankieShopTest@f2ff811]" started-at="2023-08-01T11:29:16Z" name="teardown" finished-at="2023-08-01T11:29:17Z" duration-ms="1397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.testCases.MankindTest -->
-    </test> <!-- Mankind Test -->
+      </class> <!-- com.testCases.FrankieShopTest -->
+    </test> <!-- The Frankie Shop Test -->
   </suite> <!-- TCC -->
 </testng-results>

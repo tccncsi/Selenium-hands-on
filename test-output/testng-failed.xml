@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="com.utilities.Reporting"/>
   </listeners>
-  <test thread-count="5" name="Mankind Test(failed)">
+  <test thread-count="5" name="The Frankie Shop Test(failed)">
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://www.mankind.co.uk/"/>
+    <parameter name="url" value="https://thefrankieshop.com/"/>
     <classes>
-      <class name="com.testCases.MankindTest">
+      <class name="com.testCases.FrankieShopTest">
         <methods>
+          <include name="FrankieShopFilterTest"/>
           <include name="teardown"/>
-          <include name="signUpTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.testCases.MankindTest -->
+      </class> <!-- com.testCases.FrankieShopTest -->
     </classes>
-  </test> <!-- Mankind Test(failed) -->
+  </test> <!-- The Frankie Shop Test(failed) -->
 </suite> <!-- Failed suite [TCC] -->

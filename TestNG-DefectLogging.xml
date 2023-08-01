@@ -52,11 +52,21 @@
 	<!-- ***************** Autoverse Practicle Assessments Test ******************** -->
 	
 	<!-- Mankind Test -->
-	<test name="Mankind Test">
+<!-- 	<test name="Mankind Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www.mankind.co.uk/" />
 		<classes>
 			<class name="com.testCases.MankindTest" />
+		</classes>
+	</test> -->
+	
+	
+		<!-- The Frankie Shop Test -->
+	<test name="The Frankie Shop Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://thefrankieshop.com/" />
+		<classes>
+			<class name="com.testCases.FrankieShopTest" />
 		</classes>
 	</test> 
 	
