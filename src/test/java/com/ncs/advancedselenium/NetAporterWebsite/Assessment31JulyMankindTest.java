@@ -12,7 +12,7 @@ public class Assessment31JulyMankindTest extends BaseClass{
 	MankindHomePage mhp;
 	
   @Test
-  public void dummy_test() throws InterruptedException {
+  public void checking_filter() throws InterruptedException {
 	  System.out.println("Dummy test for Mankind website !!");
 	  mhp=new MankindHomePage(driver);
 	  mhp.handleCookiePopup();

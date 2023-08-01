@@ -58,7 +58,7 @@ public class MissGuidedHomePage extends BasePage{
 	//Handling Cookie Pop ups
 	public void handleCookiePopup() {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 10); // Waiting for up to 10 seconds
+			WebDriverWait wait = new WebDriverWait(driver, 10);
 			wait.until(ExpectedConditions.visibilityOf(cookiePopup));
 
 			if (cookiePopup.isDisplayed()) {
@@ -66,7 +66,7 @@ public class MissGuidedHomePage extends BasePage{
 			}
 		} catch (org.openqa.selenium.NoSuchElementException | org.openqa.selenium.TimeoutException e) {
 			// The popup was not found, or it did not appear within the given wait time.
-			// You can handle this exception as needed or ignore it.
+			
 		}
 
 	}
@@ -125,6 +125,8 @@ public class MissGuidedHomePage extends BasePage{
 		return qvalue;
 	}
 	
+	
+	//Selecting multiple quantity of the product
 	public void increasing_quantity() {
 		
 		int index=1;
@@ -137,6 +139,7 @@ public class MissGuidedHomePage extends BasePage{
 		}
 	}
 	
+	//Method to calculate total price after adding multiple quantity of a particular product.	
 	public boolean calculating_final_price() {
 		waitForFindElementPresent(price_of_one);
 		String qprice=price_of_one.getText();
@@ -161,6 +164,7 @@ public class MissGuidedHomePage extends BasePage{
 		
 	}
 	
+	//validating cart page for different things like quantity and comparing total price
 	public boolean validating_cart() {
 		clicking_on_view_bag_btn();
 		increasing_quantity();

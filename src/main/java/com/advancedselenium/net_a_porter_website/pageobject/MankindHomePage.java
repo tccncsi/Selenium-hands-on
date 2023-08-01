@@ -221,17 +221,20 @@ public class MankindHomePage extends BasePage {
 		return price_range.isDisplayed();
 	}
 
+	//calling generic method for storing products on default page 
 	public int storing_all_products_for_originallist() throws InterruptedException {
 		int numOfProd=recording_all_products_for_default_page(basic_product_list_ul,initial_productlist);
 		return numOfProd;
 	}
 	
-	
+	//calling generic method for storing price of different products after selecting a aparticular filter
 	public int storing_all_products_for_price_filter_page() throws InterruptedException {
 		int total_price=recording_all_products_for_price_filter_page(basic_product_list_ul);
 		return total_price;
 	}
 	
+	
+	//Checking if all the prices are in the selected price range i.e. $15-$30
 	public int checking_each_price_value_lies_in_range() {
 	    int correct = 0;
 	    for (String price : price_list) {
@@ -242,9 +245,7 @@ public class MankindHomePage extends BasePage {
 	                    correct++;
 	                }
 	            } catch (NumberFormatException e) {
-	                // Handle the case where the value cannot be parsed into a double
-	                // You can log the error or perform other actions as needed.
-	                // For example:
+	                
 	                // System.err.println("Error parsing value: " + price);
 	            }
 	        }
@@ -263,10 +264,13 @@ public class MankindHomePage extends BasePage {
 		return clear_all_filter_btn.isDisplayed();
 	}
 	
+	//calling generic method to store products after removal of filter condition
 	public int storing_all_products_after_removing_filter() throws InterruptedException {
 		return recording_all_products_for_default_page(basic_product_list_ul,final_productlist);
 	}
 	
+	
+	//checking if both the product lists are equal or not
 	public boolean checking_if_displayed_products_are_equal() {
 		 boolean areEqual = initial_productlist.equals(final_productlist);
 		 return areEqual;
