@@ -61,12 +61,21 @@
 	</test> -->
 	
 	
-		<!-- The Frankie Shop Test -->
-	<test name="The Frankie Shop Test">
+	<!-- The Frankie Shop Test -->
+<!-- 	<test name="The Frankie Shop Test">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://thefrankieshop.com/" />
 		<classes>
 			<class name="com.testCases.FrankieShopTest" />
+		</classes>
+	</test>  -->
+	
+	<!-- asos Test -->
+	<test name="asos Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.asos.com/" />
+		<classes>
+			<class name="com.testCases.AsosTest" />
 		</classes>
 	</test> 
 	

@@ -195,6 +195,7 @@ public class BasePage extends Page {
 	                int responseCode = verifyLinkStatus(href);
 	                Assert.assertEquals(responseCode, HttpURLConnection.HTTP_OK, "Link is not working properly: " + href);	                
 	            } catch (IOException e) {
+	            	System.out.println("In catch");
 	                e.printStackTrace();
 	            }
 	        } else {
