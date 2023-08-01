@@ -155,10 +155,10 @@ public class MissGuidedHomePage extends BasePage{
 
 	        // Compare the two double values using the delta
 	        if (Math.abs(final_price - totalprice) < epsilon) {
-	           
+	            //System.out.println("The values are equal.");
 	        	return true;
 	        } else {
-	            
+	            //System.out.println("The values are not equal.");
 	        	return false;
 	        }
 		
