@@ -29,8 +29,7 @@ public class BaseClass {
 	public Logger logger;
 	  
 	
-	 @Parameters({"browser","url"})
-	  
+	 @Parameters({"browser","url"})	  
 	  @BeforeMethod
 	  public void setup(String brwname, String url) throws
 	  InvocationTargetException { logger =

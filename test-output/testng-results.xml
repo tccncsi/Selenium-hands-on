@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-18T12:02:24 IST" name="TCC" finished-at="2023-07-18T12:03:26 IST" duration-ms="62679">
+  <suite started-at="2023-08-01T23:24:28 IST" name="TCC" finished-at="2023-08-01T23:25:38 IST" duration-ms="70716">
     <groups>
     </groups>
-    <test started-at="2023-07-18T12:02:24 IST" name="Demo Test 2" finished-at="2023-07-18T12:03:26 IST" duration-ms="62679">
-      <class name="com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:24 IST" name="setup" finished-at="2023-07-18T12:02:36 IST" duration-ms="11937" status="PASS">
+    <test started-at="2023-08-01T23:24:28 IST" name="Demo Test 4" finished-at="2023-08-01T23:25:38 IST" duration-ms="70716">
+      <class name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest@3d6f0054]" started-at="2023-08-01T23:24:28 IST" name="setup" finished-at="2023-08-01T23:24:33 IST" duration-ms="5416" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,22 +16,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount]]>
+                <![CDATA[https://phptravels.com/demo/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalid_birthday_date()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:36 IST" name="invalid_birthday_date" finished-at="2023-07-18T12:02:39 IST" duration-ms="3197" status="PASS">
+        <test-method signature="registration_test()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest@3d6f0054]" started-at="2023-08-01T23:24:33 IST" name="registration_test" finished-at="2023-08-01T23:25:20 IST" duration-ms="47150" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalid_birthday_date -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:39 IST" name="teardown" finished-at="2023-07-18T12:02:40 IST" duration-ms="670" status="PASS">
+        </test-method> <!-- registration_test -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest@3d6f0054]" started-at="2023-08-01T23:25:20 IST" name="teardown" finished-at="2023-08-01T23:25:21 IST" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:40 IST" name="setup" finished-at="2023-07-18T12:02:51 IST" duration-ms="11464" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest@3d6f0054]" started-at="2023-08-01T23:25:21 IST" name="setup" finished-at="2023-08-01T23:25:26 IST" duration-ms="5450" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,70 +40,22 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount]]>
+                <![CDATA[https://phptravels.com/demo/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalid_email_field()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:51 IST" name="invalid_email_field" finished-at="2023-07-18T12:02:52 IST" duration-ms="842" status="PASS">
+        <test-method signature="validating_password()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest@3d6f0054]" started-at="2023-08-01T23:25:26 IST" name="validating_password" finished-at="2023-08-01T23:25:38 IST" duration-ms="11586" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalid_email_field -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:52 IST" name="teardown" finished-at="2023-07-18T12:02:53 IST" duration-ms="663" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:02:53 IST" name="setup" finished-at="2023-07-18T12:03:06 IST" duration-ms="13258" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="invalid_password_field()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:03:06 IST" name="invalid_password_field" finished-at="2023-07-18T12:03:08 IST" duration-ms="2134" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalid_password_field -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:03:08 IST" name="teardown" finished-at="2023-07-18T12:03:09 IST" duration-ms="617" status="PASS">
+        </test-method> <!-- validating_password -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest@3d6f0054]" started-at="2023-08-01T23:25:38 IST" name="teardown" finished-at="2023-08-01T23:25:38 IST" duration-ms="425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:03:09 IST" name="setup" finished-at="2023-07-18T12:03:25 IST" duration-ms="15731" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="validRegistration()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:03:25 IST" name="validRegistration" finished-at="2023-07-18T12:03:26 IST" duration-ms="1426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validRegistration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest@5fbdfdcf]" started-at="2023-07-18T12:03:26 IST" name="teardown" finished-at="2023-07-18T12:03:26 IST" duration-ms="525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest -->
-    </test> <!-- Demo Test 2 -->
+      </class> <!-- com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest -->
+    </test> <!-- Demo Test 4 -->
   </suite> <!-- TCC -->
 </testng-results>

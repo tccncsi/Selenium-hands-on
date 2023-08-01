@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest">
+      <class name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyMankindTest">
         <methods>
-          <include name="invalid_password_field"/>
-          <include name="validRegistration"/>
-          <include name="invalid_birthday_date"/>
-          <include name="invalid_email_field"/>
+          <include name="dummy_test"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest -->
+      </class> <!-- com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyMankindTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

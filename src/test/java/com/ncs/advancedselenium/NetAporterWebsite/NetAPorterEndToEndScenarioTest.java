@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
 
 import com.advance_selenium.net_a_porter_website.base.BaseClass;
+import com.advance_selenium.net_a_porter_website.utilities.JiraCreateIssue;
 import com.advance_selenium.net_a_porter_website.utilities.XLUtils;
 import com.advancedselenium.net_a_porter_website.pageobject.NetAPorterAccountPage;
 import com.advancedselenium.net_a_porter_website.pageobject.NetAPorterHomePage;
@@ -14,7 +15,8 @@ public class NetAPorterEndToEndScenarioTest extends BaseClass {
 
 	NetAPorterHomePage nhp;
 	NetAPorterAccountPage nap;
-
+	
+	@JiraCreateIssue(isCreateIssue = true)
 	@Test
 	public void checkingFullFunctionality() throws InterruptedException {
 		nhp = new NetAPorterHomePage(driver);

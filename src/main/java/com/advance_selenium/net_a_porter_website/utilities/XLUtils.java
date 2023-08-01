@@ -26,7 +26,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class XLUtils {
-	
+
 	public static FileInputStream fi;
 	public static FileOutputStream fo;
 	public static XSSFWorkbook wb;
@@ -141,7 +141,8 @@ public class XLUtils {
 
 	public static String FetchExcelData(String EleName) throws IOException {
 
-		String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\FormTestData.xlsx";
+		String path = System.getProperty("user.dir") + "\\src\\main\\java\\testData\\TestData.xlsx";
+
 		String temp[][] = new String[2][2];
 
 		File f = new File(path);
@@ -151,9 +152,13 @@ public class XLUtils {
 		int y = 0;
 
 		for (int a = 0; a < wb.getNumberOfSheets(); a++) {
-			// System.out.println("Current sheet name is "+wb.getNumberOfSheets());
+			//System.out.println("Current sheet name is " + wb.getNumberOfSheets());
 			String sheetName = wb.getSheetName(a);
-			XSSFSheet xs = wb.getSheet(sheetName);
+			
+			//System.out.println(sheetName);
+			
+			//XSSFSheet xs = wb.getSheet(sheetName);
+			XSSFSheet xs = wb.getSheet("Sheet2");
 			int rowno = xs.getLastRowNum();
 			String data[][] = new String[rowno][xs.getRow(0).getLastCellNum()];
 
@@ -180,9 +185,8 @@ public class XLUtils {
 
 	public static String FetchGeneratorData(String EleName) throws IOException {
 
-		String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\TestData.xlsx";
+		String path = System.getProperty("user.dir") + "\\src\\main\\java\\testData\\TestData.xlsx";
 		String temp[][] = new String[2][2];
-
 		File f = new File(path);
 		FileInputStream fis = new FileInputStream(f);
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
@@ -222,7 +226,7 @@ public class XLUtils {
 
 		String path = // System.getProperty("user.dir") +
 						// "\\src\\main\\java\\com\\testData\\New.xlsx";
-				System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\TestData.xlsx";
+				System.getProperty("user.dir") + "\\src\\main\\java\\testData\\TestData.xlsx";
 
 		String temp[][] = new String[2][2];
 
@@ -304,7 +308,7 @@ public class XLUtils {
 
 	public static String FetchExcelTestCaseData(String TestcaseName) throws IOException {
 
-		String path = System.getProperty("user.dir") + "\\src\\main\\java\\com\\testData\\TestCases.xlsx";
+		String path = System.getProperty("user.dir") + "\\src\\main\\java\\testData\\TestCases.xlsx";
 		String temp[][] = new String[2][2];
 
 		File f = new File(path);
@@ -332,8 +336,9 @@ public class XLUtils {
 						data[i][j + 2] = xs.getRow(i).getCell(j + 2).toString();
 						data[i][j + 3] = xs.getRow(i).getCell(j + 3).toString();
 						data[i][j + 4] = xs.getRow(i).getCell(j + 4).toString();
-						
-						temp[x][y] = data[i][j + 1] + "\n\n" + data[i][j + 2] + "\n\n" + data[i][j + 3] +"\n\n" +data[i][j + 4];
+
+						temp[x][y] = data[i][j + 1] + "\n\n" + data[i][j + 2] + "\n\n" + data[i][j + 3] + "\n\n"
+								+ data[i][j + 4];
 						break;
 					}
 				}
@@ -520,16 +525,18 @@ public class XLUtils {
 	}
 
 	public static void CreateDefectExcelDataGeneric(String tcName, String tcSummary, String tcSteps,
-			String errorDetails, String browser,String defectEnv,String defectStatus,String screenshotFilePath,Boolean screenshotFlag) throws IOException {
+			String errorDetails, String browser, String defectEnv, String defectStatus, String screenshotFilePath,
+			Boolean screenshotFlag) throws IOException {
 		XSSFWorkbook workbook_ED = null;
 		XSSFSheet sheet_ED = null;
 		FileOutputStream os_ED = null;
 		FileInputStream inputStream_ED = null;
-		
-		//BasePage.defectCount++;
-		
+
+		// BasePage.defectCount++;
+
 		try {
 			String path = System.getProperty("user.dir") + "\\Defect Report\\GenericDefectList.xlsx";
+
 			File myFile_ED = new File(path);
 			inputStream_ED = new FileInputStream(myFile_ED);
 
@@ -539,7 +546,7 @@ public class XLUtils {
 			Row row_ED = sheet_ED.createRow(sheet_ED.getLastRowNum() + 1);
 			if (sheet_ED.getLastRowNum() == 0) {
 			}
-			
+
 			Cell cellTcName = row_ED.createCell(0);
 			cellTcName.setCellValue(tcName);
 
@@ -558,17 +565,17 @@ public class XLUtils {
 
 			Cell cellBrowserName = row_ED.createCell(5);
 			cellBrowserName.setCellValue(browser);
-				
+
 			Cell cellDefectEnv = row_ED.createCell(6);
 			cellDefectEnv.setCellValue(defectEnv);
-			
+
 			Cell cellDefectStatus = row_ED.createCell(7);
 			cellDefectStatus.setCellValue(defectStatus);
-			
-			//update duplicate defect 0 for each new defect
+
+			// update duplicate defect 0 for each new defect
 			Cell cellDuplicateDefect = row_ED.createCell(8);
 			cellDuplicateDefect.setCellValue("0");
-			
+
 			os_ED = new FileOutputStream(myFile_ED);
 			workbook_ED.write(os_ED);
 
@@ -592,7 +599,7 @@ public class XLUtils {
 				ClientAnchor anchor = helper.createClientAnchor();
 				// set top-left corner of the picture,
 				// subsequent call of Picture#resize() will operate relative to it
-				//anchor.setCol1(8);
+				// anchor.setCol1(8);
 				anchor.setCol1(9);
 				anchor.setRow1(sheet_ED.getLastRowNum());
 				Picture pict = drawing.createPicture(anchor, pictureIdx);
@@ -616,11 +623,9 @@ public class XLUtils {
 					// TODO: handle exception
 				}
 			}
-			
-			
+
 			// Resize all columns to fit the content size
-			for (int i = 0; i < 3; i++) 
-			{
+			for (int i = 0; i < 3; i++) {
 				sheet_ED.autoSizeColumn(i);
 			}
 
@@ -764,25 +769,25 @@ public class XLUtils {
 				String defectStatus = XLUtils.getCellData(path, "Defect Dump", i, 7);
 
 				if (defectStatus.equalsIgnoreCase("Done") && defectSummary.equalsIgnoreCase(issueSummary)) {
-					
+
 					counter = 0;
 					continue;
-					
+
 				} else if (defectStatus.equalsIgnoreCase("To Do") || defectStatus.equalsIgnoreCase("In Progress")) {
 					if (defectSummary.equalsIgnoreCase(issueSummary)) {
-						
+
 						counter = 1;
-						
-						//update the duplicate defect count
+
+						// update the duplicate defect count
 						String num = XLUtils.getCellData(path, "Defect Dump", i, 8);
 						int number = Integer.parseInt(num) + counter;
-                        XLUtils.setCellData(path, "Defect Dump", i, 8,Integer.toString(number));
-                        
-                        //update the timestamp for this duplicate defect
-                        String latestTime = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()).toString();
-                        String earlierTime = XLUtils.getCellData(path, "Defect Dump", i, 4);
-                        String newTime =  latestTime +" ," +"\n" +earlierTime;
-                        XLUtils.setCellData(path, "Defect Dump", i, 4,newTime);
+						XLUtils.setCellData(path, "Defect Dump", i, 8, Integer.toString(number));
+
+						// update the timestamp for this duplicate defect
+						String latestTime = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()).toString();
+						String earlierTime = XLUtils.getCellData(path, "Defect Dump", i, 4);
+						String newTime = latestTime + " ," + "\n" + earlierTime;
+						XLUtils.setCellData(path, "Defect Dump", i, 4, newTime);
 					}
 				}
 
@@ -806,6 +811,5 @@ public class XLUtils {
 		}
 
 	}
-
 
 }

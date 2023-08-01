@@ -7,8 +7,8 @@
 		 <!-- <listener class-name="com.utilities.TestListener" />  --> 
 	</listeners>
 	
-	
-	<test name="Demo Test">
+	 <!-- 
+	<test name="Demo Test 1">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www.net-a-porter.com/en-in/" />
 		<classes>
@@ -16,7 +16,7 @@
 		</classes>
 	</test>	
 	
-		
+	 	
 	<test name="Demo Test 2">
 		<parameter name="browser" value="chrome" />
 		<parameter name="url" value="https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount" />
@@ -33,6 +33,102 @@
 		    <class name = "com.ncs.advancedselenium.NetAporterWebsite.NetAPorterEndToEndScenarioTest"/>		    	
 		</classes>
 	</test>
+	
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www.petitestudionyc.com/" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.PetiteStudioHomePageShopAllTabsTest" />
+			
+		</classes>
+	</test>
+	
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www2.hm.com/en_in/index.html" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.HMHomePageTest" />
+			
+		</classes>
+	</test>
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www.ae.com/us/en" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.AEEndToEndScenarioTest" />
+			
+		</classes>
+	</test>
+	
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www.freepeople.com/" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyFreePeopleTest" />
+			
+		</classes>
+	</test>
+	
+	-->
+	
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www.mankind.co.uk/" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyMankindTest" />
+			
+		</classes>
+	</test>
+	
+	
+	 
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://phptravels.com/demo/" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest" />
+			
+		</classes>
+	</test>
+	
+	
+	
+	<test name="Demo Test 4">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www.missguided.co.uk/" />
+		<classes>
+			<class
+				name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyMissGuidedTest" />
+			
+		</classes>
+	</test>
+	
+	
 	
 		
 </suite>

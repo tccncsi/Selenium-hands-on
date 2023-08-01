@@ -10,6 +10,7 @@ import static org.testng.Assert.assertTrue;
 import org.testng.Assert;
 import com.advancedselenium.net_a_porter_website.pageobject.*;
 import com.advance_selenium.net_a_porter_website.base.BaseClass;
+import com.advance_selenium.net_a_porter_website.utilities.JiraCreateIssue;
 import com.advance_selenium.net_a_porter_website.utilities.XLUtils;
 
 
@@ -23,6 +24,7 @@ public class NetAPorterHomePageTest extends BaseClass{
 //	  System.out.println("First Test case executed");
 //  }
   
+	@JiraCreateIssue(isCreateIssue = true)
   	@Test
   	public void choosing_language_japanese() throws InterruptedException {
   		nhp=new NetAPorterHomePage(driver);
@@ -39,7 +41,7 @@ public class NetAPorterHomePageTest extends BaseClass{
 	  
   }
   	
-  		
+	@JiraCreateIssue(isCreateIssue = true)
   		@Test
   		public void clicking_on_account_tab() throws InterruptedException {
   			nhp=new NetAPorterHomePage(driver);

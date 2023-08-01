@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="com.advance_selenium.net_a_porter_website.utilities.Reporting"/>
   </listeners>
-  <test thread-count="5" name="Demo Test 2(failed)">
+  <test thread-count="5" name="Demo Test 4(failed)">
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount"/>
+    <parameter name="url" value="https://phptravels.com/demo/"/>
     <classes>
-      <class name="com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest">
+      <class name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest">
         <methods>
-          <include name="invalid_password_field"/>
+          <include name="registration_test"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest -->
+      </class> <!-- com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest -->
     </classes>
-  </test> <!-- Demo Test 2(failed) -->
+  </test> <!-- Demo Test 4(failed) -->
 </suite> <!-- Failed suite [TCC] -->

@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
 
 import com.advance_selenium.net_a_porter_website.base.BaseClass;
+import com.advance_selenium.net_a_porter_website.utilities.JiraCreateIssue;
 import com.advance_selenium.net_a_porter_website.utilities.XLUtils;
 import com.advancedselenium.net_a_porter_website.pageobject.NetAPorterAccountPage;
 import com.advancedselenium.net_a_porter_website.pageobject.NetAPorterHomePage;
@@ -16,13 +17,13 @@ public class NetAPorterAccountPageTest extends BaseClass{
 	NetAPorterAccountPage nap;
  
   
-  
-  @Test
+	@JiraCreateIssue(isCreateIssue = true)
+	@Test
 	public void validRegistration() throws InterruptedException {
 
 		nap=new NetAPorterAccountPage(driver);
-		String excelPath = "src\\main\\java\\testData\\FormTestData.xlsx";
-        String sheetName = "Data";
+		String excelPath = "src\\main\\java\\testData\\TestData.xlsx";
+        String sheetName = "Sheet1";
         int rowNumber = 0;
           	        
         String regEmail=XLUtils.getCellData(excelPath, sheetName, rowNumber, 1);       
@@ -50,12 +51,13 @@ public class NetAPorterAccountPageTest extends BaseClass{
         
         
 	}
-  
+	
+	@JiraCreateIssue(isCreateIssue = true)
   	@Test
   	public void invalid_birthday_date() {
   		nap=new NetAPorterAccountPage(driver);
-  		String excelPath = "src\\main\\java\\testData\\FormTestData.xlsx";
-        String sheetName = "Data";
+  		String excelPath = "src\\main\\java\\testData\\TestData.xlsx";
+        String sheetName = "Sheet1";
         int rowNumber = 0;
           	        
         String regEmail=XLUtils.getCellData(excelPath, sheetName, rowNumber, 1);
@@ -84,11 +86,12 @@ public class NetAPorterAccountPageTest extends BaseClass{
   		
   	}
   	
+	@JiraCreateIssue(isCreateIssue = true)
   	@Test
   	public void invalid_email_field() {
   		nap=new NetAPorterAccountPage(driver);
-  		String excelPath = "src\\main\\java\\testData\\FormTestData.xlsx";
-        String sheetName = "Data";
+  		String excelPath = "src\\main\\java\\testData\\TestData.xlsx";
+        String sheetName = "Sheet1";
         int rowNumber = 0;
           	        
         String regEmail=XLUtils.getCellData(excelPath, sheetName, rowNumber, 1);
@@ -110,11 +113,12 @@ public class NetAPorterAccountPageTest extends BaseClass{
   		
   	}
   	
+	@JiraCreateIssue(isCreateIssue = true)
   	@Test
   	public void invalid_password_field() {
   		nap=new NetAPorterAccountPage(driver);
-  		String excelPath = "src\\main\\java\\testData\\FormTestData.xlsx";
-        String sheetName = "Data";
+  		String excelPath = "src\\main\\java\\testData\\TestData.xlsx";
+        String sheetName = "Sheet1";
         int rowNumber = 0;
           	        
         String regEmail=XLUtils.getCellData(excelPath, sheetName, rowNumber, 1);
