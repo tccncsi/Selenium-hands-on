@@ -24,8 +24,8 @@ public class Assessment31JulyPHPTravelersTest extends BaseClass{
 	  
 	  pthp.generating_password();
 	  
-	  assertTrue(pthp.error_msg_box_displayed(),"Error Message box is not displayed");
-//	  assertTrue(pthp.error_msg_heading_displayed(),"Error message box heading is not displayed");
+//	  assertTrue(pthp.error_msg_box_displayed(),"Error Message box is not displayed");
+	  assertTrue(pthp.error_msg_heading_displayed(),"Error message box heading is not displayed");
 //	  assertTrue(pthp.error_msg_displayed(),"Error message is not displayed.");
 //	  
 	  String actual_value=pthp.dashboard_name();
