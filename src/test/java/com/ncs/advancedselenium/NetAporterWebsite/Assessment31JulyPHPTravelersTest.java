@@ -8,12 +8,15 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import com.advance_selenium.net_a_porter_website.base.BaseClass;
+import com.advance_selenium.net_a_porter_website.utilities.JiraCreateIssue;
 import com.advance_selenium.net_a_porter_website.utilities.XLUtils;
 import com.advancedselenium.net_a_porter_website.pageobject.PHPTraveleersHomePage;
 
 public class Assessment31JulyPHPTravelersTest extends BaseClass{
 	
 	PHPTraveleersHomePage pthp;
+	
+	@JiraCreateIssue(isCreateIssue = true)
   @Test
   public void registration_test() throws IOException, InterruptedException {
 	  System.out.println("Dummy test for PHP Travelers website");
@@ -34,6 +37,7 @@ public class Assessment31JulyPHPTravelersTest extends BaseClass{
 	  
   }
   
+  @JiraCreateIssue(isCreateIssue = true)
   @Test//(enabled=false)
   public void validating_password() {
 	  
