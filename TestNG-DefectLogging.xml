@@ -7,87 +7,7 @@
 		 <!-- <listener class-name="com.utilities.TestListener" />  --> 
 	</listeners>
 	
-	 <!-- 
-	<test name="Demo Test 1">
-		<parameter name="browser" value="chrome" />
-		<parameter name="url" value="https://www.net-a-porter.com/en-in/" />
-		<classes>
-		    <class name = "com.ncs.advancedselenium.NetAporterWebsite.NetAPorterHomePageTest"/>		    	
-		</classes>
-	</test>	
 	
-	 	
-	<test name="Demo Test 2">
-		<parameter name="browser" value="chrome" />
-		<parameter name="url" value="https://www.net-a-porter.com/en-in/account/register?redirect=%2Fen-in%2Faccount" />
-		<classes>
-		    <class name = "com.ncs.advancedselenium.NetAporterWebsite.NetAPorterAccountPageTest"/>		    	
-		</classes>
-	</test>	
-	
-	 
-	<test name="Demo Test 3">
-		<parameter name="browser" value="chrome" />
-		<parameter name="url" value="https://www.net-a-porter.com/en-in/" />
-		<classes>
-		    <class name = "com.ncs.advancedselenium.NetAporterWebsite.NetAPorterEndToEndScenarioTest"/>		    	
-		</classes>
-	</test>
-	
-	
-	
-	<test name="Demo Test 4">
-	<parameter name="browser" value="chrome" />
-		<parameter name="url"
-			value="https://www.petitestudionyc.com/" />
-		<classes>
-			<class
-				name="com.ncs.advancedselenium.NetAporterWebsite.PetiteStudioHomePageShopAllTabsTest" />
-			
-		</classes>
-	</test>
-	-->
-	
-	
-	<test name="Demo Test 4">
-	<parameter name="browser" value="chrome" />
-		<parameter name="url"
-			value="https://www2.hm.com/en_in/index.html" />
-		<classes>
-			<class
-				name="com.ncs.advancedselenium.NetAporterWebsite.HMHomePageTest" />
-			
-		</classes>
-	</test>
-	<!-- 
-	
-	<test name="Demo Test 4">
-	<parameter name="browser" value="chrome" />
-		<parameter name="url"
-			value="https://www.ae.com/us/en" />
-		<classes>
-			<class
-				name="com.ncs.advancedselenium.NetAporterWebsite.AEEndToEndScenarioTest" />
-			
-		</classes>
-	</test>
-	
-	
-	
-	<test name="Demo Test 4">
-	<parameter name="browser" value="chrome" />
-		<parameter name="url"
-			value="https://www.freepeople.com/" />
-		<classes>
-			<class
-				name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyFreePeopleTest" />
-			
-		</classes>
-	</test>
-	
-	-->
-	
-	<!-- 
 	
 	<test name="Demo Test 1">
 	<parameter name="browser" value="chrome" />
@@ -129,6 +49,5 @@
 	</test>
 	
 	
-	-->
-		
+			
 </suite>
