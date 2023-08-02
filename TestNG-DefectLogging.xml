@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TCC">
+
+	<listeners>
+		<listener class-name="com.utilities.Reporting" />
+		 <!-- <listener class-name="com.utilities.TestListener" /> -->
+	</listeners>
+	<!-- 
+	<test name="Demo Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.net-a-porter.com/en-in/" />
+		<classes>
+		    <class name = "com.testCases.LanguageTest"/>	
+		</classes>
+	</test>
+	
+	 -->
+	
+<!-- 	<test name="Assessment 2 Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.petitestudionyc.com/" />
+		<classes>
+		    <class name = "com.testCases.Assessment2"/>	
+		</classes>
+	</test> -->
+	
+	<!-- <test name="Assessment 3 Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www2.hm.com/en_in/index.html" />
+		<classes>
+		    <class name = "com.testCases.Assessment3"/>	
+		</classes>
+	</test> -->
+	
+	<!-- <test name="Assessment 4 Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.ae.com/us/en" />
+		<classes>
+		    <class name = "com.testCases.Assessment4"/>	
+		</classes>
+	</test>
+ -->
+ 
+<!--   	<test name="Practical Assessment Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.youngandreckless.com/" />
+		<classes>
+		    <class name = "com.testCases.Practical_assess"/>	
+		</classes>
+	 </test>
+
+ --> 
+  	<test name="Practical Assessment Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.google.com/" />
+		<classes>
+		    <class name = "com.testCases.Practical_assess"/>	
+		</classes>
+	 </test> 	
+	
+</suite>
