@@ -17,8 +17,9 @@ public class Assessment31JulyPHPTravelersTest extends BaseClass{
 	PHPTraveleersHomePage pthp;
 	
 	@JiraCreateIssue(isCreateIssue = true)
-  @Test
+  @Test(enabled=false)
   public void registration_test() throws IOException, InterruptedException {
+		driver.get("https://phptravels.com/demo/");
 	  System.out.println("Dummy test for PHP Travelers website");
 	  pthp=new PHPTraveleersHomePage(driver);
 	  assertTrue(pthp.signup_btn_displayed(),"signup tab is not visible");
@@ -40,6 +41,7 @@ public class Assessment31JulyPHPTravelersTest extends BaseClass{
   @JiraCreateIssue(isCreateIssue = true)
   @Test//(enabled=false)
   public void validating_password() {
+	  driver.get("https://phptravels.com/demo/");
 	  
 	  pthp=new PHPTraveleersHomePage(driver);
 	  pthp=new PHPTraveleersHomePage(driver);

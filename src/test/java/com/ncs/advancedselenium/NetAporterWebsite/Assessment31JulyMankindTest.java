@@ -15,6 +15,7 @@ public class Assessment31JulyMankindTest extends BaseClass{
 	@JiraCreateIssue(isCreateIssue = true)
   @Test
   public void checking_filter() throws InterruptedException {
+		driver.get("https://www.mankind.co.uk/");
 	  System.out.println("Dummy test for Mankind website !!");
 	  mhp=new MankindHomePage(driver);
 	  mhp.handleCookiePopup();

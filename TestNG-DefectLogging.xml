@@ -7,8 +7,20 @@
 		 <!-- <listener class-name="com.utilities.TestListener" />  --> 
 	</listeners>
 	
+	<test name="Demo Test 1">
+	<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://www.google.com/" />
+		<classes>
+			<class name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyMankindTest" />
+			<class name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyPHPTravelersTest" />
+			<class name="com.ncs.advancedselenium.NetAporterWebsite.Assessment31JulyMissGuidedTest" />
+							
+		</classes>
+	</test>
 	
 	
+	<!-- 
 	<test name="Demo Test 1">
 	<parameter name="browser" value="chrome" />
 		<parameter name="url"
@@ -48,6 +60,6 @@
 		</classes>
 	</test>
 	
-	
+	-->
 			
 </suite>

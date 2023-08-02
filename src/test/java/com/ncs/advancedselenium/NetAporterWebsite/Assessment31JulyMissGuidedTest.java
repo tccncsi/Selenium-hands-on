@@ -14,6 +14,7 @@ public class Assessment31JulyMissGuidedTest extends BaseClass{
 	@JiraCreateIssue(isCreateIssue = true)
 	@Test
   public void links_test() throws InterruptedException {
+		driver.get("https://www.missguided.co.uk/");
 	  
 	  System.out.println("Dummy test for miss guided website");
 	  mghp=new MissGuidedHomePage(driver);
