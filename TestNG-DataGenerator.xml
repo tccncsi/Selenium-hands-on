@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="iExam">
+
+	<listeners>
+		<listener class-name="com.utilities.Reporting" />
+		 <!-- <listener class-name="com.utilities.TestListener" /> -->
+	</listeners>
+	<test name="Demo Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name ="url" value="https://bhagyashreea.aidaform.com/expert-employee-information-form"/>
+		<classes>
+			<class name ="com.testCases.EmployeeFormGenerateDataTest"/>
+			<class name = "com.testCases.EmployeeFormEnterPageTest"/>
+		</classes>
+	</test>
+</suite>
