@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TCC]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="Petite Studio Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.petitestudionyc.com/"/>
+    <classes>
+      <class name="com.testCases.PetiteShopAllTest">
+        <methods>
+          <include name="ShopAllLinksTest"/>
+          <include name="HelpLinksTest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testCases.PetiteShopAllTest -->
+    </classes>
+  </test> <!-- Petite Studio Test(failed) -->
+</suite> <!-- Failed suite [TCC] -->

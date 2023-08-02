@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TCC">
+
+	<listeners>
+		<listener class-name="com.utilities.Reporting" />
+		 <!-- <listener class-name="com.utilities.TestListener" /> -->
+	</listeners>
+	
+	<!-- NET A PORTER -->
+<!-- 	<test name="NetAPorter Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.net-a-porter.com/" />
+		<classes>
+			<class name="com.testCases.LanguageChangeTest" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- Petite Studio -->
+<!-- 	<test name="Petite Studio Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.petitestudionyc.com/" />
+		<classes>
+			<class name="com.testCases.PetiteShopAllTest" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- H & M Test -->
+<!-- 	<test name="HandM Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www2.hm.com/en_in/index.html" />
+		<classes>
+			<class name="com.testCases.HandMTest" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- American Eagle Test  -->
+<!-- 		<test name="American Eagle Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.ae.com/" />
+		<classes>
+			<class name="com.testCases.AEAddProductsTest" />
+		</classes>
+	</test> -->
+	
+	
+	
+	<!-- ***************** Autoverse Practicle Assessments Test ******************** -->
+	
+	<!-- Mankind Test -->
+<!-- 	<test name="Mankind Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.mankind.co.uk/" />
+		<classes>
+			<class name="com.testCases.MankindTest" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- The Frankie Shop Test -->
+<!-- 	<test name="The Frankie Shop Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://thefrankieshop.com/" />
+		<classes>
+			<class name="com.testCases.FrankieShopTest" />
+		</classes>
+	</test>  -->
+	
+	<!-- asos Test -->
+	<test name="asos Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.asos.com/" />
+		<classes>
+			<class name="com.testCases.AsosTest" />
+		</classes>
+	</test> 
+	
+</suite>
